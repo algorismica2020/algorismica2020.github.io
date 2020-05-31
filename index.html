@@ -1,0 +1,186 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="apiDSBCN.css">
+<link rel="stylesheet" href="apidoc.css?">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet'>
+<head>
+<style>
+
+
+</style>
+</head>
+
+
+<center> 
+<p style="font-size:12px; font-family: 'Carrois Gothic SC'; color:grey"; line-height: 1.0rem>
+![](images/marcav_pos_rgb.png width="128") <br> <br>
+<b> Deep Learning Course v2.0 </b><br>
+Master in Fundamental Principles of Data Science <br>
+Jordi Vitrià, 2020 <br>
+</p>
+</center>
+
+![](images/front.png)
+
+> "You want to make it seem alive and effortless and fun, but that's an
+> art that took me 25 years to really learn. I wanted to do it very much
+> 25 years ago, but I didn't know how."
+>
+>      -- David O. Russell, director of American Hustle
+
+
+# Deep Learning
+
+Deep learning is one of the fastest growing areas of machine learning and a hot topic in both academia and industry. This course will cover the basics of deep learning by using a hands-on approach.
+
+## Course Instructor
+
+[Jordi Vitrià](http://www.ub.edu/cvub/jordivitria/)
+
+## Class Time and Location
++ First Semester (September, 2020 - January, 2021)
++ Lectures: Wednesday 17:00h-19:00h
++ Location: Aula B1, Facultat de Matemàtiques i Informàtica, Universitat de Barcelona.  [Map](https://www.google.es/maps/place/Gran+Via+de+les+Corts+Catalanes,+585,+08007+Barcelona/@41.3865736,2.1619408,17z/data=!3m1!4b1!4m5!3m4!1s0x12a4a28cbeee3689:0x4b4a8ba716765923!8m2!3d41.3865736!4d2.1641295?hl=ca).
+
+## Schedule
+
+
+12-9-2020: Project Launch
+ - Create specifications
+ - Initialize revision control system
+
+19-9-2020: Build Milestone
+ - Build system fully functional
+ - Placeholder unit tests committed
+ 
+ _Plan for weekend overtime if we miss this milestone_
+ 
+20-10-2020: Site Visit
+ **Whole team vistits client**. Dress appropriately.
+
+
+
+
+
+            
+## Prerequisites
+
++ Proficiency in Python (3.7): All class assignments will be in Python (using `tensorflow` and `keras`). 
++ Calculus, Linear Algebra: You should be comfortable taking derivatives and understanding matrix vector operations and notation.
++ Basic Probability and Statistics.
+
+
+## Grading
+
++ Assignment #1: 30%. Submission deadline (UB Campus Virtual): **TBD**
++ Assignment #2: 30%. Submission deadline (UB Campus Virtual): **TBD**
++ Assignment #3: 40%. Submission deadline (UB Campus Virtual): **TBD**
+
+Study groups are allowed but we expect students to understand and complete their own assignments and to hand in one assignment per student.
+
+## Course Syllabus
+<ol type="1">
+<li>  Using the Jupyter/Collab notebooks. Software stack. 
+<li>  Introduction to Deep Learning and its applications. 
+<li>  Basic concepts: learning from data.
+<li>  Automated differentiation & Backpropagation, Training a Neural Network from Scratch.                     
+<li>  Dense Neural Networks.                                                     
+<li>  Recurrent Neural Netwoks I.                                                                        
+<li>  Recurrent Neural Netwoks II.                                                                    
+<li>  Embeddings.                                                                                              
+<li>  Convolutional Neural Networks I.                                                                         
+<li>  Convolutional Neural Networks II.                                                  
+<li>  Unsupervised Learning I.                                                                                 
+<li>  Unsupervised Learning II.                                                                                  
+<li>  Deep Reinforcement Learning.                                                                                     
+</ol>
+
+## Books
+
++ A.Zhang, Z.Lipton, M.Li, A.J.Smola. [Dive into Deep Learning](http://d2l.ai/), 2020.
++ I.Goodfellow,Y.Bengio, A.Courville, [Deep Learning](https://www.deeplearningbook.org/), MIT Press, 2016. 
++ M.Nielssen, [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/), 2015.
+
+
+
+
+## Course Software Installation: Working in Colab
+
+Colaboratory, or "Colab" for short, allows you to write and execute **Python** in your browser, with
+
++ Zero configuration required
++ Free access to GPUs
++ Easy sharing
+
+Watch [Introduction to Colab](https://www.youtube.com/watch?v=inN8seMm7UI) to learn more
+
+
+You can develop deep learning applications with Google Colaboratory (Colab) -on the free Tesla K80 GPU- using Keras and Tensorflow. Colab is a Google internal research tool for data science. They have released the tool sometime earlier to the general public with a goal of dissemination of machine learning education and research. This is a free service that may not always be available, and requires extra steps to ensure your work is saved. Be sure to read the docs on the Colab web site to ensure you understand the limitations of the system.
+
+For accessing Colab, first of all you should sign in to you Google account if you are not signed in by default. You must do this step before opening Colab, otherwise the notebooks will not work. 
+
+Next, head on to the [Colab Welcome Page](https://colab.research.google.com) and click on `Github`. In the `Enter a GitHub URL` line enter ‘https://github.com/DataScienceUB/DeepLearningMaster2020’. You will see all the course notebooks listed there. Click on the one you are interested in using.
+
+You should see your notebook displayed now. Before running anything, you need to tell Colab that you are interested in using a GPU. You can do this by clicking on the `Runtime` tab and selecting `Change runtime type`. A pop-up window will open up with a drop-down menu. Select `GPU` from the menu and click `Save.
+
+When you run the first cell, you will face a pop-up saying Warning: This notebook was not authored by Google`; you should leave the default tick in the `Reset all runtimes before running` check box and click on `Run Anyway`.
+
+If you opened a notebook from Github, you may need to save your work to Google Drive. You can do this by clicking on `File` and then `Save`. 
+
+Click on `SAVE A COPY IN DRIVE`. This will open up a new tab with the same file, only this time located in your Drive. If you want to continue working after saving, use the file in the new tab. Your notebook will be saved in a folder called `Colab Notebooks` in your Google Drive by default.
+
+If you run a script which creates/downloads files, the files will NOT persist after the allocated instance is shutdown. To save files, you need to permit your Colaboratory instance to read and write files to your Google Drive. Add the following code snippet at the beginning of every notebook.
+
+```python
+from google.colab import drive
+drive.mount('/content/gdrive', force_remount=True)
+root_dir = "/content/gdrive/My Drive/"
+base_dir = root_dir + 'masterUB/'
+```
+
+Now, you may access your Google Drive as a file sytem using standard python commands to both read and write files. 
+
+
+## Course Software Installation: Working with Docker
+
+You can run the course software using a **Docker container**. 
+
+> A gentle introduction to docker: [How Docker Can Help You Become A More Effective Data Scientist](https://towardsdatascience.com/how-docker-can-help-you-become-a-more-effective-data-scientist-7fc048ef91d5)
+
+
+
+
+<br>
+<div class="center">
+<p>
+    <span style="float:right;">
+        [Next Page <i class="material-icons">fast_forward</i>](deep1.html)  
+    </span>
+</p>
+</div>
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script> 
+
+<!-- Markdeep: 
+
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> -->
+
+<script src="markdeep.min.js?" charset="utf-8"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+<script type="text/javascript">
+// Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+</script>
