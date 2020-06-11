@@ -255,25 +255,26 @@ Els sistemes de numeració romans i egipcis no són estrictament posicional
 
 ## Bases i Nombres
 
-Suposem que arribem a un pais desconegut i volem contar quantes persones <i class="material-icons" style="color:red;">accessibility</i> hi ha en un local determinat.
+Suposem que arribem a un pais desconegut i volem contar quantes persones <i class="material-icons" style="color:red;">accessibility</i> hi ha en un local determinat. Considerarem que cada una de les persones <i class="material-icons" style="color:red;">accessibility</i> és un element d'un conjunt.
 
 <center><img src="images/occupancy-sign.png" width="150"></center>
 
 
-Si ens diuen que n'hi ha a <code>11</code>, quantes <i class="material-icons" style="color:red;">accessibility</i> hi ha? 
+Si ens diuen que hi ha <code>11</code> elements al conjunt, quantes <i class="material-icons" style="color:red;">accessibility</i> hi ha? 
 
 Depèn de la **base** en que està escrit! La **base d’un nombre** determina el nombre de dígits diferents i el valor de les posicions dels dígits.
 
 + Si en aquest pais escriuen els nombres en base 2, <code>11</code> = <i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i>.
 
-+ Si en aquest pais escriuen els nombres en base 3, <code>11</code> = <i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i>.
++ Si en aquest pais escriuen els nombres en base 10, <code>11</code> = <i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i><i class="material-icons" style="color:red;">accessibility</i>.
 
 ---
 
 ## Bases i Nombres
 
-Per entendre com una base representa una quantitat, va bé pensar-ho així:
-<code>642</code>  és 600 + 40 + 2 en BASE 10.
+Per entendre com una base representa la **cardinalitat d'un conjunt**, va bé pensar-ho així:
+
+<center><code>642</code>  és 600 + 40 + 2 en BASE 10.</center>
 
 Això  correspon a l'ús d'una fòrmula que ens permet entendre una base:
 
@@ -281,7 +282,7 @@ $$ d_n \times R^{n-1} +  \dots + d_2 \times  R + d_1 $$
 
 on `R` és la base del nombre i `d_i` és el dígit a la posició i-èssima del nombre. D'aquí surt que:
 
-$$ 642 = 6_3 \times 10^2 + 4_2 \times 10 + 2_1 $$
+$$ 642 = 6_3 \times 10^2 + 4_2 \times 10 + 2_1 \times 10^0$$
 
 Les bases més importants en informàtica són:
 
@@ -329,6 +330,7 @@ Fibonacci és avui conegut sobretot per la seva seqüència:
 
 La seqüència es pot definir amb la següent regla matemàtica:
 
+
 <center><img src="images/seqfib.png" width="350"></center>
 
 
@@ -373,10 +375,15 @@ def fib1(n):
 
 ```
 
-.footnote[.red[*]Un algorisme recursiu és un algorisme que es crida a si mateix.]
 
 + Copia aquest codi i calcula el terme 10 i el terme 100: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
 + Què ha passat quan has intentat calcular el terme 100? 
+
+
+
+
+
+.footnote[.red[*]Un algorisme recursiu és un algorisme que es crida a si mateix.]
 
 
 ---
@@ -639,6 +646,26 @@ for i in range(327864287686868676876876876887986):
 Caldrà tenir en compte quina complexitat computacional té operar dos nombres d’aquestes característiques.
 
 ---
+
+#### <p style="background-color: #33FFCE;">Problema 3.1 del Manual de Problemes</p>
+
++ Escriu un algorisme que divideixi (ens retorni el quocient de) dos nombres enters, positius i més grans que 1, sense fer servir els operadors de multiplicació `*`, divisió `/` ni mòdul `%`: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
+
++ Contesta les següents preguntes:
+  + Quantes operacions (assignacions, comparacions, sumes i restes) fa quan calcula `90/10`?
+
+#### <p style="background-color: #33FFCE;">Solució</p>
+
+```python
+def divide(dividend, divisor):  
+    quotient = 0
+    while (dividend >= divisor):  
+        dividend -= divisor 
+        quotient += 1
+    return  quotient 
+```
+
+---
 name:granO
 
 ## La notació Gran O
@@ -841,6 +868,22 @@ Es pot fer millor?
 No! Per sumar `n` bits com a mínim s’han de poder llegir i escriure, i això ja són `2n` passos!
 
 ---
+
+#### <p style="background-color: #33FFCE;">Problema 3.2 del Manual de Problemes.</p>
+
+El "*complement a un*" i el "*complement a dos*" són dues eines matemàtiques que faciliten molt les tasques aritmètiques en el sistema binari, sobretot la realització de restes i el treball amb nombres negatius.
+
+El "complement a un" (C1) d’un nombre binari és el nombre resultant d’invertir els uns i els zeros d’aquest nombre. Per exemple, el complement a un del nombre `1101` és el nombre `0010`.
+
+El "complement a dos" (C2) d’un nombre binari és el nombre resultant de sumar 1 al seu complement a un. És a dir, C2 = C1 + 1. Generalment s’assumeix que el C2 és la manera de representar el negatiu d’un número binari.
+
+Llavors, la **resta de dos nombres binaris pot obtenir-se sumant al minuend el complement a dos del subtrahend**.
+
++ Escriu un algorisme que resti dos nombres binaris que estan emmagatzemats en dues llistes: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
++ Quina és la complexitat de l'algorisme?
+
+
+---
 name: mult
 
 ## Aritmètica Bàsica: Multiplicació
@@ -980,7 +1023,6 @@ def div(x,y):
 ```
 
 Amb el que hem vist abans, és fàcil deduïr que **la seva complexitat és `O(n^2)`**.
-
 
 
 
