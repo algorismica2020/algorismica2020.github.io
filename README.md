@@ -1,5 +1,5 @@
 
-<img src="/images/marcav_pos_rgb.png" width="324" width="100">
+<img src="/images/marcav_pos_rgb.png" width="324" width="50">
 
 
 # algorismica2020.github.io
