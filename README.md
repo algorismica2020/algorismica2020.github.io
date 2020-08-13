@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/images/marcav_pos_rgb.png" width="324" width="50">
+  <img src="/images/marcav_pos_rgb.png" width="250">
 </p>
 
 # Repositori de l'assignatura "Algorísmica"
