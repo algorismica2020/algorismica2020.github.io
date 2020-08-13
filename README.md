@@ -1,5 +1,6 @@
-
+<centering>
 <img src="/images/marcav_pos_rgb.png" width="324" width="50">
+</centering>
 
 
 # algorismica2020.github.io
