@@ -4,12 +4,7 @@
 
 # Repositori de l'assignatura "Algorismica" de la UB
 
-<blockquote>
-**AVÍS**: Degut a l'estat d'emergència sanitaria creat per la COVID-19, aquesta assignatura es farà durant el curs 2020-2021 en modalitat d'aprenentatge combinat (blended learning), fent servir sessions presencials i aprenentatge en línia asíncron.
-</blockquote>
-
-
-**AVÍS**: Degut a l'estat d'emergència sanitaria creat per la COVID-19, aquesta assignatura es farà durant el curs 2020-2021 en modalitat d'aprenentatge combinat (blended learning), fent servir sessions presencials i aprenentatge en línia asíncron.
+> :warning: **AVÍS**: Degut a l'estat d'emergència sanitaria creat per la COVID-19, aquesta assignatura es farà durant el curs 2020-2021 en modalitat d'aprenentatge combinat (blended learning), fent servir sessions presencials i aprenentatge en línia asíncron.
 
 ## Algorismica: Temari de l'assignatura
 +  Teoria: [Introducció](http://algorismica2020.github.io/introducció.html) 
