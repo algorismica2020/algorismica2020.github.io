@@ -8,10 +8,10 @@
 
 ## Algorismica: Temari de l'assignatura
 +  Teoria: [Introducció](http://algorismica2020.github.io/introducció.html) 
-+  Teoria: [Python](http://algorismica2020.github.iopython.html)   
-+  Teoria: [Algorismes Numèrics 1](http://algorismica2020.github.ionumerics1.html)  
-+  Teoria: [Algorismes Numèrics 2](http://algorismica2020.github.ionumerics2.html) 
-+  Teoria: [Algorismes de Text](http://algorismica2020.github.iotext.html) 
++  Teoria: [Python](http://algorismica2020.github.io/python.html)   
++  Teoria: [Algorismes Numèrics 1](http://algorismica2020.github.io/numerics1.html)  
++  Teoria: [Algorismes Numèrics 2](http://algorismica2020.github.io/numerics2.html) 
++  Teoria: [Algorismes de Text](http://algorismica2020.github.io/text.html) 
 
 ## Pràctiques
 + Notebook 1
