@@ -1,6 +1,6 @@
 [logo]: https://algorismica2020.github.io/images/marcav_pos_rgb.png "Logo Title Text 2"
 
-![alt text](https://algorismica2020.github.io/images/marcav_pos_rgb.png "Logo Title Text 1")
+![alt text](https://algorismica2020.github.io/images/marcav_pos_rgb.png "Logo Title Text 1" =100x20)
 
 
 # algorismica2020.github.io
