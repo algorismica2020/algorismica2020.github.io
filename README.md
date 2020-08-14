@@ -12,6 +12,9 @@
 +  Teoria: [Algorismes Numèrics 1](http://algorismica2020.github.io/numerics1.html)  
 +  Teoria: [Algorismes Numèrics 2](http://algorismica2020.github.io/numerics2.html) 
 +  Teoria: [Algorismes de Text](http://algorismica2020.github.io/text.html) 
++  Teoria: [Algorismes de Força Bruta](http://algorismica2020.github.io/forcabruta.html) 
++  Teoria: [Algorismes de Dividir i Vèncer](http://algorismica2020.github.io/dividir.html) 
++  Teoria: [Algorismes de Cerca](http://algorismica2020.github.io/cerca.html) 
 
 ## Pràctiques
 + Notebook 1
