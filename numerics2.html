@@ -212,12 +212,36 @@ name:modular
 o com en `Bob` envia un missatge secret `M` a l‘`Alice` sense que l’`Eve` ho pugui llegir.
 
 ---
+## Com enviar un missatge secret?
+
+L'artimètica modular és una part de les matemàtiques en ha resultat fonamental per una de les tasques informàtiques més importants dels nostres temps: assegurar la **confidencialitat** de les comunicacions sobre canals digitals.
+
+Sense els algorismes que veurem, no seria aconsellable connectar-nos a la nostra entitat financera des de casa o fer un pagament amb el mòbil.
+
+Les tècniques que ens permeten, fent ús d'uns quants teoremes de l'artimètica modular, enviar missatges secrets s'agrupen sota el nom de **criptografia**. 
+
+--
+
+L'algorisme bàsic, tal i com veurem a continuació, no és complex, però al darrera hi ha unes quantes idees força avançades!
+
+Per explicar-lo, anem a suposar que un personatge imaginari, en Bob, vol enviar un missatge secret a l'Alice sense que l'Eve ho pugui llegir. En aquest escenari, l'Alice podria ser la nostra entitat bancària, en Bob nosaltres mateixos i l'Eve una ciberdelinqüent que vol interceptar les nostres comunicacions.
+
+---
 
 ## Com enviar un missatge secret?
 
 
 <center><img src="images/bob1.png" width="700" alt="En Bob envia un missatge secret M a l'Alice sense que l'Eve ho pugui llegir 1. L'alice escull 2 nombres primers p i qu, p=11 q=3; 2.Calcula n=pq n=33; 3. Calcula m=(p-1)(q-1) 10*2=20; 4. Escull dos nombres e i d tals que ed % m = 1, 3 i 7; 5. Publica la seva clau pública (n,e) 33,3 i es guarda una privada (n,d); 6. En Bob buca la clau pública de l'Alice; 7. Transforma el seu missatge a un enter M M=14; 8. Calcula C = M^e % n, 14^3 % 33 = 5; 9. Envia C a l'Alice, C=5; 10. Alice usa la clau privada n,d per calcular R = C^d % n; 5^7 % 33 = 14; 10. Alice ja té el missatge M =R, M=14"></center>
 
+---
+
+## Com enviar un missatge secret?
+
+En aquest escenari, si l'Eve vol saber quin és el missatge que em enviat te encara un algorisme molt simple al seu abast. 
+
+Per evitar que l'usi haurem d'assegurar-nos una sèrie de requeriments espcials, un dels quals és fer servir nombres molt grans (amb una representació de l'ordre de milers de bits)!
+
+Per aquest motiu cal evaluar molt bé la complexitat dels algorismes que farem servir.
 
 ---
 
@@ -227,7 +251,18 @@ o com en `Bob` envia un missatge secret `M` a l‘`Alice` sense que l’`Eve` ho
 <center><img src="images/bob2.png" width="550" alt="Si l'Eve vol saber quin és el missatge...  (n,e) = (33,3) C=5  1. L'Eve factoritza n = pq  33 = 11 x 3; 2. Troba d tal que ed % (p-1)(q-1) = 1, d=7; 3. Desencripta el missatge amb d, M = 5^7 % 33 = 14"></center>
 
 ---
-## Com enviar un missatge secret?
+
+#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
+## Criptografia
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MsqqpO9R5Hc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+---
+
+## Com assegurar-nos que el missatge serà secret?
 
 
 Aquest esquema té sentit si:
@@ -239,18 +274,71 @@ Aquest esquema té sentit si:
 
 ---
 
-## Aritmètica Modular
+## Factorització de nombres enters (Viquipèdia)
 
-En certs aspectes de la informàtica (per exemple, la criptografia) és important una variació de l'aritmètica sobre els nombres enters: l’**aritmètica modular**.
+En matemàtiques, la factorització o descomposició en producte de factors és el procés de descompondre un objecte, per exemple un nombre enter, un polinomi, o una matriu en el producte d'altres objectes anomenats factors, que en multiplicar-los tots junts donen l'objecte original.
+
+Segons el teorema fonamental de l'aritmètica, **tot enter admet una factorització única en nombres primers**.
+
+*Exemples*: 
++ `11 = 11`  
++ `25 = 5 × 5 = 5^2`
++ `125 = 5 × 5 × 5 = 5^3` 
++ `360 = 2 × 2 × 2 × 3 × 3 × 5 = 2^3 × 32 × 5` 
+
+El temps d'execució d'un algorisme de factorització de propòsit general depèn només de la mida de l'enter a factoritzar. 
+
+Per a un ordinador clàssic, GNFS és el millor algorisme publicat per als `n` grans. Aquest algorisme te una complexitat de tipus exponencial!
+
+---
+
+#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
+## Factorització de nombres enters: un algorisme *ingenu*
+
+```python
+import math 
+
+def primeFactors(n): 
+    # Impremeix el nombre de 2 que divideixen n 
+    while n % 2 == 0: 
+        print(2) 
+        n = n / 2
+    # n és senar! 
+    # anem saltant de 2 en 2 ( i = i + 2)  
+    for i in range(3, int(math.sqrt(n))+1, 2): 
+        # mentre i divideix n, imprimim i i dividim n 
+        while n % i == 0: 
+            print(i) 
+            n = n / i 
+    # Imprimim el primer si és més gran que 2 
+    if n > 2: 
+        print(n)
+```
+
++ Executa aquest algorisme per algun nombre petit (p.e. `315`): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
+
+<div class=warnred>
+  Aquest algorisme encara té una complexitat més alta! Només el podem fer servir per nombres petits.
+</div>
+
+
+---
+
+
+## Aritmètica Modular
 
 
 Definim `x mòdul N`, o `x%N`,  com la resta de dividir `x` per `N`, és a dir, si `x = qN+r`  amb `0 < =r < N`, llavors `x mòdul N` és `r`.red[*].
 
-Per exemple 12 % 7 és 5, i 100 % 12 és 4.
+> Per exemple `12%7` és `5`, i `100%12` és `4`.
 
-Això permet definir una equivalència (congruència) entre nombres (inclosos els negatius!). Direm que `x` és congruent amb `y`, `mod N`, si i només si `N` divideix `(x-y)`.
+Això permet definir una equivalència (*congruència*) entre nombres (inclosos els negatius!). 
 
-Per exemple 16, 28, 40 i 100 són congruents entre sí mòdul 12.
+Direm que `x` és congruent amb `y`, donat `N`, si i només si `N` divideix `(x-y)`.
+
+> Per exemple 16, 28, 40 i 100 són congruents entre sí mòdul 12.
+
 
 .footnote[.red[*]La complexitat és `O(n^2)`]
 
@@ -259,13 +347,15 @@ name:sumamod
 
 ## Aritmètica Modular
 
-Quan treballem amb aritmètica modular tots els operands i els resultats han d'estar en mòdul N. 
+<div class=warnred>
+  Quan treballem amb aritmètica modular tots els <b> operands</b> i els <b>resultats</b> han d'estar en mòdul N. 
+</div>
 
 **Suma modular `(a + b) % N` :** 
 
-> Sabem que  `(a + b) % N  = (a % N + b % N) % N`
+> Per les propietats de l'operador, sabem que  `(a + b) % N  = (a % N + b % N) % N`
 
-> A més, sabem que si dos nombres estan el rang `[0, N-1]` (`a % N` i `b % N` ho estan) la seva suma està en el rang `[0, 2(N-1)]` (que només és un bit més). 
+> A més, sabem que si dos nombres estan el rang `[0, N-1]` (`a % N` i `b % N` ho estan), la seva suma està en el rang `[0, 2(N-1)]` (que només és un bit més). 
 
 > Com que els operands ja estan en mòdul N, fem la suma bàsica i l'únic que hem de tenir en compte és que si el resultat passa de `N-1` li hem de restar `N`. Altrament, no hem de fer res.
 
@@ -281,7 +371,7 @@ name:multmod
 
 **Multiplicació modular (a * b) % N**: 
 
-> Sabem que  `(a * b) % N = (a % N * b % N) % N`
+> Per les propietats de l'operador, sabem que  `(a * b) % N = (a % N * b % N) % N`
 
 > A més, sabem que el producte pot ser fins `(N-1)^2` i que això es pot representar amb `2n` bits. Per transformar el resultat hem de dividir per `N` i calcular el mòdul (amb complexitat `O(n^2)`). 
 
@@ -298,20 +388,29 @@ name:potmod
 
 **Divisió**: Aquesta operació no és tant simple (no està definida per tots els nombres) i té una **complexitat `O(n^3)`**. 
 
-**Exponenciació**: Ara imaginem que volem calcular expressions com aquesta amb nombres `x`, `y` molt grans (centenars de bits/dígits)(`N` no és un nombre gran): 
+> Com que es complexa i no la necessitem, no l'explicarem...
+
+**Exponenciació**: Ara imaginem que volem calcular expressions com aquesta:
 
 $$ x^y \mbox{ mod } N $$
 
 
+amb nombres `x`, `y` molt grans (centenars o milers de bits/dígits) i suposant que `N` no és un nombre gran. 
+
+> L'exponenciació sí que és necessària per implementar un esquema criptogràfic, i ens pot portar problemes si no ho fem bé!
 ---
 
 ## Aritmètica Modular
 
-+ El resultat intermig d'aquesta operació pot necessitar molts bits/dígits per ser representat, **tot i que el resultat final necessita només `log(N)` bits/dígits** (aquest és un nombre molt petit!). 
++ El resultat intermig, `x^y`, d'aquesta operació pot necessitar molts bits/dígits per ser representat, **tot i que el resultat final necessita només `log(N)` bits/dígits** (aquest és un nombre molt petit!). 
 
-+ Si els operadors tenen 20 bits, necessitem 10 milions de bits per emmagatzemar un valor intermig!
+<div class=warnred>
+  Si els operadors tenen 20 bits, necessitem 10 milions de bits per emmagatzemar un valor intermig.
+  </div>
 
 --
+
+Exemple en base 10:
 
 > `>>> (155 ** 245)
 4278248942979368837154163038105593721699158763295276283468486026116
@@ -323,26 +422,31 @@ $$ x^y \mbox{ mod } N $$
 4333849233319516087345366409004055624880988958445804402097403640767
 61507446284998849068230137963897430353199524688534438610076904296875`
 
+> Aquest és el nombre de dígits que necessitem quan tenim 2 operadors de 3 dígits!
 
 ---
 
 ## Aritmètica Modular
 
-Una solució és fer totes les operacions intermèdies mòdul `N`.
+Una solució és fers operacions intermèdies mòdul `N`:  calcular `x^y mod N` fent `y` **multiplicacions successives** per `x mòdul N`.
 
-O sigui, calcular `x^y mod N` fent `y` **multiplicacions successives** per `x mòdul N`.
+$$ x \mbox{ mod } N \rightarrow x^2 \mbox{ mod } N \rightarrow x^3 \mbox{ mod } N \rightarrow \dots x^y \mbox{ mod } N$$
 
-$$ x \mbox{ mod } N \rightarrow x^2 \mbox{ mod } N \rightarrow x^3 \mbox{ mod } N \rightarrow
-\dots x^y \mbox{ mod } N$$
+Exemple:
 
-Les multiplicacions són de complexitat `O(n^2)`. Tots aquests resultats són menors que `N`
-i per tant hem solucionat el problema d'emmagatzemar a memòria nombres molt grans. Però..., quantes multiplicacions hem de fer?
+$$ 234^{345} \mbox{ mod } 7 = 234 \mbox{ mod } 7 \rightarrow 3 \times 234 \mbox{ mod } 7 \rightarrow 2 \times 234 \mbox{ mod } 7 \rightarrow \dots  $$
+
+Les multiplicacions són de complexitat `O(n^2)`. Tots aquests resultats són menors que `N` i per tant hem solucionat el problema d'emmagatzemar a memòria nombres molt grans. 
+
+Però..., quantes multiplicacions hem de fer?
 
 --
 
-El problema és que si `y` té `n` bits, **hem de fer `2^(n)` multiplicacions** de complexitat `O(n^2)`. Anem a una complexitat exponencial sobre `n`, la mida de `y`:
+El problema és que si `y` té `n` bits, **hem de fer `2^n` multiplicacions** de complexitat `O(n^2)`. 
 
-$$ O(2^n) $$
+Anem a una complexitat exponencial sobre `n`, la mida de `y`:
+
+$$ O(2^n * n^2) \approx O(2^n) $$
 
 ---
 
@@ -412,6 +516,9 @@ La **complexitat és `O(n^3)`**: `n` crides recursives i per cada una d'elles un
 ---
 name:euclides
 
+#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
+
 ## Algorisme d'Euclides
 
 La forma més obvia de trobar el **màxim comú divisor** de dos nombres és trobar els factors dels dos nombres i multiplicar llavors els seus factors comuns. Per exemple, el mcd de `1035` i `759`:
@@ -427,48 +534,12 @@ $${\displaystyle O\left(\exp \left(\left({\begin{matrix}{\frac {64}{9}}\end{matr
 
 per factoritzar un nombre de `n` bits.
 
-**Curiositat**: A la pàgina següent teniu un algorisme "ingenu" de factorització.
-
-
----
-```python
-from time import time
-from math import sqrt
-def primeListSofE(n, verbose = True) :
-    t = time()
-    sieve = [True for j in range(2,n+1)]
-    for j in range(2,int(sqrt(n))+1) :
-        i = j-2
-        if sieve[i]:
-            for k in range(j*j,n+1,j) :
-                sieve[k-2] = False
-    ret = [j for j in range(2,n+1) if sieve[j-2]] 
-    if verbose :
-        print ("Calculated primes to",n,"in",time()-t,"sec.")
-    return ret
-
-def factor(n) :
-    """ Factorització simple """
-    ret =[]
-    nn = n
-    maxFactor = int(n**0.5)
-    primes = primeListSofE(maxFactor)
-    for p in primes :
-        while nn % p == 0 :
-            nn //= p
-            ret += [p]
-        if nn == 1 :
-            break
-    if nn != 1 :
-        ret += [nn]
-    return ret
-
-factor(135565) >> [5, 19, 1427]
-```
-
 
 ---
 name:euclides
+
+#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
 
 ## Algorisme d'Euclides
 
@@ -487,6 +558,9 @@ gcd(1071, 462)
 Quina complexitat té per nombres grans?
 
 ---
+
+#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
 
 ## Algorisme d'Euclides
 
@@ -513,6 +587,7 @@ Comprovar si un nombre més o menys gran és primer per la via de la factoritzac
 
 Això podria fer dir que **provar la primeritat d’un nombre és un problema dur o impossible**, però això no és veritat: **només és dur si ho intentem pel camí de la factorització**!
 
+
 ---
 
 ## Nombres primers
@@ -525,9 +600,12 @@ Per fer-ho, ens basarem en un teorema de l'any 1640...
 --
 name:fermat
 
-** Teorema petit de Fermat**: 
+<div class=warnred>
 
-> Si `p` és primer, llavors per a qualsevol enter `a`, `1 <= a < p`, es compleix que `a^(p-1) % p = 1`.
+<b> Teorema petit de Fermat </b> <br>  
+
+Si <code>p</code> és primer, llavors per a qualsevol enter <code>a</code>, <code>1 <= a < p</code>, es compleix que <code>a^(p-1) % p = 1</code>.
+</div>
 
 > Si `41651` és primer, llavors `12^(41651 - 1) % 41651 = 1` 
 
