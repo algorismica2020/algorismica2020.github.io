@@ -1,4 +1,4 @@
-# Sessió en línia del dia 5/10/2020: Algorismes Numèrics
+# Sessió en línia del dia 5/10/2020: Algorismes Numèrics I
 
 Aquesta sessió té una durada aproximada de 90 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
 
@@ -62,8 +62,8 @@ def fib1(n):
         return fib1(n-1) + fib1(n-2)
 ```        
 
-+ Copia l'algorisme recursiu de Fibonacci i calcula el terme 10 i el terme 100: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
-+ Què ha passat quan has intentat calcular el terme 100?
++ Copia l'algorisme recursiu de Fibonacci a un notebook i calcula el terme 10 i el terme 100: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
++ Què ha passat quan has intentat calcular el terme 100? Per què?
 
 ---
 
