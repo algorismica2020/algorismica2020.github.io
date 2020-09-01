@@ -17,7 +17,7 @@
   + Contingut en línia: [Introducció als algorismes]   
   + Classe presencial: Python
 + 19/10: 
-  + Contingut en línia: [Algorismes Numèrics](http://algorismica2020.github.io/classes/deep0.html)
+  + Contingut en línia: [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
   + Classe presencial: 
 + 26/10: 
   + Contingut en línia: [Algorismes Numèrics]
