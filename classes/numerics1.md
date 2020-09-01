@@ -10,7 +10,7 @@ Recordeu que si voleu conservar els notebooks que obriu des d'aquesta pàgina he
 
 ### Video: Introducció als sistemes de numeració.
 
-Video de 6' sobre l'història dels sistemes de numeració, la seva relació amb les operacions aritmètiques i el concepote de base de representació.
+Video de 6' sobre l'història dels sistemes de numeració, la seva relació amb les operacions aritmètiques i el concepte de base de representació.
 
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
