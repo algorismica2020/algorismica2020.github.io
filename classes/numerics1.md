@@ -84,7 +84,7 @@ Video de 6' sobre el càlcul **no recursiu** de l'algorisme de Fibonacci.
 ---
 
 
-### Exercici: Algorisme de Fibonacci
+### Exercici: Un algorisme eficient per calcular els termes de la sèrie de Fibonacci
 
 ```python
 def fib3(n):
