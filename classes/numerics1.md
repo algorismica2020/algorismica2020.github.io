@@ -1,8 +1,8 @@
 # Sessió en línia del dia 5/10/2020: Algorismes Numèrics
 
-Aquesta sessió té una durada d'una hora i està formada per les següents unitats:
+Aquesta sessió té una durada aproximada de 90 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
 
-### Video d'introducció al tema.
+### Video: Introducció als sistemes de numeració.
 
 Video de 6' amb l'explicació de les transparències 3, 4, 5 i 6.
 
@@ -19,13 +19,13 @@ Fes els següents exercicis:
 + Canvi de base:
   + Pensa com seria l'algorisme que passa un nombre escrit en base 10 a base `a`, on `a` és un nombre enter positiu qualsevol. 
   + Codifica aquest algorisme en Python: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
-  + Comprova que l'algorisme és correcte fent servir aquest recurs: https://www.rapidtables.com/convert/number/base-converter.html
+  + Comprova que l'algorisme és correcte fent servir aquest recurs: [https://www.rapidtables.com/convert/number/base-converter.html](https://www.rapidtables.com/convert/number/base-converter.html)
 + Quin és el nombre enter més gran que puc representar usant 64 dígits en base 2?
 + Quin és el nombre enter més gran que puc representar usant 32 dígits en base 16?
 
 ---
 
-## Fibonacci.
+## Video: Fibonacci.
 
 Video de 6' amb l'explicació de Fibonacci.
 
@@ -36,18 +36,14 @@ Video de 6' amb l'explicació de Fibonacci.
 
 ---
 
-
-
-
+### Exercicis: Algorisme de Fibonacci
 
 + Copia l'algorisme recursiu de Fibonacci i calcula el terme 10 i el terme 100: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
 + Què ha passat quan has intentat calcular el terme 100? 
 
-
 ---
 
-
-## Recursivitat.
+## Video: Recursivitat.
 
 Video de 6' amb l'explicació de la recursivitat.
 
@@ -59,7 +55,7 @@ Video de 6' amb l'explicació de la recursivitat.
 ---
 
 
-## Altres versions de Fibonacci.
+## Video: Altres versions de Fibonacci.
 
 Video de 6' amb l'explicació amb llistes.
 
@@ -73,7 +69,7 @@ Video de 6' amb l'explicació amb llistes.
 
 
 
-## Algorisme de Fibonacci
+## Exercici: Algorisme de Fibonacci
 
 ```python
 def fib3(n):
@@ -92,7 +88,7 @@ fib3(10)
 
 ---
 
-## **Passos computacionals** d'un algorisme?
+## Video: **Passos computacionals** d'un algorisme
 
 
 Video de 8' amb l'explicació.
@@ -104,7 +100,7 @@ Video de 8' amb l'explicació.
 
 ---
 
-
+## Exercici
 
 + Escriu un algorisme que divideixi (ens retorni el quocient de) dos nombres enters, positius i més grans que 1, sense fer servir els operadors de multiplicació `*`, divisió `/` ni mòdul `%`: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
 
@@ -123,7 +119,7 @@ def divide(dividend, divisor):
 ```
 
 ---
-## La notació Gran O
+## Video: La notació Gran O
 
 
 Video de 10' amb l'explicació.
@@ -137,7 +133,7 @@ Video de 10' amb l'explicació.
 
 
 
-## Magnitud dels nombres. 
+## Video: Magnitud dels nombres. 
 
 
 
