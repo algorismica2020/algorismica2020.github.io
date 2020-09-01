@@ -22,6 +22,7 @@ Fes els següents exercicis:
   + Comprova que l'algorisme és correcte fent servir aquest recurs: https://www.rapidtables.com/convert/number/base-converter.html
 + Quin és el nombre enter més gran que puc representar usant 64 dígits en base 2?
 + Quin és el nombre enter més gran que puc representar usant 32 dígits en base 16?
+
 ---
 
 ## Fibonacci.
@@ -34,7 +35,8 @@ Video de 6' amb l'explicació de Fibonacci.
 
 
 ---
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
+
 
 
 
@@ -68,7 +70,8 @@ Video de 6' amb l'explicació amb llistes.
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
+
 
 ## Algorisme de Fibonacci
 
@@ -101,14 +104,14 @@ Video de 8' amb l'explicació.
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
 
 + Escriu un algorisme que divideixi (ens retorni el quocient de) dos nombres enters, positius i més grans que 1, sense fer servir els operadors de multiplicació `*`, divisió `/` ni mòdul `%`: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
 
 + Contesta les següents preguntes:
   + Quantes operacions (assignacions, comparacions, sumes i restes) fa quan calcula `90/10`?
 
-#### <p style="background-color: #33FFCE;">Solució</p>
+
 
 ```python
 def divide(dividend, divisor):  
@@ -132,7 +135,7 @@ Video de 10' amb l'explicació.
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
+
 
 ## Magnitud dels nombres. 
 
