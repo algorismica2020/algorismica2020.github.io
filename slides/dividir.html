@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation">
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool.">
+
+    <title>Algorismes: Dividir i Vèncer </title>
+
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/print.css" media="print">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, 
+      .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .red { color: #fa0000; }
+      .green { color: #00fa77; }
+      .blue { color: #0000fa; }
+      .light { color: #aaaaaa; }
+      .bold { font-family: 'Yanone Kaffeesatz'; font-size: 1.5em;
+              line-height: 0.9em;}
+      .code {font-family: 'Ubuntu Mono';}
+      .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.75em;
+        line-height: 0.4em;
+      }
+
+      .summary {
+        background:#003366;
+        color: #ffffcc;
+      }
+	  
+	  .summary a{
+        color: #ffddaa;
+	  }
+
+      .exam {
+        background: #802222;
+        color: #ffffcc;
+        text-shadow: 0 0 20px #333;
+      }
+
+      .inverse {
+        background: #800000;
+        color: #ffffcc;
+      }
+
+      .inverse h1, 
+      .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.6em;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    margin-bottom: 10px;
+}
+
+summary {
+    font-weight: normal;
+    padding: .5em;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+div.warnred {    
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+    border-left: 5px solid #dfb5b4;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+div.warnblue {    
+    background-color: #99ccff;
+    border-color: #dFb5b4;
+    border-left: 5px solid #0066ff;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+    </style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+  <body>
+  <textarea id="source">
+
+
+class: center, middle
+
+<center><img src="images/ub.png" width="150"></center>
+
+
+# **ALGORÍSMICA**
+## Algorismes Dividir i Vèncer
+
+
+Jordi Vitrià, Mireia Ribera
+
+.blue[jordi.vitria@ub.edu] |  .blue[ribera@ub.edu]
+
+---
+
+## La recursió
+
+Per poder comprendre l'estratègia de dividir i vèncer ens cal aprofundir en el concepte de la recursió. I l'estudiarem a través d'un exemple clàssic: les torres de Hanoi
+
+---
+name:Hanoi
+
+## Exemple: el problema de les torres de Hanoi
+
+
+<center><img src="images/hanoi.png" width="350"></center>
+
+There is a legend about an Indian temple which contains a large room with three time-worn posts in it surrounded by 64 golden disks. Brahmin priests, acting out the command of an ancient prophecy, have been moving these disks, in accordance with the rules of the puzzle, since that time. The puzzle is therefore also known as the Tower of Brahma puzzle. According to the legend, when the last move of the puzzle is completed, the world will end.
+
+If the legend were true, and if the priests were able to move disks at a rate of one per second, using the smallest number of moves, it would take them 
+`2^(64−1)` seconds or roughly 585 billion years; it would take 18,446,744,073,709,551,615 turns to finish.
+
+---
+
+## Exemple: el problema de les torres de Hanoi
+
+
+Les torres de Hanoi és un joc usat típicament com a exemple de **recursivitat**. 
+
+A l'inici estan col·locats de més gran a més petit en la primera vareta. El joc consisteix en passar tots els discs a la tercera vareta tenint en compte que només es pot canviar de vareta un disc cada vegada i que mai no podem tenir un disc col·locat sobre un que sigui més petit.
+
+La idea bàsica per resoldre-ho amb un algorisme recursiu és que:
+
++ Per poder passar la peça grossa de `A` a `C` cal passar les que estan a sobre de `A` a `B` amb l’ajut de `C`.
++ Llavors puc passar la peça que queda a `A` a `C` i oblidar-me d’ella, ja està ben col·locada!
++ Ara tinc la pila a `B`.  Per tant el que queda és passar les peces de `B` a `C` amb l’ajuda de `A` i ja hauré acabat.
+
+Aquesta idea bàsica es pot repetir recursivament!
+
+---
+
+## Exemple: el problema de les torres de Hanoi
+```python
+def moveTower(height,fromPole, toPole, withPole):  # height és el nombre de discs 
+    if height >= 1:                                # que hi ha al pal origen
+        moveTower(height-1,fromPole,withPole,toPole)
+        moveDisk(fromPole,toPole)
+        moveTower(height-1,withPole,toPole,fromPole)
+    return
+def moveDisk(fp,tp):
+    print("moving disk from",fp,"to",tp)
+
+moveTower(3,"A","B","C")
+```
+
+
+
+```python
+moving disk from A to B
+moving disk from A to C
+moving disk from B to C
+moving disk from A to B
+moving disk from C to A
+moving disk from C to B
+moving disk from A to B
+```
+
+Després veurem que la complexitat és exponencial `O(2^n)`.
+
+
+---
+
+## Exemple: el problema de les torres de Hanoi
+
+Les crides recursives generen aquest arbre (a cada node hi ha els paràmetres, que recordem eren: `height`, `fromPole`, `toPole`, `withPole`):
+
+<center><img src="images/hanoi1.png" width="550"></center>
+
+per exemple: `3ABC` vol dir que hi ha tres discs a `A`, que es mouran a `B` amb l'ajut de `C`; `1CAB` vol dir que hi ha 1 disc a `C`, que es mouran a `A` amb l'ajut de `B`.
+
+---
+
+## Exemple: el problema de les torres de Hanoi
+
+L'ordre de generació de la solució és:
+<center><img src="images/hanoi2.png" width="400"></center>
+
+```python
+def moveTower(height,fromPole, toPole, withPole): 
+    if height >= 1:
+        moveTower(height-1,fromPole,withPole,toPole)
+        moveDisk(fromPole,toPole)
+        moveTower(height-1,withPole,toPole,fromPole)
+    return
+```
+---
+
+## Exemple: el problema de les torres de Hanoi
+
++ Què passaria amb l'arbre si enlloc de 3 peces en tenim 4?
+
+--
+
+> *Que tindria un nivell més amb el doble de fulles.*
+
+--
+
++ Quantes vegades es crida recursivament la funció (quantes fulles i nodes te l'arbre) si tenim `n` peces?
+
+--
+
+$$ 1 + 2 + 4 + 8 + \dots + 2^n = \sum_{0}^n 2^i = 2^{n+1} - 1$$
+
+--
+
++ Quina és la complexitat de l'algorisme?
+
+--
+
+> *Si fa* `(2^(n+1)-1)` *crides i cada una de les crides com a màxim
+executa instruccions de cost* `O(1)`*, el cost és* `O(2^(n+1))`*. És a dir,  ordre exponencial,* `O(2^n)`.
+
+
+---
+name:divvenc
+
+## Algorismes de dividir i vèncer
+
+Dividir i vèncer és una **estratègia de resolució de problemes** consistent en:
+
++  Dividir un problema en subproblemes que són instàncies més petites (des del punt de vista de la mida de l'entrada) del mateix problema.
+
++  Resoldre recursivament aquests subproblemes.
+
++  Combinar adequadament les solucions dels subproblemes per trobar la solució del problema original.
+
+--
+
+Les **qüestions a resoldre** són tres:
+
++  Com anem dividint el problema en subproblemes de forma recursiva?
+
++  Com aturem la recursió i donem una solució al darrer subproblema?
+
++  Com combinem les solucions recursives per assolir la solució del problema complet?
+
+
+---
+
+## Exemple: Suma (recursiva) dels elements d'una llista.
+
+```python
+def sum(l):
+   if len(l) == 1:
+        return l[0]
+   else:
+        return l[0] + sum(l[1:])
+         
+a =[5,7,3,8,10]
+
+```
+
++ Quina complexitat té aquest algorisme?
+
+--
+> `O(n)` 
+<center><img src="images/suma recursiva.png" width="220" alt="una cadena amb un darrer element '4' amb un retorn de 4, un element '3,4' amb un retorn de 3 + 4 = 7, un element '7,3,4' amb un retorn de 7+7 = 14, un element '5,7,3,4' amb un retorn de 14+5=19"></center>
+
+
+---
+
+## Algorismes de dividir i vèncer: relacions de recurrència.
+
+L’esquema general d’aquests algorismes és: tenim un problema de mida `n`, que reformulem mitjançant la solució d’`a` problemes de mida `n/b` i llavors combinem les respostes en un temps `O(n^d)`. 
+
+La seva complexitat serà per tant:
+
+
+$$ T(n) = a T(n/b) + O(n^d) $$
+
+
+Aquest tipus de recurrència té una **solució tancada**, que està enunciada al **Teorema Master**.
+
+---
+
+name:master
+
+### Teorema Master
+
+___ 
+
+
+**Teorema:** Si `T(n)=aT(n/b)+O(n^d)` per algunes constants `a>0`, `b>1`, i `d>=0`, llavors:
+
++  **cas 1**: `T(n) = O(n^d) ` si `d > log_b a`  
++  **cas 2**: `T(n) = O(n^d log n) ` si `d = log_b a `
++  **cas 3**: `T(n) = O(n^(log_b a))` si `d < log_b a`
+
+___ 
+
+Fixeu-vos que en el cas 1 el que mana és el cost de la combinació de solucions per què `d` és molt gran. 
+
+En el cas 3, en canvi, el que mana és `log b` d'`a` que serà gran quan hi hagi molts subproblemes i no es redueixin gaire en cada divisió. 
+
+En el cas 2 àmbdues complexitats estan equilibrades.
+
+---
+
+## Algorismes de dividir i vèncer: relacions de recurrència.
+
+** Exemple:**
+
+Si tenim un determinat problema que es pot  dividir en 2 subproblemes (`a = 2`), cada un dels quals processa unes dades que són `1/2` de les originals (`b = 2`), i la reconstrucció de la solució en costa `O(n^2)`...
+
+--
+
+... podem aplicar el cas (1) del teorema Master, perquè `2>log_2=1` ...
+
+--
+
+i per tant resulta `O(n^2)`.
+
+---
+
+## Algorismes de dividir i vèncer per ordenar: *mergesort* i *quicksort*
+
+A continuació veurem dos algorismes que ens ajudaran a ordenar una llista de forma més eficient, concretament amb una complexitat d'`O(n log n)`. 
+
+Cadascun usa alguna funció auxiliar per preparar (`partition` al *quicksort*) o per recombinar (`merge` al *mergesort*) els subproblemes en que es basa la divisió.
+
+---
+name:mergesort
+
+
+## Algorismes de dividir-i-vèncer: **merge**
+
+
+Suposem que tenim dos conjunts de cartes, amb `n` elements cada un, que estan ordenats de menor a major (quan les posem de cara la més petita està al davant). En aquest cas concret podem obtenir una llista ordenada barrejant les dues si seguim aquests passos:
+
+1. Comparem les dues cartes de sobre de tot de cada conjunt i escollim la més petita, que posem a un nou conjunt de cartes ordenades (pel darrera, si n’hi ha alguna).
+2. Repetim 1 fins que un dels conjunts estigui buit, i el conjunt que encara té cartes l’afegim per darrera al conjunt de cartes ordenades.
+
+El resultat és un conjunt de cartes ordenades!
+
+
+
+---
+
+## Algorismes de dividir-i-vèncer: **merge**
+
+<center><img src="images/merge1.png" width="650" alt="es mostren els passos successius de barregar dues piles de 4 cartes cadascuna"></center>
+
+
+---
+
+## Algorismes de dividir-i-vèncer: **merge**
+
+<center><img src="images/merge2.png" width="650" alt="es mostren els darrers passos per barregar les dues piles anteriors i el resultat ordenat"></center>
+
+
+---
+
+## Algorismes de dividir-i-vèncer: **mergesort**
+
+Però en el cas general no partim de dos conjunts de cartes ordenades! 
+
+`merge` és una funció auxiliar de l'algorisme general d'ordenació *mergesort*.
+
+El que podem fer és descomposar el problema en subproblemes més petits fins que arribem als casos que sabem resoldre!
+
+Això ho podem expressar recursivament:
+
+```python
+def mergesort(list):
+    if len(list) < 2:
+        return list
+    else:
+        middle = len(list) // 2
+        left = mergesort(list[:middle])
+        right = mergesort(list[middle:])
+        return merge(left, right)
+```
+
+La correcció d’aquest algorisme és evident, sempre i quan definim bé la funció `merge`. 
+
+---
+
+## Algorismes de dividir-i-vèncer: **mergesort**
+
+<center><img src="images/merge3.png" width="550" alt="diagrama amb els passos de divisió i ordenació de la llista 1,5,8,3,4,2,1,0"></center>
+
+
+---
+
+## Algorismes de dividir-i-vèncer: **merge**
+
+La funció `merge` també la podem definir recursivament:
+
+```python
+def merge(x,y):
+    if len(x) < 1:
+        return y
+    if len(y) < 1:
+        return x
+    if x[0] <= y[0]:
+        return [x[0]] + merge(x[1:],y)
+    else:
+        return [y[0]] + merge(x,y[1:])
+
+```
+
+Aquesta funció es pot definir també de forma NO recursiva, i és simplement anar comparant i copiant de forma ordenada els dos vectors en un nou vector.
+
+---
+
+## Algorismes de dividir-i-vèncer: **merge**
+
+La versió no recursiva de `merge` seria aquesta:
+
+```python
+def merge(left, right):
+    result = []
+    i ,j = 0, 0
+    while(i < len(left) and j < len(right)):
+        if (left[i] <= right[j]):
+            result.append(left[i])
+            i = i + 1
+        else:
+            result.append(right[j])
+            j = j + 1
+
+    result += left[i:]
+    result += right[j:]
+    return result
+
+```
+---
+
+## Algorismes de dividir-i-vèncer: **mergesort**
+
+Quina és la complexitst d'aquest algorisme?
+
+La funció `merge` té una complexitat per cada crida recursiva `O(n)` (en el pitjor dels casos). Com que aquesta és la funció que usem per combinar les solucions parcials, `d=1`.
+
+Quan dividim creem 2 problemes, de mida `n/2`. Per tant, com que `a=2` i `b=2`, `log_b a = 1`, que és igual a `d`, podem aplicar el cas 2 del teorema Master: **`mergesort` té una complexitat `O(n log n)`.**
+
+La funció mergesort es pot implementar iterativament, de forma no recursiva, en la seva totalitat, però per fer-ho necessitem una estructura que no veurem en aquesta assignatura: la cua.
+
+---
+name:quicksort
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+
+**Quicksort** és un altre algorisme d’ordenació basat en l’estratègia de dividir i vèncer.
+
+Aquest algorisme divideix el vector basant-se en els valors dels elements que conté: reordena els elements per aconseguir una **partició**, una situació en la que tots els elements anteriors a una posició `s` siguin menors o iguals que `A[s]` i tots els elements posteriors a la posició `s` siguin majors o iguals que `A[s]`:
+
+`A[0] ... A[s-1] <= A[s] <=  A[s+1] ... A[n-1]`
+
+L'element `A[s]` s'anomena **pivot**. 
+
+> Per exemple:
+
+> `3  56 34 2 <= 99 <= 134 345 111`
+
+> és una partició de la llista `[3  99 56 134 34 2 345 111]`
+
+---
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+Òbviament, si tenim aquesta situació, `A[s]` ja està al seu lloc i no s’haurà de moure, i podem passar a ordenar el que hi ha a ambdues bandes:
+
+```python
+
+def quick_sort(A):
+    quick_sort_r(A, 0, len(A) - 1)    # quicksort_r té més paràmetres per 
+                                      # facilitar les crides recursives
+
+def quick_sort_r(A , first, last):  # A és la llista, first i last els índexs 
+                                      # entre els quals cal ordenar
+    if last > first:
+        pivot = partition(A, first, last) # dividim el problema
+        quick_sort_r(A, first, pivot - 1) # ordenem part esquerra
+        quick_sort_r(A, pivot + 1, last)  # ordenem part dreta
+``` 
+---
+
+## Algorismes de dividir-i-vèncer: **partition**
+
+
+Com calculem la partició d’una llista `A`?
+
++ Primer seleccionem un element, respecte del qual dividirem la subllista, que anomenarem el **pivot**. Per exemple, escollim `pivot=A[first]`.
+
++ Després hem de reordenar per aconseguir una partició.  Això ho podem fer amb dues passades (d’esquerra a dreta i de dreta a esquerra) de la llista.
+
+  + La passada d’esquerra a dreta `(i)` comença pel segon element `i`  no s’atura fins trobar un element més gran o igual que el pivot `(p)`. 
+
+  + La passada de dreta a esquerra `(j)` comença per l’últim element i s’atura quan troba un element més petit o igual que el pivot.
+
+---
+
+## Algorismes de dividir-i-vèncer: **partition**
+
+Quan les dues passades s’aturen, ens podem trobar en tres situacions:
+
+<center><img src="images/quicksort1.png" width="650" alt="primer cas i és més petit que j, intercanviem i fem avançar i i j; segon cas: j és més petit que i, intercanviem el pivot i A[j]; tercer cas: i=j, tenim el vector partit i la posició de partició és i=j"></center>
+
+
+---
+## Algorismes de dividir-i-vèncer: **partition**
+
+
+```python
+def partition(A, first, last):
+    # ordenem A[first],A[mid],A[last]
+    mid = (first + last)//2  
+    if A[first] > A [mid]: A[first], A[mid] = A[mid], A[first]
+    if A[first] > A [last]: A[first], A[last] = A[last], A[first]
+    if A[mid] > A[last]:   A[mid], A[last] = A[last], A[mid]  
+    A[mid], A[first] = A[first], A[mid] 
+  # inicialitzem pivot, i i j
+    pivot = first
+    i = first + 1
+    j = last
+    while True:
+      # anem avançant
+        while i <= last and A[i] <= A[pivot]: i += 1
+        while j >= first and A[j] > A[pivot]: j -= 1
+        if i >= j: break
+        else:
+            A[i], A[j] = A[j], A[i] # intercanviem, fem avançar i j
+    A[j], A[pivot] = A[pivot], A[j] # vector partit, pivot=j
+    return j
+
+quick_sort([3,7,2,4,1,80])
+>>> [1,2,3,4,7,80]
+```
+---
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+
+<center><img src="images/quicksort2.png" width="500" alt="passos de l'algorisme quicksort"></center>
+
+---
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+
+<center><img src="images/quicksort3.png" width="500" alt="passos de l'algorisme quicksort"></center>
+
+---
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+
+<center><img src="images/quicksort4.png" width="500" alt="passos de l'algorisme quicksort"></center>
+
+---
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+
+<center><img src="images/quicksort5.png" width="500" alt="passos de l'algorisme quicksort"></center>
+
+---
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+
+<center><img src="images/quicksort6.png" width="500"></center>
+
+**Quicksort** és l’algorisme que fa servir Linux/Unix per ordenar amb la seva instrucció `sort`.  
+
+---
+
+## Algorismes de dividir-i-vèncer: **quicksort**
+
+Quina és l’eficiència del quicksort?
+
+> Observació: el nombre de comparacions que fa abans d’una partició són `n+1` si els índexs es creuen i `n` si coincideixen.
+
+Si totes les particions passen al mig del vector tenim **el millor cas**, i el nombre de comparacions serà:
+
+`T(n) = 2 T(n/2) + n`, que segons el teorema Master és `O(n log n)`.
+
+En **el pitjor cas** (p.e. [4,3,2,1,0]), totes les particions són als extrems (alguna de les subllistes estarà buida), llavors el nombre de comparacions serà `T(n) = O(n^2)`. 
+> Observació:  Sempre podem desordenar la llista al principi i aquest cas no existirà mai! 
+
+
+En el **cas promig** el nombre de comparacions serà `O(1,38 n log_2 n)`, és a dir, un 38% més de comparacions que en el millor cas.
+
+La complexitat se seguiria expressant com a **O(n log n)**.
+
+---
+
+
+name:mediana
+
+## Algorismes de dividir-i-vèncer: càlcul de la **mediana**
+
+La mediana de `[45,1,10,30,25]` és `25`, perquè la **mediana** es defineix com l’element que queda al mig del vector si ordenem els seus elements. Per tant, la seva implementació directa és `O(n log n)`.
+
+**Ho podem fer lineal?**
+
+--
+
+Considerem el següent problema (que subsumeix el problema de la mediana): 
+
+>Entrada: Una llista de nombres `S`; un enter `k`. 
+
+>Sortida: El `k`-èssim element més petit de `S`.
+
+Per exemple, si `k=1`, la sortida hauria de ser el valor mínim de `S`.
+
+
+---
+## Algorismes de dividir-i-vèncer: càlcul de la mediana
+
+
+Anem a plantejar una solució de dividir i vèncer.
+
+Suposem un  nombre qualsevol `v` i que fem una partició de la llista segons aquest nombre (per exemple, `v=5`) en tres parts, `Sleft`, `Sv` i `Sright`:
+
+
+<center><img src="images/mediana1.png" width="650" alt="la llista [2,36,5,21,8,13,11,20,5,4,1] queda partida en Sleft = [2,4,1], elements més petits que v, Sv = [5,5], elements iguals a v, Sright = [36,21,8,13,11,20] elements més grans que v"></center>
+
+
+---
+
+## Algorismes de dividir-i-vèncer: càlcul de la mediana
+
+
+Ara la cerca es podria limitar a una de les tres subllistes: si busquéssim el 8è element, ha de ser el tercer element més petit de `Sright` atès que a `Sleft` i `Sv` hi ha un total de 5 elements.
+
+En general:
+
+<center><img src="images/mediana2.png" width="650" alt="selection(S,k) = selection(Sleft,k) si k<=len(Sleft); v si k>len(Sleft) i k<=Sleft+Sv; selection(Sright, k-len(Sleft)-len(Sv) si k>length(Sleft)+len(Sv)"></center>
+
+
+Aquestes subllistes es podem calcular en temps lineal!
+
+---
+
+## Algorismes de dividir-i-vèncer: càlcul de la mediana
+
+
+Ja tenim l’algorisme recursiu definit, però encara no sabem com definir `v`. 
+
+L’ideal seria que `v` partís les llistes per la meitat. Aleshores la complexitat seria `T(n) = T(n/2) + O(n)`, que és una complexitat lineal!!
+
+--
+
+
+
+La solució és triar-lo de forma aleatòria cada vegada!
+
++ En el pitjor cas farem: ` n + (n-1) + (n-2) + ...  = O(n^2)`. 
+
++ En el millor cas farem `O(n)`. 
+
++ En el cas promig es pot demostrar que és `O(n)`.  
+
+
+---
+
+## Algorismes de dividir-i-vèncer: càlcul de la mediana
+
+
+
+```python
+import random
+def kSelect(A,k,length):  # escollim una posició r random( 1 - length(A))
+        n = length-1
+        r = random.randint(0, length-1)
+        A1 = []
+        A2 = []
+        pivot = A[r]
+        for i in range ( 0 , n+1):  # construim la llista més petita i la més gran
+                if A[i] < pivot :  A1.append(A[i])
+                if A[i] > pivot :  A2.append(A[i])
+        if k <= len(A1): # cerquem a la llista dels elements mes petits
+                return kSelect(A1, k ,len(A1))
+
+        if k > len(A) - len(A2): # cerquem a la llista dels elements mes grans
+                return kSelect(A2, k-(len(A)-len(A2)),len(A2))
+        else :  
+      return pivot
+```
+
+
+
+</textarea>
+  <script src="common/remark-latest.min.js"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true
+    });
+    var slideshow = remark.create({
+                // Set the slideshow display ratio
+                // Default: '4:3'
+                // Alternatives: '16:9', ...
+                ratio: '4:3',
+
+                // Navigation options
+                navigation: {
+                  // Enable or disable navigating using scroll
+                  // Default: true
+                  // Alternatives: false
+                  scroll: true,
+
+                  // Enable or disable navigation using touch
+                  // Default: true
+                  // Alternatives: false
+                  touch: true,
+
+                  // Enable or disable navigation using click
+                  // Default: false
+                  // Alternatives: true
+                  click: false
+                },
+
+                // Customize slide number label, either using a format string..
+                slideNumberFormat: 'Slide %current% of %total%',
+                // .. or by using a format function
+                slideNumberFormat: function (current, total) {
+                  return 'Slide ' + current + ' of ' + total;
+                },
+
+                // Enable or disable counting of incremental slides in the slide counting
+                countIncrementalSlides: true
+              }); 
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+  <script type="text/javascript">
+// Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+  </script>
+</body>
+
+</html>
