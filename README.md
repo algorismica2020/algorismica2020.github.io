@@ -8,13 +8,13 @@
 
 ## Classes
 + Setmana del 28/9: 
-  + Contingut en línia: [Python](http://algorismica2020.github.io/classes/python1.md)   
+  + Contingut en línia: [Python]   
   + Classe presencial: Introdució al funcionament de l'assignatura; Eines de programació: Python, Jupyter, Colab.
 + 5/10:
-  + Contingut en línia: [Python](http://algorismica2020.github.io/classes/python2.md)   
+  + Contingut en línia: [Python]   
   + Classe presencial: Python
 + 12/10: 
-  + Contingut en línia: [Introducció als algorismes](http://algorismica2020.github.io/classes/intro.md)   
+  + Contingut en línia: [Introducció als algorismes]   
   + Classe presencial: Python
 + 19/10: 
   + Contingut en línia: [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.md)
