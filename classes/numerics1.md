@@ -2,6 +2,8 @@
 
 Aquesta sessió té una durada aproximada de 90 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
 
+---
+
 ### Video: Introducció als sistemes de numeració.
 
 Video de 6' amb l'explicació de les transparències 3, 4, 5 i 6.
@@ -25,7 +27,7 @@ Fes els següents exercicis:
 
 ---
 
-## Video: Fibonacci.
+### Video: Fibonacci.
 
 Video de 6' amb l'explicació de Fibonacci.
 
@@ -43,7 +45,7 @@ Video de 6' amb l'explicació de Fibonacci.
 
 ---
 
-## Video: Recursivitat.
+### Video: Recursivitat.
 
 Video de 6' amb l'explicació de la recursivitat.
 
@@ -55,7 +57,7 @@ Video de 6' amb l'explicació de la recursivitat.
 ---
 
 
-## Video: Altres versions de Fibonacci.
+### Video: Altres versions de Fibonacci.
 
 Video de 6' amb l'explicació amb llistes.
 
@@ -69,7 +71,7 @@ Video de 6' amb l'explicació amb llistes.
 
 
 
-## Exercici: Algorisme de Fibonacci
+### Exercici: Algorisme de Fibonacci
 
 ```python
 def fib3(n):
@@ -88,7 +90,7 @@ fib3(10)
 
 ---
 
-## Video: **Passos computacionals** d'un algorisme
+### Video: **Passos computacionals** d'un algorisme
 
 
 Video de 8' amb l'explicació.
@@ -100,7 +102,7 @@ Video de 8' amb l'explicació.
 
 ---
 
-## Exercici
+### Exercicis
 
 + Escriu un algorisme que divideixi (ens retorni el quocient de) dos nombres enters, positius i més grans que 1, sense fer servir els operadors de multiplicació `*`, divisió `/` ni mòdul `%`: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
 
@@ -119,7 +121,7 @@ def divide(dividend, divisor):
 ```
 
 ---
-## Video: La notació Gran O
+### Video: La notació Gran O
 
 
 Video de 10' amb l'explicació.
@@ -133,7 +135,7 @@ Video de 10' amb l'explicació.
 
 
 
-## Video: Magnitud dels nombres. 
+### Video: Magnitud dels nombres. 
 
 
 
