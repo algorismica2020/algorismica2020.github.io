@@ -36,14 +36,7 @@ Video de 6' sobre l'arribada a Europa del sistema decimal i el paper que hi va j
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
 </center>
-
-
----
-
-### Exercicis: Algorisme de Fibonacci
-
-+ Copia l'algorisme recursiu de Fibonacci i calcula el terme 10 i el terme 100: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
-+ Què ha passat quan has intentat calcular el terme 100? 
+ 
 
 ---
 
@@ -55,6 +48,22 @@ Video de 6' sobre el càlcul **recursiu** de l'algorisme de Fibonacci.
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
 </center>
 
+---
+
+### Exercicis: Algorisme de Fibonacci
+
+```python
+def fib1(n):
+    if n==0:
+        return n
+    if n==1:
+        return n
+    else:
+        return fib1(n-1) + fib1(n-2)
+```        
+
++ Copia l'algorisme recursiu de Fibonacci i calcula el terme 10 i el terme 100: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
++ Què ha passat quan has intentat calcular el terme 100?
 
 ---
 
