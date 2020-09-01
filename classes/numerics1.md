@@ -3,7 +3,7 @@
 Aquesta sessió té una durada aproximada de 90 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
 Es recomana seguir aquests continguts en el mateix ordre que apareixen en aquesta pàgina.
 
-> :warning:   Recordeu que si voleu conservar els notebooks que obriu des d'aquesta pàgina heu de baixar-los al vostre ordinador abans de tancar Colab.
+!!  Recordeu que si voleu conservar els notebooks que obriu des d'aquesta pàgina heu de baixar-los al vostre ordinador abans de tancar Colab.
 
 ---
 
