@@ -11,12 +11,39 @@
   + Contingut en línia: [Python](http://algorismica2020.github.io/classes/python1.html)   
   + Classe presencial: Introdució al funcionament de l'assignatura; Eines de programació: Python, Jupyter, Colab.
 + 5/10:
-  + Contingut en línia:    
-  + Classe presencial: 
+  + Contingut en línia: [Python](http://algorismica2020.github.io/classes/python2.html)   
+  + Classe presencial: Python
 + 12/10: 
-  + Contingut en línia:    
+  + Contingut en línia: [Introducció als algorismes](http://algorismica2020.github.io/classes/intro.html)   
+  + Classe presencial: Python
++ 19/10: 
+  + Contingut en línia: [Algorismes Numèrics]
   + Classe presencial: 
-
++ 26/10: 
+  + Contingut en línia: [Algorismes Numèrics]
+  + Classe presencial: 
++ 2/11: 
+  + Contingut en línia: [Algorismes Numèrics]   
+  + Classe presencial: 
++ 9/11: 
+  + Contingut en línia: [Algorismes per cadenes de caràcters]   
+  + Classe presencial: 
++ 16/11: 
+  + Contingut en línia: [Algorismes de Força Bruta]    
+  + Classe presencial: 
++ 23/11: 
+  + Contingut en línia: [Algorismes de Dividir i Vèncer]   
+  + Classe presencial: 
++ 30/11: 
+  + Contingut en línia: [Algorismes de Dividir i Vèncer]   
+  + Classe presencial: 
++ 7/12: Festiu
++ 14/12: 
+  + Contingut en línia: [Algorismes de Cerca]   
+  + Classe presencial: 
++ 21/12: 
+  + Contingut en línia: [El problema del viatjant de comerç]   
+  + Classe presencial: 
 ## Apunts de teoria de l'assignatura
 +  Teoria: [Python](http://algorismica2020.github.io/slides/python.html)   
 +  Teoria: [Introducció](http://algorismica2020.github.io/slides/introduccio.html) 
