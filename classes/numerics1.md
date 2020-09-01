@@ -6,7 +6,7 @@ Aquesta sessió té una durada aproximada de 90 minuts i està formada per algun
 
 ### Video: Introducció als sistemes de numeració.
 
-Video de 6' amb l'explicació de les transparències 3, 4, 5 i 6.
+Video de 6' sobre l'història dels sistemes de numeració, la seva relació amb les operacions aritmètiques i el concepote de base de representació.
 
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
@@ -16,12 +16,14 @@ Video de 6' amb l'explicació de les transparències 3, 4, 5 i 6.
 
 ### Exercicis: Bases i Nombres
 
-Fes els següents exercicis:
+Fes els següents exercici:
 
 + Canvi de base:
   + Pensa com seria l'algorisme que passa un nombre escrit en base 10 a base `a`, on `a` és un nombre enter positiu qualsevol. 
   + Codifica aquest algorisme en Python: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
   + Comprova que l'algorisme és correcte fent servir aquest recurs: [https://www.rapidtables.com/convert/number/base-converter.html](https://www.rapidtables.com/convert/number/base-converter.html)
+  
+Intenta contestar de forma justificada les seguents preguntes:
 + Quin és el nombre enter més gran que puc representar usant 64 dígits en base 2?
 + Quin és el nombre enter més gran que puc representar usant 32 dígits en base 16?
 
@@ -29,7 +31,7 @@ Fes els següents exercicis:
 
 ### Video: Fibonacci.
 
-Video de 6' amb l'explicació de Fibonacci.
+Video de 6' sobre l'arribada a Europa del sistema decimal i el paper que hi va jugar Fibonacci. Definició i algorisme per calcular la célebre serie de Fibonaci. 
 
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
@@ -47,7 +49,7 @@ Video de 6' amb l'explicació de Fibonacci.
 
 ### Video: Recursivitat.
 
-Video de 6' amb l'explicació de la recursivitat.
+Video de 6' sobre el càlcul **recursiu** de l'algorisme de Fibonacci.
 
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
@@ -59,7 +61,7 @@ Video de 6' amb l'explicació de la recursivitat.
 
 ### Video: Altres versions de Fibonacci.
 
-Video de 6' amb l'explicació amb llistes.
+Video de 6' sobre el càlcul **no recursiu** de l'algorisme de Fibonacci.
 
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
@@ -67,8 +69,6 @@ Video de 6' amb l'explicació amb llistes.
 
 
 ---
-
-
 
 
 ### Exercici: Algorisme de Fibonacci
@@ -93,7 +93,7 @@ fib3(10)
 ### Video: **Passos computacionals** d'un algorisme
 
 
-Video de 8' amb l'explicació.
+Video de 8' amb la introducció al càlcul del cost computacional d'un algorisme.
 
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
@@ -124,7 +124,7 @@ def divide(dividend, divisor):
 ### Video: La notació Gran O
 
 
-Video de 10' amb l'explicació.
+Video de 10' amb una introducció a la notació Gran O
 
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
@@ -135,7 +135,7 @@ Video de 10' amb l'explicació.
 
 
 
-### Video: Magnitud dels nombres. 
+### Material addicional. 
 
 
 
