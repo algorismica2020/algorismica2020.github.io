@@ -1,6 +1,5 @@
 # Sessió en línia del dia 5/10/2020
----
-name:sistnum
+
 
 ## Sobre la representació dels nombres.
 
@@ -9,8 +8,6 @@ Video de 6' amb l'explicació de les transparències 3, 4, 5 i 6.
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
 </center>
-
----
 
 
 #### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
