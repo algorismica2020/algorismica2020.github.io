@@ -6,7 +6,18 @@
 
 > **AVÍS**: Degut a l'estat d'emergència sanitaria creat per la COVID-19, aquesta assignatura es farà durant el curs 2020-2021 en modalitat d'aprenentatge combinat (blended learning), fent servir sessions presencials i aprenentatge en línia asíncron.
 
-## Apunts de l'assignatura
+## Classes
++ Setmana del 28/9: 
+  + Contingut en línia: [Python](http://algorismica2020.github.io/classes/python1.html)   
+  + Classe presencial: Introdució al funcionament de l'assignatura; Eines de programació: Python, Jupyter, Colab.
++ 5/10:
+  + Contingut en línia:    
+  + Classe presencial: 
++ 12/10: 
+  + Contingut en línia:    
+  + Classe presencial: 
+
+## Apunts de teoria de l'assignatura
 +  Teoria: [Python](http://algorismica2020.github.io/slides/python.html)   
 +  Teoria: [Introducció](http://algorismica2020.github.io/slides/introduccio.html) 
 +  Teoria: [Algorismes Numèrics 1](http://algorismica2020.github.io/slides/numerics1.html)  
