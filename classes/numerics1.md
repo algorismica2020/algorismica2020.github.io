@@ -1,7 +1,8 @@
 # Sessió en línia del dia 5/10/2020: Algorismes Numèrics
 
+Aquesta sessió té una durada d'una hora i està formada per les següents unitats:
 
-## Video d'introducció al tema.
+### Video d'introducció al tema.
 
 Video de 6' amb l'explicació de les transparències 3, 4, 5 i 6.
 
@@ -11,7 +12,7 @@ Video de 6' amb l'explicació de les transparències 3, 4, 5 i 6.
 
 ---
 
-## Bases i Nombres
+### Exercicis: Bases i Nombres
 
 Fes els següents exercicis:
 
