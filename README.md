@@ -8,53 +8,53 @@
 
 ## Classes
 + Setmana del 28/9: 
-  + Contingut en línia: [Python]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Mireia): [Python]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: Introdució al funcionament de l'assignatura; Eines de programació: Python, Jupyter, Colab.
 + 5/10:
-  + Contingut en línia: [Python]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Mireia): [Python]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: Python
 + 12/10: 
-  + Contingut en línia: [Introducció als algorismes]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", ""   
+  + Contingut en línia (Jordi): [Introducció als algorismes]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", ""   
   + Classe presencial: Python
 + 19/10: 
-  + Contingut en línia: [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
-  + Practica: Resoldre els problemes del llibre següents: "", "", ""   
+  + Contingut en línia (Jordi): [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", ""   
   + Classe presencial: 
 + 26/10: 
-  + Contingut en línia: [Algorismes Numèrics]
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Jordi): [Algorismes Numèrics]
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 2/11: 
-  + Contingut en línia: [Algorismes Numèrics]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Jordi): [Algorismes Numèrics]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 9/11: 
-  + Contingut en línia: [Algorismes per cadenes de caràcters]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 16/11: 
-  + Contingut en línia: [Algorismes per cadenes de caràcters]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 23/11: 
-  + Contingut en línia: [Algorismes de Força Bruta] 
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Mireia): [Algorismes de Força Bruta] 
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 30/11: 
-  + Contingut en línia: [Algorismes de Dividir i Vèncer]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 7/12: Festiu
 + 14/12: 
-  + Contingut en línia: [Algorismes de Dividir i Vèncer]   
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 21/12: 
   + Contingut en línia: [Algorismes de Cerca]  
-  + Practica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: [El problema del viatjant de comerç]
 
 ## Apunts 
