@@ -22,15 +22,15 @@
 + 19/10: 
   + Contingut en línia (Jordi): [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
   + Pràctica: Resoldre els problemes del llibre següents: "", "", ""   
-  + Classe presencial: 
+  + Classe presencial: **Examen curt de teoria**; 
 + 26/10: 
   + Contingut en línia (Jordi): [Algorismes Numèrics]
   + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 2/11: 
   + Contingut en línia (Jordi): [Algorismes Numèrics]   
-  + **Examen parcial (teoria + problemes) a l'hora de pràctiques**
-  + Classe presencial: 
+  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
+  + Classe presencial: **Examen curt de teoria**; 
 + 9/11: 
   + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
   + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
@@ -42,7 +42,7 @@
 + 23/11: 
   + Contingut en línia (Mireia): [Algorismes de Força Bruta] 
   + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
-  + Classe presencial: 
+  + Classe presencial: **Examen curt de teoria**
 + 30/11: 
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
   + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
@@ -55,11 +55,11 @@
 + 21/12: 
   + Contingut en línia (Mireia): [Algorismes de Cerca]  
   + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
-  + Classe presencial: [El problema del viatjant de comerç]
+  + Classe presencial: **Examen curt de teoria**; [El problema del viatjant de comerç]
 
-## Apunts 
+## Material d'estudi 
 
-Els apunts de cada tema de teoria es poden trobar aquí:
+Els apunts de la teoria de cada tema els podeu trobar aquí aquí:
 
 +  Teoria: [Python](http://algorismica2020.github.io/slides/python.html)   
 +  Teoria: [Introducció](http://algorismica2020.github.io/slides/introduccio.html) 
@@ -70,4 +70,4 @@ Els apunts de cada tema de teoria es poden trobar aquí:
 +  Teoria: [Algorismes de Dividir i Vèncer](http://algorismica2020.github.io/slides/dividir.html) 
 +  Teoria: [Algorismes de Cerca](http://algorismica2020.github.io/slides/cerca.html) 
 
-
+També podeu trobar un manuel de problemes (alguns resolts i alguns pers resoldre) aquí: [Link al llibre de l'assignatura en pdf]
