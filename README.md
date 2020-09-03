@@ -29,7 +29,7 @@
   + Classe presencial: 
 + 2/11: 
   + Contingut en línia (Jordi): [Algorismes Numèrics]   
-  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
+  + **Examen parcial (teoria + problemes) a l'hora de pràctiques**
   + Classe presencial: 
 + 9/11: 
   + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
@@ -53,7 +53,7 @@
   + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: 
 + 21/12: 
-  + Contingut en línia: [Algorismes de Cerca]  
+  + Contingut en línia (Mireia): [Algorismes de Cerca]  
   + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
   + Classe presencial: [El problema del viatjant de comerç]
 
