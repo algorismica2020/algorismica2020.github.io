@@ -9,34 +9,34 @@
 ## Classes
 + Setmana del 28/9: 
   + Classe presencial: 
-    + Introdució al funcionament de l'assignatura; 
-    + Què és l'algorísmica?; 
+    + Introdució al funcionament de l'assignatura. 
+    + Què és l'algorísmica?
     + Eines de programació: Python, Jupyter, Colab.
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
     + Problemes de  Notebook basics Variables, exercicis 1-8 i 10-13. L'exercici 9 és optatiu. 
 + Setmana del 5/10:
   + Classe presencial: 
-    + Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercicis 1 i 2; 
-    + Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercicis 1 i 2; 
+    + Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercicis 1 i 2.
+    + Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercicis 1 i 2.
     + Problemes de  Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
-    + Problemes de  Notebook basics control. Exercici 1; 
-    + Problemes de  Notebook basics cadenes. Exercici 1 i 2; 
+    + Problemes de  Notebook basics control. Exercici 1.
+    + Problemes de  Notebook basics cadenes. Exercici 1 i 2. 
     + Problemes de  Notebook basics Llistes. Exercici 1, 2, 6, 7, 8 i 9. 
 + Setmana del 12/10: 
   + Classe presencial: 
     + 2.8 (Factorial menor)
-    + 2.10 (Sumatori de parelles),
+    + 2.10 (Sumatori de parelles)
     + 2.14 (Nombres apocalíptics)
     + 2.17 (Avet). 
   + Contingut en línia (Jordi): [Introducció als algorismes]   
   + Pràctica (problemes del llibre): 
     + 1.1 (Notació Gran O),
-    + 2.1 (Conversió Celsius a Fahrenheit i convert0a50), 
-    + 2.2 (Inversió económica, Futval2), 
-    + 2.3 (Condicionals. Prou cerveses), 
+    + 2.1 (Conversió Celsius a Fahrenheit i convert0a50) 
+    + 2.2 (Inversió económica, Futval2) 
+    + 2.3 (Condicionals. Prou cerveses) 
     + 2.5 (Capicua)
 
 + Setmana del 19/10: 
