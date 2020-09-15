@@ -111,7 +111,7 @@
 + 21/12: 
   + Classe presencial: 
     + **Examen curt de teoria**; 
-    + [El problema del viatjant de comerç](Traveling Salesman Problem_def.ipynb)
+    + qwd [El problema del viatjant de comerç](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/Traveling%20Salesman%20Problem_def.ipynb)
     + 5.15(Menor i major relatius)
   + Contingut en línia (Mireia): [Algorismes de Cerca]  
   + Pràctica: 
