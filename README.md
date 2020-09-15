@@ -14,7 +14,8 @@
 + 5/10:
   + Classe presencial: Repàs teoria de Python; Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercici 1, Exercici 2; Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercici 1 i Exercici 2; Problemes de Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
-  + Pràctica: Resoldre els problemes del Notebook basics control. Exercici 1; Notebook basics cadenes Exercici 1, 2; Notebook basics Llistes Exercici 1, 2, 6, 7, 8, 9. 
+  + Pràctica: 
+    + Notebook basics control. Exercici 1; Notebook basics cadenes Exercici 1, 2; Notebook basics Llistes Exercici 1, 2, 6, 7, 8, 9. 
 + 12/10: 
   + Classe presencial: Revisar problemes pràctiques; Problemes del llibre 2.8(Factorial menor), 2.10(Sumatori de parelles), 2.14(Nombres apocalíptics), 2.17(Avet). 
   + Contingut en línia (Jordi): [Introducció als algorismes]   
