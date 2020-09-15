@@ -12,20 +12,19 @@
     + Introdució al funcionament de l'assignatura; Què és l'algorísmica?; Eines de programació: Python, Jupyter, Colab.
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
-    + Resoldre els problemes 1-8 i 10-13. El problema 9 és optatiu. 
+    + Problemes de  Notebook basics Variables, exercicis 1-8 i 10-13. L'exercici 9 és optatiu. 
 + Setmana del 5/10:
   + Classe presencial: 
-    + Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercici 1, Exercici 2; 
-    + Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercici 1 i Exercici 2; 
-    + Problemes de Notebook Teoría Control (tot). 
+    + Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercicis 1 i 2; 
+    + Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercicis 1 i 2; 
+    + Problemes de  Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
-    + Notebook basics control. Exercici 1; 
-    + Notebook basics cadenes. Exercici 1, 2; 
-    + Notebook basics Llistes. Exercici 1, 2, 6, 7, 8, 9. 
+    + Problemes de  Notebook basics control. Exercici 1; 
+    + Problemes de  Notebook basics cadenes. Exercici 1, 2; 
+    + Problemes de  Notebook basics Llistes. Exercici 1, 2, 6, 7, 8, 9. 
 + Setmana del 12/10: 
   + Classe presencial: 
-    + Revisar problemes pràctiques; 
     + 2.8(Factorial menor)
     + 2.10(Sumatori de parelles),
     + 2.14(Nombres apocalíptics)
