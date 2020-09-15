@@ -22,8 +22,8 @@
     + Problemes de  Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
-    + Problemes de  Notebook basics control. Exercici 1.
-    + Problemes de  Notebook basics cadenes. Exercici 1 i 2. 
+    + Problemes de  Notebook basics Control. Exercici 1.
+    + Problemes de  Notebook basics Cadenes. Exercici 1 i 2. 
     + Problemes de  Notebook basics Llistes. Exercici 1, 2, 6, 7, 8 i 9. 
 + Setmana del 12/10: 
   + Classe presencial: 
