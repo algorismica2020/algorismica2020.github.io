@@ -8,12 +8,16 @@
 
 ## Classes
 + Setmana del 28/9: 
-  + Classe presencial: Introdució al funcionament de l'assignatura; Què és l'algorísmica?; Eines de programació: Python, Jupyter, Colab.
+  + Classe presencial: 
+    + Introdució al funcionament de l'assignatura; Què és l'algorísmica?; Eines de programació: Python, Jupyter, Colab.
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
     + Resoldre els problemes 1-8 i 10-13. El problema 9 és optatiu. 
 + Setmana del 5/10:
-  + Classe presencial: Repàs teoria de Python; Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercici 1, Exercici 2; Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercici 1 i Exercici 2; Problemes de Notebook Teoría Control (tot). 
+  + Classe presencial: 
+    + Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercici 1, Exercici 2; 
+    + Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercici 1 i Exercici 2; 
+    + Problemes de Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
     + Notebook basics control. Exercici 1; 
