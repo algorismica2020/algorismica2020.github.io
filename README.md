@@ -12,14 +12,14 @@
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
     + Resoldre els problemes 1-8 i 10-13. El problema 9 és optatiu. 
-+ 5/10:
++ Setmana del 5/10:
   + Classe presencial: Repàs teoria de Python; Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercici 1, Exercici 2; Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercici 1 i Exercici 2; Problemes de Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
     + Notebook basics control. Exercici 1; 
     + Notebook basics cadenes. Exercici 1, 2; 
     + Notebook basics Llistes. Exercici 1, 2, 6, 7, 8, 9. 
-+ 12/10: 
++ Setmana del 12/10: 
   + Classe presencial: 
     + Revisar problemes pràctiques; 
     + 2.8(Factorial menor)
@@ -34,7 +34,7 @@
     + 2.3(Condicionals. Prou cerveses), 
     + 2.5(Capicua)
 
-+ 19/10: 
++ Setmana del 19/10: 
   + Classe presencial: 
     + **Examen curt de teoria**: Completar programes de Python i Qüestions teòriques algorismes, gran O. 
     + Càlcul complexitat
@@ -45,7 +45,7 @@
     + 3.3(Numeracio en diferents bases)
     + 3.10(Restriccions múltiples Tres condicions)
     + 3.11(La seqüència de Fibonacci)
-+ 26/10: 
++ Setmana del 26/10: 
   + Classe presencial: Revisió els exercicis de la pràctica. 
     + 3.6(Aritmètica modular)
     + 3.9(Primeritat i el teorema de Fermat)
@@ -54,7 +54,7 @@
     + 3.2(El màxim comú divisor i les seves aplicacions)
     + 3.6(Aritmètica modular)
     + 3.9(Primeritat i el teorema de Fermat)
-+ 2/11: 
++ Setmana del 2/11: 
   + Classe presencial: 
     + **Examen curt de teoria**
     + Preguntes encriptació / factorització
@@ -65,7 +65,7 @@
     + 3.5(Operacions amb nombres binaris)
     + 3.8(Primeritat)
     + 3.1(Divisió entera)
-+ 9/11: 
++ Setmana del 9/11: 
   + Classe presencial: 
     + 4.2(Alfabet aviació)
     + 4.4(Totes les subcadenes)
@@ -74,13 +74,13 @@
     + 4.1(Acrònims)
     + 4.6(Run Length Encoding)
     + 4.7(Subcadena més llarga sense cap caràcter repetit)
-+ 16/11: 
++ Setmana del 16/11: 
   + Classe presencial: 
     + 4.8(Subseqüència en comú més llarga)
   + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
   + Pràctica: 
     + 4.5(Levensthein)
-+ 23/11: 
++ Setmana del 23/11: 
   + Classe presencial: 
     + **Examen curt de teoria**
     + Repàs Fitxers
@@ -90,7 +90,7 @@
     + 5.8(Rotacions)
     + 5.23(Sumatori parcial màxim 1. Força bruta)
     + 5.24(Xifres i lletres Ordenació per selecció)
-+ 30/11: 
++ Setmana del 30/11: 
   + Classe presencial: 
     + Torres de Hanoi 
     + Exercicis teorema màster. Notebook basics Python. Complexitat. 
@@ -99,8 +99,8 @@
     + 5.6(Negatius al davant)
     + 5.19(Karatsuba)
     + 5.23(Sumatori parcial màxim 2 (dividir i vèncer) i 3 (Kadane))
-+ 7/12: Festiu
-+ 14/12: 
++ Setmana del 7/12: Festiu
++ Setmana del 14/12: 
   + Classe presencial: 
     + 5.23(Xifres i lletres QS) 
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
@@ -108,7 +108,7 @@
     + 5.1(Suma d’una llista)
     + 5.10(Comptador inversions en una llista)
     + 5.22(Ordenar llista aparellada)
-+ 21/12: 
++ Setmana del 21/12: 
   + Classe presencial: 
     + **Examen curt de teoria**; 
     + [El problema del viatjant de comerç](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/Traveling%20Salesman%20Problem_def.ipynb)
@@ -120,7 +120,6 @@
     + 5.15(Menor, major relatius)
     + 5.20(Cerca binària. Preg. 3 Cerca quasi ordenada)
 
-    
     
     
 ## Material d'estudi 
@@ -136,4 +135,4 @@ Els apunts de la teoria de cada tema els podeu trobar aquí aquí:
 +  Teoria: [Algorismes de Dividir i Vèncer](http://algorismica2020.github.io/slides/dividir.html) 
 +  Teoria: [Algorismes de Cerca](http://algorismica2020.github.io/slides/cerca.html) 
 
-També podeu trobar un manuel de problemes (alguns resolts i alguns pers resoldre) aquí: [Link al llibre de l'assignatura en pdf]
+També podeu trobar un manual de problemes (alguns resolts i alguns pers resoldre) aquí: [Link al llibre de l'assignatura en pdf]
