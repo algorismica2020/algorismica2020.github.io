@@ -8,17 +8,18 @@
 
 ## Classes
 + Setmana del 28/9: 
+  + Classe presencial: Introdució al funcionament de l'assignatura; Què és l'algorísmica?; Eines de programació: Python, Jupyter, Colab.
   + Contingut en línia (Mireia): [Python]   
-  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
-  + Classe presencial: Introdució al funcionament de l'assignatura; Eines de programació: Python, Jupyter, Colab.
+  + Pràctica: Resoldre els problemes 1-8 i 10-13. El problema 9 és optatiu. 
 + 5/10:
+  + Classe presencial: Repàs teoria de Python; Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercici 1, Exercici 2; Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercici 1 i Exercici 2; Problemes de Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
-  + Pràctica: Resoldre els problemes del llibre següents: "", "", "" 
-  + Classe presencial: Python
+  + Pràctica: Resoldre els problemes del Notebook basics control. Exercici 1; Notebook basics cadenes Exercici 1, 2; Notebook basics Llistes Exercici 1, 2, 6, 7, 8, 9. 
 + 12/10: 
+  + Classe presencial: Revisar problemes pràctiques; Problemes del llibre 2.8(Factorial menor), 2.10(Sumatori de parelles), 2.14(Nombres apocalíptics), 2.17(Avet). 
   + Contingut en línia (Jordi): [Introducció als algorismes]   
-  + Pràctica: Resoldre els problemes del llibre següents: "", "", ""   
-  + Classe presencial: Python
+  + Pràctica: Resoldre els problemes del llibre següents: 1.1(Notació Gran O), 2.1(Conversió Celsius a Fahrenheit i convert0a50), 2.2(Inversió económica, Futval2), 2.3(Condicionals. Prou cerveses), 2.5 (Capicua)
+
 + 19/10: 
   + Contingut en línia (Jordi): [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
   + Pràctica: Resoldre els problemes del llibre següents: "", "", ""   
