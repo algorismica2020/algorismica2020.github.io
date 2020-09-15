@@ -111,7 +111,7 @@
 + 21/12: 
   + Classe presencial: 
     + **Examen curt de teoria**; 
-    + [El problema del viatjant de comerç]
+    + [El problema del viatjant de comerç](Traveling Salesman Problem_def.ipynb)
     + 5.15(Menor i major relatius)
   + Contingut en línia (Mireia): [Algorismes de Cerca]  
   + Pràctica: 
