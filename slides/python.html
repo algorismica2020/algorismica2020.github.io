@@ -515,6 +515,106 @@ Python també ens dona funcions matemàtiques dins d'un mòdul especial anomenat
   list(range(0,-4,-1))
   > [0,-1,-2,-3]
   ```
+---
+
+## Estructures de control
+
+Quan volem canviar el fil del programa en funció de si es 
+compleix una condició o no, farem servir l'estructura `if`:
+
+```python
+if a==0:
+    print("valor neutre")
+elif a < 0:
+    print("valor negatiu")
+elif a == 1:
+    print("valor unitat")
+else: 
+    print("altres valors")
+```
+
+Els `elif` són opcionals. En podem posar tants com vulguem.
+
+---
+
+## Exemple
+
+Càlcul del promig d'una seqüència de nombres:
+
+```python
+def mitja():
+    n = eval(input("Quants nombres tens?"))
+    suma = 0.0
+    for i in range(n):
+        x = eval(input("Entra un nombre: "))
+        suma = suma + x
+    return("La mitja és: ", suma/n)
+
+```
+
+És correcte, però no gaire pràctic. Per què?
+
+---
+
+## Estructures de control
+
+Per solucionar el problema anterior podem usar un altre *estructura de bucle*: `while`.
+
+```python
+i = 0
+while i < 10:   #les instruccions s'executaran mentre es compleixi la condició
+    print(i)
+    i += 1
+```
+
+Llavors podem reescriure el programa anterior com:
+
+```python
+def mitja():
+    suma = 0.0
+    comptador = 0
+    mesnombres = "s"
+    while mesnombres[0] == 's': 
+        x = eval(input("Entra un nombre: "))
+        suma += x
+        comptador += 1
+        mesnombres = input("Hi ha més nombres (si o no)?")
+    return suma/comptador
+```
+
+Però encara podem fer més eficient aquest codi!
+
+---
+
+## Estructures de control
+
+```python
+def mitja():
+    suma = 0.0
+    comptador = 0
+    x = eval(input("Entra un nombre (negatiu per acabar): "))
+    while x > 0: 
+        suma += x
+        comptador += 1
+        x = eval(input("Entra un nombre (negatiu per acabar): "))
+    return suma/comptador
+```
+--
+
+
+
+```python
+def mitja():
+    suma = 0.0
+    comptador = 0
+    xStr = input("Entra un nombre (<Enter> per acabar): ")
+    while xStr != "":
+        x = eval(xStr) 
+        suma += x
+        comptador += 1
+        xStr = input("Entra un nombre (<Enter> per acabar): ")
+    return suma/comptador
+```
 
 Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Control.ipynb ) 
 ---
@@ -619,7 +719,7 @@ b = "Mireia"
 print(a,b)
 > Hola Mireia
 
-type(str2)
+type(a)
 > str
 ```
 
@@ -643,18 +743,18 @@ edat = eval(input("Quina és la teva edat?"))
 ## Cadenes de caràcters (*strings*)
 
 
-Per accedir a una cadena de caràcters hem de veure com Python les indexa:
+Per treballar amb cadenes de caràcters hem de veure com Python les emmagatzema:
 
 `H` | `o` | `l` | `a` |   | `o` | `l` | `a` 
 - | - | - | - 
 .code[0] | .code[1] | .code[2] | .code[3] | .code[4] | .code[5] | .code[6] | .code[7]
 
-Llavors podem accedir als valors de cada element de la cadena o fins i tot a subcadenes: 
+Una cadena, és una seqüència de caràcters indexats. Amb els índexs podem accedir a cada element de la cadena o fins i tot a subcadenes: 
 
 ```python
 s = "Hello Bob"
-x = 8
-print(s[0], s[1], s[x-2])
+x = 2
+print(s[0], s[x], s[8-2])
 > H l B
 ```
 
@@ -766,7 +866,13 @@ print(cadena)
 `islower`, `isupper` i `isalpha`: Verifiquen si la cadena és majúscules, minúscules o tota de lletres respectivament.
 
 `lower` i `upper`: Converteixen la cadena de majúscules a minúscules i de minúscules a majúscules respectivament.
+---
 
+## Cadenes
+
+Pots revisar i practicar tots aquests conceptes amb el següent Notebook
+
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Cadenes.ipynb) 
 
 ---
 
@@ -876,9 +982,9 @@ Els operadors són:
 <       # menor que
 <=      # menor o igual que 
 ==      # igual que
->=      # major o igual que
 >       # major que
-!=      # diferent que
+>=      # major o igual que
+!=      # diferent a
 ```
 
 ---
@@ -901,107 +1007,7 @@ print(a or (not b) and c)
 `or`: és veritat si al menys un dels dos operands ho és.
 
 
-
----
-
-## Estructures de control
-
-Quan volem canviar el fil del programa en funció de si es 
-compleix una condició o no, farem servir l'estructura `if`:
-
-```python
-if a==0:
-    print("valor neutre")
-elif a < 0:
-    print("valor negatiu")
-elif a == 1:
-    print("valor unitat")
-else: 
-    print("altres valors")
-```
-
-Els `elif` són opcionals. En podem posar tants com vulguem.
-
----
-
-## Exemple
-
-Càlcul del promig d'una seqüència de nombres:
-
-```python
-def mitja():
-    n = eval(input("Quants nombres tens?"))
-    suma = 0.0
-    for i in range(n):
-        x = eval(input("Entra un nombre: "))
-        suma = suma + x
-    return("La mitja és: ", suma/n)
-
-```
-
-És correcte, però no gaire pràctic. Per què?
-
----
-
-## Estructures de control
-
-Per solucionar el problema anterior podem usar un altre *estructura de bucle*: `while`.
-
-```python
-i = 0
-while i < 10:   #les instruccions s'executaran mentre es compleixi la condició
-    print(i)
-    i += 1
-```
-
-Llavors podem reescriure el programa anterior com:
-
-```python
-def mitja():
-    suma = 0.0
-    comptador = 0
-    mesnombres = "s"
-    while mesnombres[0] == 's': 
-        x = eval(input("Entra un nombre: "))
-        suma += x
-        comptador += 1
-        mesnombres = input("Hi ha més nombres (si o no)?")
-    return suma/comptador
-```
-
-Però encara podem fer més eficient aquest codi!
-
----
-
-## Estructures de control
-
-```python
-def mitja():
-    suma = 0.0
-    comptador = 0
-    x = eval(input("Entra un nombre (negatiu per acabar): "))
-    while x > 0: 
-        suma += x
-        comptador += 1
-        x = eval(input("Entra un nombre (negatiu per acabar): "))
-    return suma/comptador
-```
---
-
-
-
-```python
-def mitja():
-    suma = 0.0
-    comptador = 0
-    xStr = input("Entra un nombre (<Enter> per acabar): ")
-    while xStr != "":
-        x = eval(xStr) 
-        suma += x
-        comptador += 1
-        xStr = input("Entra un nombre (<Enter> per acabar): ")
-    return suma/comptador
-```
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Booleans.ipynb)
 
 ---
 
@@ -1133,6 +1139,131 @@ def stdDev(nums, mean):
 data = getNumbers()
 print("Mitja: ", mean(data), " | Desviació: ", stdDev(data, mean(data)))
 ```
+---
+
+## Llistes
+
+Una llista imbricada és una llista que apareix com a element d’una altra llista. 
+
+`l = [0,1,3,['a','b']]`
+
+
+Per obtenir un element d’una llista imbricada ho podem fer de dues maneres:
+
+```python
+# amb dos passes...
+li = l[3]
+li[0]
+> 'a'
+# o bé ...
+l[3][0]
+> 'a'
+```
+
+I és que les llistes imbricades es fan servir per representar matrius:
+
+```python
+m = [[1,2,3],[4,5,6],[7,8,9]]
+m[0]
+> [1,2,3]
+
+m[1][1]
+>5
+```
+---
+
+## Diccionaris
+
+Python ens proporciona un altre tipus de col·lecció molt útil: els **diccionaris**.
+
+La raó de la seva existència és que no sempre serà possible accedir a una dada pel seu índex, sinó per exemple, per algun valor que el defineix (p.e. un empleat pel seu DNI). És a dir, volem accedir a un valor per una **clau**. 
+
+Python crea els diccionaris així:
+
+```python
+passwd = {'bill':'clinton', 'barack':'obama'}
+```
+I ens permet accedir-hi així:
+
+```python
+passwd['bill']
+> clinton
+```
+
+Els diccionaris són mutables:
+
+```python
+passwd['bill'] = 'gates'
+```
+
+---
+
+## Exemple: omplir un diccionari des d'un fitxer.
+
+Suposem que tenim una llista d'usuaris i els seus passwords en un 
+fitxer. El format és una línia per usuari formada per dues paraules: el nom 
+d'usuari i el password.
+
+```python
+passwords = {}
+f = open('passwords.txt','r')
+for line in f.readlines():
+    usr, passw = line.split()
+    passwords[usr] = passw
+f.close()
+```
+
+---
+
+## Diccionaris
+
+```python
+p = {'a':'A', 'b':'B', 'c':'C', 'd':'D'}
+for i in p.keys():
+    print(i,end=',')
+> a,b,c,d
+
+for i in p.values():
+    print(i,end=',')
+> A,B,C,D
+
+for i in p.items():
+    print(i,end=',')
+> ('a','A'),('b','B'),('c','C'),('d','D')
+
+list(p.values())
+> ['A','B','C','D']
+
+'a' in p
+> True
+```
+
+---
+## Tuples
+
+Hi ha una altra classe de col·lecció a Python que és semblant a la llista, però que és immutable: la **tupla**.
+
+`t = 'a','b','c','d'`
+
+o
+
+`t = ('a','b','c','d')`
+
+Si només hi ha un element s'ha d'escriure amb una coma final:
+
+```python
+t = ('a',)
+type(t)
+> tuple
+
+t = ('a')
+type(t)
+> str
+```
+
+Les operacions son les mateixes que per les llistes (tenint en compte que són immutables!)
+
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Coleccions.ipynb)
 
 ---
 
@@ -1260,130 +1391,8 @@ print(numbers)
 
 > [3,2,1]
 ```
----
 
-## Llistes
-
-Una llista imbricada és una llista que apareix com a element d’una altra llista. 
-
-`l = [0,1,3,['a','b']]`
-
-
-Per obtenir un element d’una llista imbricada ho podem fer de dues maneres:
-
-```python
-# amb dos passes...
-li = l[3]
-li[0]
-> 'a'
-# o bé ...
-l[3][0]
-> 'a'
-```
-
-I és que les llistes imbricades es fan servir per representar matrius:
-
-```python
-m = [[1,2,3],[4,5,6],[7,8,9]]
-m[0]
-> [1,2,3]
-
-m[1][1]
->5
-```
----
-
-## Diccionaris
-
-Python ens proporciona un altre tipus de col·lecció molt útil: els **diccionaris**.
-
-La raó de la seva existència és que no sempre serà possible accedir a una dada pel seu índex, sinó per exemple, per algun valor que el defineix (p.e. un empleat pel seu DNI). És a dir, volem accedir a un valor per una **clau**. 
-
-Python crea els diccionaris així:
-
-```python
-passwd = {'bill':'clinton', 'barack':'obama'}
-```
-I ens permet accedir-hi així:
-
-```python
-passwd['bill']
-> clinton
-```
-
-Els diccionaris són mutables:
-
-```python
-passwd['bill'] = 'gates'
-```
-
----
-
-## Exemple: omplir un diccionari des d'un fitxer.
-
-Suposem que tenim una llista d'usuaris i els seus passwords en un 
-fitxer. El format és una línia per usuari formada per dues paraules: el nom 
-d'usuari i el password.
-
-```python
-passwords = {}
-f = open('passwords.txt','r')
-for line in f.readlines():
-    usr, passw = line.split()
-    passwords[usr] = passw
-f.close()
-```
-
----
-
-## Diccionaris
-
-```python
-p = {'a':'A', 'b':'B', 'c':'C', 'd':'D'}
-for i in p.keys():
-    print(i,end=',')
-> a,b,c,d
-
-for i in p.values():
-    print(i,end=',')
-> A,B,C,D
-
-for i in p.items():
-    print(i,end=',')
-> ('a','A'),('b','B'),('c','C'),('d','D')
-
-list(p.values())
-> ['A','B','C','D']
-
-'a' in p
-> True
-```
-
----
-## Tuples
-
-Hi ha una altra classe de col·lecció a Python que és semblant a la llista, però que és immutable: la **tupla**.
-
-`t = 'a','b','c','d'`
-
-o
-
-`t = ('a','b','c','d')`
-
-Si només hi ha un element s'ha d'escriure amb una coma final:
-
-```python
-t = ('a',)
-type(t)
-> tuple
-
-t = ('a')
-type(t)
-> str
-```
-
-Les operacions son les mateixes que per les llistes (tenint en compte que són immutables!)
-
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Referencies.ipynb)
 ---
 
 ## Exemple: Estadística de les paraules d'un document?
@@ -1415,6 +1424,16 @@ def numW():
     for i in range(min(n,len(lfreq))-1):
         print(lfreq[i][1], lfreq[i][0])
 ```
+
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Exemple.ipynb)
+
+---
+
+  ## Per a practicar
+  
+En el següent Notebook trobareu molts exercicis per practicar totes aquestes instruccions i estructures que hem vist de Python.
+
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PythonPractica2.ipynb ) 
 
 </textarea>
   <script src="common/remark-latest.min.js"></script>
