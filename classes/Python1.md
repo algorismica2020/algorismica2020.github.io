@@ -13,7 +13,7 @@ o al vostre ordinador abans de tancar Colab.
 
 ### Video: Funcions
 
-Video de 9 min de recordatori sobre el funcionament de les (funcions a Python)[http://www.ub.edu/adaptabit/videos/T1-1-Python-Funcions/T1-1-Python-Funcions.html]
+Video de 9 min de recordatori sobre el funcionament de les [funcions a Python](http://www.ub.edu/adaptabit/videos/T1-1-Python-Funcions/T1-1-Python-Funcions.html)
 
 ---
 
