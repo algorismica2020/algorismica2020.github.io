@@ -37,7 +37,7 @@ Obre el (notebook de Variables)[https://colab.research.google.com/github/algoris
 
 ### Exercicis: Control
 
-Obre el (notebook de Control)[https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Control.ipynb] i fes els exercicis proposats
+Obre el [notebook de Control](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Control.ipynb) i fes els exercicis proposats
 
 ---
 
