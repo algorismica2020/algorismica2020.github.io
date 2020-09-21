@@ -6,6 +6,21 @@
 
 > **AVÍS**: Degut a l'estat d'emergència sanitaria creat per la COVID-19, aquesta assignatura es farà durant el curs 2020-2021 en modalitat d'aprenentatge combinat (blended learning), fent servir sessions presencials i aprenentatge en línia asíncron.
 
+## Com funciona l'assignatura?
+
+Usarem dues eines diferents per distribuir la informació i organitzar la feina:
+
++ GitHub, per distribuïr el material formatiu: https://algorismica2020.github.io/
++ Campus Virtual de la UB per la recollida d'exercicis, lliurament de proves presencials i qualificacions.
+
+L’assignatura seguirà un esquema d’**avaluació continuada**, amb dos elements principals: (a) proves presencials i (b) lliurament d’exercicis.
++ Es farà una sèrie d'examens parcials al llarg del curs, que tindran una nota que serà la mitja de totes les proves (EP). 
++ Lliurament de pràctiques. El professorat proposa diverses pràctiques de laboratori a resoldre individualment. Si l’estudiant no lliura els problemes dins del període assenyalat, obté un 0. La nota final (LP) de la part de lliurament de problemes és la mitjana d'una sèrie de lliuraments sleccionats pels professors.
+
+La nota d’avaluació continuada és `AC = 0.5 * LP + 0.5 * EP`, sempre que `(LP > 4.0)` i `(EP > 4.0)`. Altrament la nota d’avaluació continuada és `min(4.0 , (LP + EP)/2)`. 
+
+En el cas de no arrribar a l’aprovat per avaluació continuada, els alumnes poden anar a un examen final i després a una reavaluació.
+
 ## Classes
 + Setmana del 28/9: 
   + Classe presencial: 
