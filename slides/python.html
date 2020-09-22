@@ -837,7 +837,7 @@ Si no indiquem el separador, per defecte és el caracter blanc.
 
 ```python
 cadena = "El gos i el gat, menjàven plegats"
-llista = cadena.split('.')
+llista = cadena.split(' ')
 > ['El', 'gos', 'i', 'el', 'gat,', 'menjàven', 'plegats']
 ```
 
@@ -885,12 +885,12 @@ Per diverses raons (economia a l’escriure, manteniment del software, disseny) 
 Recordem que les funcions no són res més que una seqüència d’instruccions amb un nom. Una funció es pot cridar des de qualsevol lloc del programa pel seu nom.
 
 ```python
-def sum(a,b):
-    return a+b
+def sum(a, b):
+    return a + b
 
 a = 3
-b = a*2
-c = sum(a,b)
+b = a * 2
+c = sum(a, b)
 c
 
 > 9
@@ -913,9 +913,9 @@ Exemple:
 a = 7
 def assignacio():
     a = 5
-    print("dins, a val ", a)
+    print("dins, a val ",  a)
 assignacio()
-print("fora, a val ",a)
+print("fora, a val ", a)
 ```
 
 Què es mostrarà a pantalla?
@@ -931,20 +931,20 @@ Quan Python rep la crida d’una funció, fa quatre coses:
 + Retorna el control al punt de programa posterior a la crida.
 
 ```python
-def sum(a,b):
-    return a+b
+def sum(a, b):
+    return a + b
 
-def dif(a,b):
-    return a-b
+def dif(a, b):
+    return a - b
 
-def sumdif(a,b):
-    s = sum(a,b)
-    d = dif(a,b)
-    return s,d
+def sumdif(a, b):
+    s = sum(a, b)
+    d = dif(a, b)
+    return s, d
 
 a = 3
 b = 3
-print(sumdif(a,b))
+print(sumdif(a, b))
 
 > 6 0
 ```
@@ -968,9 +968,9 @@ Els operadors relacionals ens permeten combinar expressions. El seu resultat és
 Podem comparar tot tipus de dades:
 
 ```python
-3<4
+3 < 4
 > 1
-3*4 < 3+4
+3 * 4 < 3+4
 > 1
 "hello" < "Hello"
 > 0
@@ -1077,7 +1077,7 @@ c = []
 d = [0] * 50
 ```
 
-Podem afegir-hi o borrar coses:
+Podem afegir-hi o borrar elements:
 
 ```python
 nums = []
@@ -1151,7 +1151,7 @@ Una llista imbricada és una llista que apareix com a element d’una altra llis
 Per obtenir un element d’una llista imbricada ho podem fer de dues maneres:
 
 ```python
-# amb dos passes...
+# amb dues passes...
 li = l[3]
 li[0]
 > 'a'
