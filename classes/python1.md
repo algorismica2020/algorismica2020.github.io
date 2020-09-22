@@ -55,6 +55,7 @@ Obre el notebook (EstildeProgramacio)[https://colab.research.google.com/github/a
 ### Pràctica final
 
 Per revisar tots els conceptes, resol les preguntes i exercicis del notebook (PracticaFinal)[https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PracticaFinal.ipynb]
+
 ---
 
 
