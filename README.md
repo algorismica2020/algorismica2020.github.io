@@ -155,4 +155,4 @@ Els apunts de la teoria de cada tema els podeu trobar aquí aquí:
 +  Teoria: [Algorismes de Dividir i Vèncer](http://algorismica2020.github.io/slides/dividir.html) 
 +  Teoria: [Algorismes de Cerca](http://algorismica2020.github.io/slides/cerca.html) 
 
-També podeu trobar un manual de problemes (alguns resolts i alguns pers resoldre) aquí: [Link al llibre de l'assignatura en pdf](https://github.com/algorismica2020/algorismica2020.github.io/raw/master/LlibreAlgorismicaAlumni.pdf)
+També podeu trobar un manual de problemes (alguns resolts i alguns pers resoldre) aquí: [Llibre de problemes de l'assignatura en pdf](https://github.com/algorismica2020/algorismica2020.github.io/raw/master/LlibreAlgorismicaAlumni.pdf)
