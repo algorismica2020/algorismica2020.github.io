@@ -14,6 +14,7 @@ o al vostre ordinador abans de tancar Colab.
 ### Video: Recordatori classe anterior
 
 Vídeo de 10'46'' en el que es resol la pràctica 1 que va tancar la darrera sessió de teoria. L'enllaç al notebook està a la transparència 22.
+
 ---
 
 ### (Video: Cadenes de caràcters)[]
@@ -36,6 +37,7 @@ Complementant els apunts, transparències 36 a 39 sobre funcions, vídeo de 6'14
 ### (Video: Booleans)[]
 
 Complementant els apunts, transparències 40 a 41, Video de 6'19' en el que s'expliquen aquest tipus de dades
+
 ---
 ### Exercicis: Booleans
 
@@ -74,4 +76,5 @@ Obre el notebook (Exemple)[https://colab.research.google.com/github/algorismica2
 ### Pràctica final
 
 Per revisar tots els conceptes, resol les preguntes i exercicis del notebook (PythonPractica2)[https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PythonPractica2.ipynb]
+
 ---
