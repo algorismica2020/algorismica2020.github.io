@@ -830,14 +830,14 @@ en diferents parts, indicant el caràcter separador:
 ```python
 cadena = "458.342.120€"
 llista = cadena.split('.')
-> ['456', '342', '120€']
+> ['458', '342', '120€']
 ```
 
 Si no indiquem el separador, per defecte és el caracter blanc. 
 
 ```python
 cadena = "El gos i el gat, menjàven plegats"
-llista = cadena.split(' ')
+llista = cadena.split()
 > ['El', 'gos', 'i', 'el', 'gat,', 'menjàven', 'plegats']
 ```
 
