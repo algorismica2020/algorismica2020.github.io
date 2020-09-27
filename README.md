@@ -34,8 +34,8 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Vídeo de 18' sobre [dades, variables i estructures de control](https://campusvirtual.ub.edu/pluginfile.php/2983095/mod_resource/content/1/T1-2-Python-DadesVariablesEstructures/T1-Python-DadesVariablesEstructures.html),  corresponent a les [transparències 15-24 de Python](https://algorismica2020.github.io/slides/python.html#15)
       + [Notebook Variables.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Variables.ipynb)
       + [Notebook Control.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Control.ipynb)
-    + Vídeo de 7' sobre [Estil de programació](https://campusvirtual.ub.edu/pluginfile.php/2983071/mod_resource/content/1/T1-3-Python-EstilProgramacio/T1-3-Python-EstilProgramacio.html)
-      + [Notebook EstilProgramacio.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/EstilProgramacio.ipynb),  corresponent a les [transparències 25-26 de Python](https://algorismica2020.github.io/slides/python.html#25)
+    + Vídeo de 7' sobre [Estil de programació](https://campusvirtual.ub.edu/pluginfile.php/2983071/mod_resource/content/1/T1-3-Python-EstilProgramacio/T1-3-Python-EstilProgramacio.html),  corresponent a les [transparències 25-26 de Python](https://algorismica2020.github.io/slides/python.html#25)
+      + [Notebook EstilProgramacio.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/EstilProgramacio.ipynb)
   + Pràctica: 
     + Pràctica de [repàs de Python - 1](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PythonPractica1.ipynb), enllaçada des de la transparència 27 
   + Material complementari: 
