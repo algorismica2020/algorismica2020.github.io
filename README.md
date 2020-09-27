@@ -10,7 +10,7 @@
 
 Usarem dues eines diferents per distribuir la informació i organitzar la feina:
 
-+ GitHub, per distribuïr el material formatiu: https://algorismica2020.github.io/
++ GitHub, per distribuïr el material formatiu: https://algorismica2020.github.io/. Els vídeos de teoria, però, sovint estaran al campus virtual i per poder-los veure haureu d'haver entrat al campus prèviament
 + Campus Virtual de la UB per la recollida d'exercicis, lliurament de proves presencials i qualificacions.
 
 L’assignatura seguirà un esquema d’**avaluació continuada**, amb dos elements principals: (a) examens parcials i (b) lliurament d’exercicis.
