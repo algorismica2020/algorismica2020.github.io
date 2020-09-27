@@ -27,9 +27,19 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Introdució al funcionament de l'assignatura. 
     + Què és l'algorísmica?
     + Eines de programació: Python, Jupyter, Colab.
-  + Contingut en línia (Mireia): [Python]   
+    + [Transparències 1-13 de teoria](https://algorismica2020.github.io/slides/python.html)
+  + Contingut en línia (Mireia): [Python]
+    + Vídeo de 10' sobre les [funcions a Python](https://campusvirtual.ub.edu/pluginfile.php/2983094/mod_resource/content/1/T1-1-Python-Funcions/T1-Python-Funcions.html), corresponent a la [transparència 14 de Python](https://algorismica2020.github.io/slides/python.html#14)
+      + [Notebook Funcions.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Funcions.ipynb)
+    + Vídeo de 18' sobre [dades, variables i estructures de control](https://campusvirtual.ub.edu/pluginfile.php/2983095/mod_resource/content/1/T1-2-Python-DadesVariablesEstructures/T1-Python-DadesVariablesEstructures.html),  corresponent a les [transparències 15-24 de Python](https://algorismica2020.github.io/slides/python.html#15)
+      + [Notebook Variables.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Variables.ipynb)
+      + [Notebook Control.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Control.ipynb)
+    + Vídeo de 7' sobre [Estil de programació](https://campusvirtual.ub.edu/pluginfile.php/2983071/mod_resource/content/1/T1-3-Python-EstilProgramacio/T1-3-Python-EstilProgramacio.html)
+      + [Notebook EstilProgramacio.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/EstilProgramacio.ipynb),  corresponent a les [transparències 25-26 de Python](https://algorismica2020.github.io/slides/python.html#25)
   + Pràctica: 
-    + Problemes de  Notebook basics Variables, exercicis 1-8 i 10-13. L'exercici 9 és optatiu. 
+    + Pràctica de [repàs de Python - 1](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PythonPractica1.ipynb), enllaçada des de la transparència 27 
+  + Material complementari: 
+     + [Curso Python. Sintaxis Básica II Tipos, operadores y variables](https://www.youtube.com/watch?v=u4I9PqhqCo8 )
 + Setmana del 5/10:
   + Classe presencial: 
     + Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercicis 1 i 2.
