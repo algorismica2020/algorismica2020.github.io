@@ -43,8 +43,8 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 + Setmana del 5/10:
   + Classe presencial: 
     + Problemes de  [Notebook Funcions](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Funcions.ipynb) (no apartat recursió). Exercicis 1 i 2.
-    + Problemes de	[Notebook Variables.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Variables.ipynb) (només fins a operacions matemàtiques bàsiques). Exercicis 1 i 2.
-    + Problemes de  Notebook Teoría Control (tot). 
+    + Problemes de	[Notebook Variables](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Variables.ipynb) (només fins a operacions matemàtiques bàsiques). Exercicis 1 i 2.
+    + Problemes de  [Notebook Control](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Control.ipynb) (tot). 
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
     + Problemes de  Notebook basics Control. Exercici 1.
