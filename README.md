@@ -42,8 +42,8 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
      + [Curso Python. Sintaxis Básica II Tipos, operadores y variables](https://www.youtube.com/watch?v=u4I9PqhqCo8 )
 + Setmana del 5/10:
   + Classe presencial: 
-    + Problemes de	Notebook Teoría Funcions (no apartat recursió). Exercicis 1 i 2.
-    + Problemes de	Notebook Teoría Variables (només fins a operacions matemàtiques bàsiques). Exercicis 1 i 2.
+    + Problemes de  [Notebook Funcions](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Funcions.ipynb) (no apartat recursió). Exercicis 1 i 2.
+    + Problemes de	[Notebook Variables.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Variables.ipynb) (només fins a operacions matemàtiques bàsiques). Exercicis 1 i 2.
     + Problemes de  Notebook Teoría Control (tot). 
   + Contingut en línia (Mireia): [Python]   
   + Pràctica: 
