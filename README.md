@@ -45,11 +45,11 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Problemes de  [Notebook Funcions](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Funcions.ipynb). Exercicis 1 i 2.
     + Problemes de	[Notebook Variables](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Variables.ipynb) Exercicis 1 i 2.
     + Problemes de  [Notebook Control](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Control.ipynb) (tot). 
-  + Contingut en línia (Mireia): [Python]   
+  + [Contingut en línia (Mireia):](https://github.com/algorismica2020/algorismica2020.github.io/blob/master/classes/python2.md)  
   + Pràctica: 
-    + Problemes de  Notebook basics Control. Exercici 1.
-    + Problemes de  Notebook basics Cadenes. Exercici 1 i 2. 
-    + Problemes de  Notebook basics Llistes. Exercici 1, 2, 6, 7, 8 i 9. 
+    + Problemes de  [Notebook basics Control](https://github.com/algorismica2019/problemes/blob/master/BasicsControl.ipynb). Exercici 1. [solució](https://github.com/algorismica2019/problemes/blob/master/BasicsControl-Solucio.ipynb)
+    + Problemes de  [Notebook basics Cadenes](https://github.com/algorismica2019/problemes/blob/master/BasicsCadenes.ipynb). Exercici 1 i 2. [solució](https://github.com/algorismica2019/problemes/blob/master/BasicsCadenes-Solucio.ipynb)
+    + Problemes de  [Notebook basics Llistes](https://github.com/algorismica2019/problemes/blob/master/BasicsLListes.ipynb). Exercici 1, 2, 6, 7, 8 i 9. [solució](https://github.com/algorismica2019/problemes/blob/master/BasicsLListes-Solucio.ipynb)
 + Setmana del 12/10: 
   + Classe presencial: 
     + 2.8 (Factorial menor)
