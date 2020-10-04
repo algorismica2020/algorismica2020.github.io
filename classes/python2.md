@@ -17,7 +17,7 @@ Vídeo de 13'54'' en el que es resol la [pràctica 1](https://colab.research.goo
 
 ---
 
-### [Video: Cadenes de caràcters](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Cadenes.ipynb)
+### [Video: Cadenes de caràcters](https://campusvirtual.ub.edu/pluginfile.php/3101440/mod_resource/content/2/T2-2-Python-CadenesCaracters/T2-2-Python-CadenesCaracters.html)
 
 Complementant els apunts, transparències 28 a 35, en aquest vídeo de 9' 43'' es veu la codificació de caràcters i les diferents funcions per a treballar amb cadenes de caràcters.
 
