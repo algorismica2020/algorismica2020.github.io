@@ -1,4 +1,4 @@
-# Sessió en línia del dia 7/10/2020: Python II
+# Setmana del 5/10/2020. Contingut en línia: Python II
 
 Aquesta sessió té una durada aproximada de 60 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
 Es recomana seguir aquests continguts en el mateix ordre que apareixen en aquesta pàgina.
