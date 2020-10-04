@@ -11,9 +11,9 @@ o al vostre ordinador abans de tancar Colab.
 
 ---
 
-### Video: [Recordatori classe anterior](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PythonPractica1.ipynb)
+### Video: [Recordatori classe anterior](https://campusvirtual.ub.edu/pluginfile.php/3002146/mod_resource/content/2/T2-1-Python-Practica1/T2-1-Python-Practica1.html)
 
-Vídeo de 13'54'' en el que es resol la pràctica 1 que va tancar la darrera sessió de teoria. L'enllaç al notebook està a la transparència 22.
+Vídeo de 13'54'' en el que es resol la [pràctica 1]((https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PythonPractica1.ipynb)) que va tancar la darrera sessió de teoria. L'enllaç al notebook està a la transparència 22.
 
 ---
 
