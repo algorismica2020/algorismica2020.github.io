@@ -29,6 +29,8 @@ Video sobre la definició del concepte d'algorisme, sobre la diferència entre u
 
 --- 
 
+### Comentaris
+
 Al video s'ha comentat que demostrar la correcció d'un algorisme és complex en molts casos i queda fora dels continguts d'aquest curs. Hi ha però una solució parcial per aquest problema: podem dir amb tota seguretat que un algorísme és **incorrecte** si per alguna de les seves entrades la sortida és incorrecte. És a dir, **només cal trobar un cas de mal funcionament** per a poder dir que **no és correcte**.
 
 Això ens indica que una de les tasques importants quan escribim un algorisme és pensar un conjunt de casos de test prou ampli i representatiu que ens ajudi a verificar la correcció d'un algorisme. Donat aquest conjunt de casos, ens podem trobar en tres situacions:
