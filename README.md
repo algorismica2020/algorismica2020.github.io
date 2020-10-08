@@ -49,7 +49,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
   + Pràctica: 
     + Problemes de  [Notebook basics Control](https://github.com/algorismica2019/problemes/blob/master/BasicsControl.ipynb). Exercici 1. [solució](https://github.com/algorismica2019/problemes/blob/master/BasicsControl-Solucio.ipynb)
     + Problemes de  [Notebook basics Cadenes](https://github.com/algorismica2019/problemes/blob/master/BasicsCadenes.ipynb). Exercici 1 i 2. [solució](https://github.com/algorismica2019/problemes/blob/master/BasicsCadenes-Solucio.ipynb)
-    + Problemes de  [Notebook basics Llistes](https://github.com/algorismica2019/problemes/blob/master/BasicsLListes.ipynb). Exercici 1, 2, 6, 7, 8 i 9. [solució](https://github.com/algorismica2019/problemes/blob/master/BasicsLListes-Solucio.ipynb)
+    + Problemes de  [Notebook basics Llistes](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsLListes.ipynb). Exercici 1, 2, 6, 7, 8 i 9. [solució](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsLListes-Solucio.ipynb)
 + Setmana del 12/10: 
   + Classe presencial: 
     + 2.8 (Factorial menor)
