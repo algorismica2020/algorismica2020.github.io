@@ -33,9 +33,9 @@ Correcció i eficiència.
 
 ### Elegància
 
-Un algorisme  ́es elegant si  ́es fàcil de llegir. Deia D.Knuth, un dels pares de l’algorısmica, que els algorismes son quelcom destinat a ser llegit per humans i nomes esporàdicament executats per ordinadors.
+Un algorisme es elegant si  ́es fàcil de llegir. Deia D.Knuth, un dels pares de l’algorísmica, que els algorismes son quelcom destinat a ser llegit per humans i nomes esporàdicament executats per ordinadors.
 
-En general, direm que un algorisme  ́es elegant si es segueixen les seguents pautes:
+En general, direm que un algorisme es elegant si es segueixen les seguents pautes:
 
 + El codi està ben estructurat a nivell de blocs i de funcions.
 + El codi és minimal: no hi sobra ni hi falta res.
