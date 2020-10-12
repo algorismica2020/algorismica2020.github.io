@@ -94,5 +94,4 @@ Video de 10' sobre els algorismes i els llenguatges de programació.
 <iframe src="https://drive.google.com/file/d/1X_bCfNFOcu1Lk7nqIog4KaKhm3yFx4Bn/preview" width="640" height="480"></iframe>
 </center>
 
-
-
+---
