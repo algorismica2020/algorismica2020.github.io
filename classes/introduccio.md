@@ -60,7 +60,7 @@ Si usem adequadament la instrucció `assert` de Python pot ser que puguem detect
 
 ### Exercici
 
-Llageix el següent programa, que calcula la mitja de la següent suma: `1+2+3+4+...++999++1000`. 
+Llageix el següent programa, que calcula la mitja de la següent suma: `1+2+3+4+...+999+1000`. 
 
 ```python
 def main():
@@ -74,7 +74,7 @@ assert main() == 500.0
 
 Si l'executem, la instrucció `assert` genera un error.
 + És incorrecte l'algorisme?
-+ Saps perquè genera l'error?
++ Saps perquè genera l'error? Saps perquè `assert 6.0/2 == 1` també genera error i en canvi `assert 4.0/2 == 1` no?
 + Com faries l'`assert` per comprovar que l'algorisme és correcte?
 
 ---
