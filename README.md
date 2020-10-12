@@ -56,7 +56,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 2.10 (Sumatori de parelles)
     + 2.14 (Nombres apocalíptics)
     + 2.17 (Avet). 
-  + Contingut en línia (Jordi): [Introducció als algorismes]   
+  + Contingut en línia (Jordi): [Introducció als algorismes](http://algorismica2020.github.io/classes/introduccio.html)
   + Pràctica (problemes del llibre): 
     + 1.1 (Notació Gran O),
     + 2.1 (Conversió Celsius a Fahrenheit i convert0a50) 
