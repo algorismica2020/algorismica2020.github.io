@@ -21,21 +21,43 @@ Video de 3' sobre l'origen de la paraula "algorisme".
 
 ### Video: Què és un algorisme?
 
-Video sobre la definició del concepte d'algorisme, sobre la diferència entre un algorisme i un programa. Algorismes per calcular l'arrel quadrada.
+Video sobre la definició del concepte d'algorisme, sobre la diferència entre un algorisme i un programa. Diferents algorismes per calcular l'arrel quadrada.
 
 ---
 
 ### Video: Quines propietats han de tenir els bons algorismes?
 
+Correcció i eficiència.
+
 --- 
+
+### Elegància
+
+Un algorisme  ́es elegant si  ́es fàcil de llegir. Deia D.Knuth, un dels pares de l’algorısmica, que els algorismes son quelcom destinat a ser llegit per humans i nomes esporàdicament executats per ordinadors.
+
+En general, direm que un algorisme  ́es elegant si es segueixen les seguents pautes:
+
++ El codi està ben estructurat a nivell de blocs i de funcions.
++ El codi és minimal: no hi sobra ni hi falta res.
++ Els noms de les variables i funcions es informatiu i ajuda a entendre l’algorisme.
++ El codi fa servir el tipus de variables i les col·leccions mes adients al problema.
++ Es fàcil comprovar la correccio del codi.
++ El codi implementa solucions genèriques i les adapta, i no funcions molt específiques que dificulten la seva comprensio.
 
 ### Comentaris
 
-Al video s'ha comentat que demostrar la correcció d'un algorisme és complex en molts casos i queda fora dels continguts d'aquest curs. Hi ha però una solució parcial per aquest problema: podem dir amb tota seguretat que un algorísme és **incorrecte** si per alguna de les seves entrades la sortida és incorrecte. És a dir, **només cal trobar un cas de mal funcionament** per a poder dir que **no és correcte**.
+Al video s'ha comentat que demostrar la correcció d'un algorisme és difícil en molts casos i queda fora de l'abast d'aquest curs. Hi ha però una solució parcial per aquest problema: podem dir amb tota seguretat que un algorísme és **incorrecte** si per alguna de les seves entrades la sortida és incorrecte. És a dir, **només cal trobar un cas de mal funcionament** per a poder dir que **no és correcte**.
 
 Això ens indica que una de les tasques importants quan escribim un algorisme és pensar un conjunt de casos de test prou ampli i representatiu que ens ajudi a verificar la correcció d'un algorisme. Donat aquest conjunt de casos, ens podem trobar en tres situacions:
 + Algun dels casos genera una sortida incorrecta: llavors podem afirmar de forma segura que l'algorisme no és correcte.
 + Tots els casos generen una sortida correcte: llavors no podem afirmar que l'algorisme és correcte ni incorrecte.
+
+Si usem adequadament la instrucció `assert` de Python pot ser que puguem detectar algorismes incorrectes!
+
+### Exercici
+
+---
+
 
 
 
