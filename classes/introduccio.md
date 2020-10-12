@@ -60,6 +60,23 @@ Si usem adequadament la instrucció `assert` de Python pot ser que puguem detect
 
 ### Exercici
 
+Llageix el següent programa, que calcula la mitja de la següent suma: `1+2+3+4+...++999++1000`. 
+
+```python
+def main():
+    sum = 0.0
+    for i in range(1,1001):
+        sum += i
+    return sum/1000
+
+assert main() == 500.0
+ ```
+
+Si l'executem, la instrucció `assert` genera un error.
++ És incorrecte l'algorisme?
++ Saps perquè genera l'error?
++ Com faries l'`assert` per comprovar que l'algorisme és correcte?
+
 ---
 
 
