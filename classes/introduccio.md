@@ -74,8 +74,7 @@ assert main() == 500.0
 
 Si l'executem, la instrucció `assert` genera un error.
 + És incorrecte l'algorisme?
-+ Saps perquè genera l'error? Saps perquè `assert 6.0/2 == 1` també genera error i en canvi `assert 4.0/2 == 1` no?
-+ Com faries l'`assert` per comprovar que l'algorisme és correcte?
++ Saps perquè genera l'error?
 
 ---
 
