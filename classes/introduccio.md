@@ -32,8 +32,11 @@ Video de 9' sobre la definició del concepte d'algorisme, sobre la diferència e
 
 ### Video: Quines propietats han de tenir els bons algorismes?
 
-Correcció i eficiència.
+Video de 13' sobre  la correcció i eficiència d'un algorisme. El cas del problema del viatjant de comerç.
 
+<center>
+<iframe src="https://drive.google.com/file/d/1lXjUGQZq9C9koIfQZ9MwW4OkofGnzoQb/preview" width="640" height="480"></iframe>
+</center>
 --- 
 
 ### Elegància
@@ -83,7 +86,13 @@ Si l'executem, la instrucció `assert` genera un error.
 
 ---
 
+### Video: Com expressem els algorismes?
 
+Video de 13' sobre els algorismes i els llenguatges de programació.
+
+<center>
+<iframe src="https://drive.google.com/file/d/1X_bCfNFOcu1Lk7nqIog4KaKhm3yFx4Bn/preview" width="640" height="480"></iframe>
+</center>
 
 
 
