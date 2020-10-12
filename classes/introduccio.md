@@ -44,7 +44,9 @@ En general, direm que un algorisme  ́es elegant si es segueixen les seguents pa
 + Es fàcil comprovar la correccio del codi.
 + El codi implementa solucions genèriques i les adapta, i no funcions molt específiques que dificulten la seva comprensio.
 
-### Comentaris
+---
+
+### Tests
 
 Al video s'ha comentat que demostrar la correcció d'un algorisme és difícil en molts casos i queda fora de l'abast d'aquest curs. Hi ha però una solució parcial per aquest problema: podem dir amb tota seguretat que un algorísme és **incorrecte** si per alguna de les seves entrades la sortida és incorrecte. És a dir, **només cal trobar un cas de mal funcionament** per a poder dir que **no és correcte**.
 
@@ -53,6 +55,8 @@ Això ens indica que una de les tasques importants quan escribim un algorisme é
 + Tots els casos generen una sortida correcte: llavors no podem afirmar que l'algorisme és correcte ni incorrecte.
 
 Si usem adequadament la instrucció `assert` de Python pot ser que puguem detectar algorismes incorrectes!
+
+---
 
 ### Exercici
 
