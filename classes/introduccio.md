@@ -21,7 +21,14 @@ Video de 3' sobre l'origen de la paraula "algorisme".
 
 ### Video: Què és un algorisme?
 
-Video sobre la definició del concepte d'algorisme, sobre la diferència entre un algorisme i un programa. Diferents algorismes per calcular l'arrel quadrada.
+Video de 9' sobre la definició del concepte d'algorisme, sobre la diferència entre un algorisme i un programa. Diferents algorismes per calcular l'arrel quadrada.
+
+<center>
+<iframe src="https://drive.google.com/file/d/1M089dhy23Jby5lBCHHE2UxNz-V1_Qdkp/view" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
+</center>
+
+https://drive.google.com/file/d/1M089dhy23Jby5lBCHHE2UxNz-V1_Qdkp/view
+
 
 ---
 
