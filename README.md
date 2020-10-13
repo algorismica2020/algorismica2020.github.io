@@ -51,13 +51,13 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Problemes de  [Notebook basics Cadenes](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsCadenes.ipynb). Exercici 1 i 2. [solució](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsCadenes-Solucio.ipynb)
     + Problemes de  [Notebook basics Llistes](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsLListes.ipynb). Exercici 1, 2, 6, 7, 8 i 9. [solució](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsLListes-Solucio.ipynb)
 + Setmana del 12/10: 
-  + Classe presencial: 
+  + Classe presencial: [Llibre de problemes de l'assignatura en pdf](https://github.com/algorismica2020/algorismica2020.github.io/raw/master/LlibreAlgorismicaAlumni.pdf)
     + 2.8 (Factorial menor)
     + 2.10 (Sumatori de parelles)
     + 2.14 (Nombres apocalíptics)
     + 2.17 (Avet). 
   + Contingut en línia (Jordi): [Introducció als algorismes](http://algorismica2020.github.io/classes/introduccio.html)
-  + Pràctica (problemes del llibre): 
+  + Pràctica : [Llibre de problemes de l'assignatura en pdf](https://github.com/algorismica2020/algorismica2020.github.io/raw/master/LlibreAlgorismicaAlumni.pdf) 
     + 1.1 (Notació Gran O),
     + 2.1 (Conversió Celsius a Fahrenheit i convert0a50) 
     + 2.2 (Inversió económica, Futval2) 
