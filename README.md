@@ -58,7 +58,6 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 2.17 (Avet). 
   + Contingut en línia (Jordi): [Introducció als algorismes](http://algorismica2020.github.io/classes/introduccio.html)
   + Pràctica : [Llibre de problemes de l'assignatura en pdf](https://github.com/algorismica2020/algorismica2020.github.io/raw/master/LlibreAlgorismicaAlumni.pdf) 
-    + 1.1 (Notació Gran O),
     + 2.1 (Conversió Celsius a Fahrenheit i convert0a50) 
     + 2.2 (Inversió económica, Futval2) 
     + 2.3 (Condicionals. Prou cerveses) 
@@ -81,6 +80,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 3.9 (Primeritat i el teorema de Fermat)
   + Contingut en línia (Jordi): [Algorismes Numèrics]
   + Pràctica: 
+    + 1.1 (Notació Gran O)
     + 3.2 (El màxim comú divisor i les seves aplicacions)
     + 3.6 (Aritmètica modular)
     + 3.9 (Primeritat i el teorema de Fermat)
