@@ -66,7 +66,6 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 + Setmana del 19/10: 
   + Classe presencial: 
     + **Examen curt de teoria**: Completar programes de Python i qüestions teòriques algorismes. 
-    + Càlcul complexitat
     + 3.7 (Calculadora) 
     + 3.10 (Setmanes i segons)
   + Contingut en línia (Jordi): [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
@@ -76,6 +75,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 3.11 (La seqüència de Fibonacci)
 + Setmana del 26/10: 
   + Classe presencial: Revisió els exercicis de la pràctica. 
+    + Càlcul complexitat
     + 3.6 (Aritmètica modular)
     + 3.9 (Primeritat i el teorema de Fermat)
   + Contingut en línia (Jordi): [Algorismes Numèrics]
