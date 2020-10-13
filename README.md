@@ -65,7 +65,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 19/10: 
   + Classe presencial: 
-    + **Examen curt de teoria**: Completar programes de Python i Qüestions teòriques algorismes, gran O. 
+    + **Examen curt de teoria**: Completar programes de Python i qüestions teòriques algorismes. 
     + Càlcul complexitat
     + 3.7 (Calculadora) 
     + 3.10 (Setmanes i segons)
