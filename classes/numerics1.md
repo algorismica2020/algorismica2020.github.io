@@ -75,10 +75,10 @@ Video de 8' sobre el càlcul **recursiu** de l'algorisme de Fibonacci.
 
 ### Video: Altres versions de Fibonacci.
 
-Video de 6' sobre el càlcul **no recursiu** de l'algorisme de Fibonacci.
+Video de 7' sobre el càlcul **no recursiu** de l'algorisme de Fibonacci.
 
 <center>
-<iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
+<iframe src="https://drive.google.com/file/d/1KJMnTY5SkJd-Afhdl2aKaPBCmUbR91e4/preview" width="640" height="480"></iframe>
 </center>
 
 
@@ -107,10 +107,10 @@ fib3(10)
 ### Video: **Passos computacionals** d'un algorisme
 
 
-Video de 8' amb la introducció al càlcul del cost computacional d'un algorisme.
+Video de 3' amb la introducció al càlcul del cost computacional d'un algorisme.
 
 <center>
-<iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
+<iframe src="https://drive.google.com/file/d/1lg4m74ZPplqSxRi3ufmPldUxo8Z61NJk/preview" width="640" height="480"></iframe>
 </center>
 
 
@@ -138,10 +138,10 @@ def divide(dividend, divisor):
 ### Video: La notació Gran O
 
 
-Video de 10' amb una introducció a la notació Gran O
+Video de 7' amb una introducció a la notació Gran O
 
 <center>
-<iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
+<iframe src="https://drive.google.com/file/d/1xGyM79UACMCNFKugtd1Em-0g2LCMggUp/preview" width="640" height="480"></iframe>
 </center>
 
 
