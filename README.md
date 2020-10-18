@@ -65,7 +65,8 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 19/10: 
   + Classe presencial: 
-    + **Examen curt de teoria**: Completar programes de Python i qüestions teòriques algorismes. 
+    + **Examen curt de teoria**: Completar programes de Python i qüestions teòriques algorismes. S'ha de lliurar al Campus Virtual abans de les 24h d'aquesta classe.
+    + Repàs de la teoria de la setmana passada.
     + 3.7 (Calculadora) 
     + 3.10 (Setmanes i segons)
   + Contingut en línia (Jordi): [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
