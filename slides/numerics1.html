@@ -201,24 +201,6 @@ Jordi Vitrià, Mireia Ribera
 
 .blue[jordi.vitria@ub.edu] |  .blue[ribera@ub.edu]
 
-
----
-class: summary
-
-### Resum del tema.
-
-+ [Representació Numèrica](#sistnum)
-  + Els nombres es poden representar de moltes maneres.
-  + Bases. Propietats d'aquesta representació. 
-+ [La Seqüència de Fibonacci](#fib)
-  + Un algorisme no és una fòrmula. 
-  + Les propietats d'un algorisme: correcció, cost, elegància.
-  + Algorismes recursius. Cost. 
-+ [Mesura del cost: Notació Gran O](#granO)
-+ Aritmètica bàsica: [Suma](#suma)
-+ Aritmètica bàsica: [Multiplicació](#mult)
-  + Versió d'Al Khwarizmi
-+ Aritmètica bàsica: [Divisió](#div)
 		
 ---
 name:sistnum
@@ -289,20 +271,7 @@ Les bases més importants en informàtica són:
 + DECIMAL és base 10 i té 10 dígits: `0,1,2,3,4,5,6,7,8,9`
 + BINARIA és base 2 i té 2 dígits: `0,1`
 + HEXADECIMAL és base 16 i té 16 dígits: `0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F`
----
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-## Bases i Nombres
-
-Fes els següents exercicis:
-
-+ Canvi de base:
-  + Pensa com seria l'algorisme que passa un nombre escrit en base 10 a base `a`, on `a` és un nombre enter positiu qualsevol. 
-  + Codifica aquest algorisme en Python: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
-  + Comprova que l'algorisme és correcte fent servir aquest recurs: https://www.rapidtables.com/convert/number/base-converter.html
-+ Quin és el nombre enter més gran que puc representar usant 64 dígits en base 2?
-+ Quin és el nombre enter més gran que puc representar usant 32 dígits en base 16?
 ---
 
 ## Una mica més d'història
@@ -586,25 +555,6 @@ També direm que <code>fib3(n)</code> és <b>lineal</b> (o polinòmic) respecte 
 <b> Nota: </b> Pel nombre d'iteracions que fa, podriem pensar que no és cap problema calcular el terme 100.000.000, però si ho proveu, no funciona. <br> El motiu no és el nombre d'iteracions, sinó la mida dels termes que va calculant, que col·lapsan la memòria de l'ordinador.
 </div>
 
----
-
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-## Algorisme de Fibonacci
-
-```python
-def fib3(n):
-    a,b = 0,1
-    for i in range(1,n+1):
-        a,b = b, a+b
-    return a
-
-fib3(10)
-> 55
-```
-
-+ Executeu aquest algorisme amb l'eina [Code Skulptor](http://www.codeskulptor.org/viz/index.html). Aquesta eina us permet visualitzar fàcilment el funcionament de qualsevol algorisme. Familiaritzeu-vos amb ella, perquè us pot ser útil.
-
 
 
 ---
@@ -645,25 +595,6 @@ for i in range(327864287686868676876876876887986):
 
 Caldrà tenir en compte quina complexitat computacional té operar dos nombres d’aquestes característiques.
 
----
-
-#### <p style="background-color: #33FFCE;">Problema 3.1 del Manual de Problemes</p>
-
-+ Escriu un algorisme que divideixi (ens retorni el quocient de) dos nombres enters, positius i més grans que 1, sense fer servir els operadors de multiplicació `*`, divisió `/` ni mòdul `%`: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
-
-+ Contesta les següents preguntes:
-  + Quantes operacions (assignacions, comparacions, sumes i restes) fa quan calcula `90/10`?
-
-#### <p style="background-color: #33FFCE;">Solució</p>
-
-```python
-def divide(dividend, divisor):  
-    quotient = 0
-    while (dividend >= divisor):  
-        dividend -= divisor 
-        quotient += 1
-    return  quotient 
-```
 
 ---
 name:granO
@@ -729,19 +660,7 @@ Les famílies més importants d’algorismes reben aquests noms:
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
 
-## Magnitud dels nombres. 
-
-
-
-És important familiaritzar-se amb les magnituds dels nombres per entendre quan és viable que un ordinador calculi alguna cosa. 
-
-Aquest video, us pot ajudar a tenir una idea intuitiva de la magnitud de les potències de 10. 
-
-<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
----
 
 
 class: center, middle, inverse
