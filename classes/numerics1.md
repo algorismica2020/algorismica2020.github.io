@@ -12,10 +12,10 @@ Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020
 
 ### Video: Introducció als sistemes de numeració.
 
-Video de 6' sobre l'història dels sistemes de numeració, la seva relació amb les operacions aritmètiques i el concepte de base de representació.
+Video de 9' sobre l'història dels sistemes de numeració, la seva relació amb les operacions aritmètiques i el concepte de base de representació.
 
 <center>
-<iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
+<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
 </center>
 
 ---
