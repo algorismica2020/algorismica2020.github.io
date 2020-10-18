@@ -42,17 +42,6 @@ Video de 6' sobre l'arribada a Europa del sistema decimal i el paper que hi va j
 <center>
 <iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
 </center>
- 
-
----
-
-### Video: Recursivitat.
-
-Video de 6' sobre el càlcul **recursiu** de l'algorisme de Fibonacci.
-
-<center>
-<iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
-</center>
 
 ---
 
@@ -70,6 +59,16 @@ def fib1(n):
 
 + Copia l'algorisme recursiu de Fibonacci a un notebook i calcula el terme 10 i el terme 100: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
 + Què ha passat quan has intentat calcular el terme 100? Per què?
+
+---
+
+### Video: Recursivitat.
+
+Video de 6' sobre el càlcul **recursiu** de l'algorisme de Fibonacci.
+
+<center>
+<iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
+</center>
 
 ---
 
