@@ -37,10 +37,10 @@ Intenta contestar de forma justificada les seguents preguntes:
 
 ### Video: Fibonacci.
 
-Video de 6' sobre l'arribada a Europa del sistema decimal i el paper que hi va jugar Fibonacci. Definició i algorisme per calcular la célebre serie de Fibonaci. 
+Video de 7' sobre l'arribada a Europa del sistema decimal i el paper que hi va jugar Fibonacci. Definició i algorisme per calcular la célebre serie de Fibonaci. 
 
 <center>
-<iframe src="https://www.bbc.co.uk/ideas/videos/why-algorithms-are-called-algorithms/p07gdlwf/player" width="500" height="440" scrolling="no" style="overflow: hidden" allowfullscreen frameborder="0"></iframe>
+<iframe src="https://drive.google.com/file/d/1cG7MLI_8ZfmBhskfOFjDGQiz2A-khsdI/preview" width="640" height="480"></iframe>
 </center>
 
 ---
