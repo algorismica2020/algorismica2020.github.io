@@ -1,6 +1,6 @@
 # Sessió en línia del dia 19/10/2020: Algorismes Numèrics I
 
-Aquesta sessió té una durada aproximada de 90 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
+Aquesta sessió té una durada aproximada de 60 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
 Es recomana seguir aquests continguts en el mateix ordre que apareixen en aquesta pàgina.
 
 Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020.github.io/slides/numerics1.html). 
