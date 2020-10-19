@@ -124,16 +124,6 @@ Video de 3' amb la introducció al càlcul del cost computacional d'un algorisme
   + Quantes operacions (assignacions, comparacions, sumes i restes) fa quan calcula `90/10`?
 
 
-
-```python
-def divide(dividend, divisor):  
-    quotient = 0
-    while (dividend >= divisor):  
-        dividend -= divisor 
-        quotient += 1
-    return  quotient 
-```
-
 ---
 ### Video: La notació Gran O
 
