@@ -67,7 +67,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
   + Classe presencial: 
     + **Examen curt de teoria** de 30'. 
       + L'examen consistirà en completar programes de Python i contestar qüestions de les classes de teoria. 
-      + A causa de la suspensió de les classes presencials, l'**examen no contarà per la nota** però igualment s'ha de lliurar al Campus Virtual abans de les 24h d'aquesta classe i serà corregit per a que vosaltres tingueu una indicació de com porteu l'assignatura.
+      + A causa de la suspensió de les classes presencials, l'**examen no comptarà per la nota** però igualment s'ha de lliurar al Campus Virtual abans de les 24h d'aquesta classe i serà corregit per a que vosaltres tingueu una indicació de com porteu l'assignatura.
     + Repàs de la teoria de la setmana passada.
     + 3.7 (Calculadora) 
     + 3.10 (Setmanes i segons)
