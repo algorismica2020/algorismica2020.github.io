@@ -70,7 +70,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
       + A causa de la suspensió de les classes presencials, l'**examen no comptarà per la nota** però igualment s'ha de lliurar al Campus Virtual abans de les 24h d'aquesta classe i serà corregit per a que vosaltres tingueu una indicació de com porteu l'assignatura.
     + Repàs de la teoria de la setmana passada.
     + 3.7 (Calculadora) 
-    + 3.10 (Setmanes i segons)
+    + 3.10 (Setmanes i segons) - Canviar l'enunciat, en comptes del factorial 100, fer només fins al factorial 12. 
   + Contingut en línia (Jordi): [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
   + Pràctica: 
     + 3.3 (Numeracio en diferents bases)
