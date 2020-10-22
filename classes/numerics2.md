@@ -47,7 +47,7 @@ Video de 9' sobre l'algorisme de la suma.
 
 ---
 
-### Com s'implementa la resta?
+### Com s'implementa la resta en un ordinador?
 
 El "*complement a un*" i el "*complement a dos*" són dues eines matemàtiques que faciliten molt les tasques aritmètiques en el sistema binari, sobretot la realització de restes i el treball amb nombres negatius.
 
@@ -57,8 +57,42 @@ El "complement a dos" (C2) d’un nombre binari és el nombre resultant de sumar
 
 Llavors, la **resta de dos nombres binaris pot obtenir-se sumant al minuend el complement a dos del subtrahend**.
 
-+ Escriu un algorisme que resti dos nombres binaris que estan emmagatzemats en dues llistes: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
++ Escriu un algorisme que resti dos nombres binaris que estan emmagatzemats en dues llistes, com per exemple `[1,0,0,0,1]` i `[0,0,1,1,1]`. Fes-ho aquí: : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
 + Quina és la complexitat de l'algorisme?
+
+---
+
+### Video: Aritmètica Bàsica.
+
+Video de 9' sobre l'algorisme de la multiplicació.
+
+<center>
+<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
+</center>
+
+---
+
+### Versió no recursiva de l'algorisme d'Al Khwarizmi.
+
+L'algorisme d'Al Khwarizmi es pot implementar de forma no recursiva molt fàcilment. Intenta entendre aquesta implementació, fent una simulació de l'execució a mà i després executa'l: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
+
+```python
+def mul(a,b):
+    result = 0
+    while b != 0:
+        if (b%2) :
+            result += a
+        b >>= 1
+        a <<= 1
+    return result
+```
+
+
+Recorda que:
++ `b%2` calcula la resta de dividir `b` per 2. Per tant, és una expressió booleana certa si el nombre és senar i falsa si és parell. 
++ `b>>=1` opera a nivell de bits i simplement desplaça la representació de `b` un bit cap a l'esquerra. Això és equivalent a dividir `b` per 2, amb cost `O(n)`. 
++ `a<<=1` opera a nivell de bits i simplement desplaça la representació de `a` un bit cap a la dreta. Això és equivalent a multiplicar `a` per 2, amb cost `O(n)`.
+
 
 ---
 
