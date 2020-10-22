@@ -668,54 +668,6 @@ name:tema2
 
 ## **Aritmètica Bàsica**
 
----
-
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-
-## Aritmètica Bàsica: Preliminar
-
-
-+ Suposem que tenim un conjunt amb `N` elements. 
-+ Per exemple, com aquest: (<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>).
-+ En base 10, això es representa amb el nombre <code>8</code>. Per tant, només cal un dígit per representar la cardinalitat d'aquest conjunt. 
-+ Fixeu-vos que si tenim `k` dígits en base `b` podem representar els nombres fins a `b^k-1`.
-  + Exemple: Si tinc 2 dígits en base 2, el conjunt més gran que puc representar (amb el nombre `11`) és 3.
-
-<div class=warnblue>
-Per tant, necessitem 
-
-$$\log_b(N+1)$$
-
- dígits per escriure <code>N</code> en base <code>b</code>. 
-</div>
-
----
-
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-
-## Aritmètica Bàsica: Preliminar
-
-Demostració de la fòrmula anterior:
-
-1.  Sabem que: $$b^k-1 = N$$
-2. Si passem el `-1` a l'altre costat i apliquem logaritmes a cada costat de la igualtat: $$\log_b b^k = \log_b (N + 1)$$ ens queda: $$ k  = \log_b (N+1) $$
-
----
-
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-
-## Aritmètica Bàsica: Preliminar
-
-Veiem un exemple: 
-
-> `k=5, b=2` 
-
->	Si tenim 5 dígits en base 2, podem representar fins a `2^5 -1 = 32 - 1 = 31`.  Efectivament `1111 = 16 + 8 + 4 + 2 + 1 = 31`
-
->	Per altra banda, necessitarem `log_2 (31+1)` dígits per escriure `31` en base `b`, que són `5` dígits.
 
 ---
 
@@ -786,20 +738,6 @@ Es pot fer millor?
 
 No! Per sumar `n` bits com a mínim s’han de poder llegir i escriure, i això ja són `2n` passos!
 
----
-
-#### <p style="background-color: #33FFCE;">Problema 3.2 del Manual de Problemes.</p>
-
-El "*complement a un*" i el "*complement a dos*" són dues eines matemàtiques que faciliten molt les tasques aritmètiques en el sistema binari, sobretot la realització de restes i el treball amb nombres negatius.
-
-El "complement a un" (C1) d’un nombre binari és el nombre resultant d’invertir els uns i els zeros d’aquest nombre. Per exemple, el complement a un del nombre `1101` és el nombre `0010`.
-
-El "complement a dos" (C2) d’un nombre binari és el nombre resultant de sumar 1 al seu complement a un. És a dir, C2 = C1 + 1. Generalment s’assumeix que el C2 és la manera de representar el negatiu d’un número binari.
-
-Llavors, la **resta de dos nombres binaris pot obtenir-se sumant al minuend el complement a dos del subtrahend**.
-
-+ Escriu un algorisme que resti dos nombres binaris que estan emmagatzemats en dues llistes: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
-+ Quina és la complexitat de l'algorisme?
 
 
 ---
@@ -819,7 +757,6 @@ Tenim `n` multiplicacions de complexitat `n` (un bit per `n` bits) + aproximadam
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
 
 
 ## Aritmètica Bàsica: Multiplicació
@@ -838,7 +775,6 @@ Exemple: `11 x 13`:
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
 
 ## Aritmètica Bàsica: Multiplicació
 
@@ -860,7 +796,6 @@ print(mult(11,13))
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
 
 ## Aritmètica Bàsica: Multiplicació
 
@@ -874,35 +809,6 @@ Per tant, si fem `n` crides que costen `n` operacions, el cost és `O(n^2)`.
 
 ---
 
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-## Aritmètica Bàsica: Multiplicació
-
-L'algorisme d'Al Khwarizmi es pot implementar de forma no recursiva molt fàcilment. Intenta entendre aquesta implementació, fent una simulació de l'execució a mà i després executa'l: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
-
-```python
-def mul(a,b):
-    result = 0
-    while b != 0:
-        if (b%2) :
-            result += a
-        b >>= 1
-        a <<= 1
-    return result
-```
-
-
-Recorda que:
-<small>
-+ `b%2` calcula la resta de dividir `b` per 2. Per tant, és una expressió booleana certa si el nombre és senar i falsa si és parell. 
-+ `b>>=1` opera a nivell de bits i simplement desplaça la representació de `b` un bit cap a l'esquerra. Això és equivalent a dividir `b` per 2, amb cost `O(n)`. 
-+ `a<<=1` opera a nivell de bits i simplement desplaça la representació de `a` un bit cap a la dreta. Això és equivalent a multiplicar `a` per 2, amb cost `O(n)`.
-</small>
-
-
-
-
----
 
 ## Aritmètica Bàsica: Multiplicació
 
