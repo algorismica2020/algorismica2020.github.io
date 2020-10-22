@@ -15,7 +15,7 @@ Suposem que tenim un conjunt amb `N` elements. Per exemple, com aquest: (`a`,`b`
 
 Fixeu-vos que si tenim `k` dígits en base `b` podem representar tots els nombres fins a `b^k-1`. Per exemple, si tinc 2 dígits en base 2, la cardinalitat més gran que puc representar (amb el nombre `11`) és la del conjunt (`a`,`b`,`c`).
 
-A partir de les fòrmules anteriors es pot deduïr que necessitarem `\log_b(N+1)` dígits per escriure `N` en base `b`.
+A partir de les fòrmules anteriors es pot deduïr que necessitarem `log_b(N+1)` dígits per escriure `N` en base `b`.
 
 Demostració de la fòrmula anterior:
 1. Sabem que: `b^k-1 = N` 
