@@ -39,7 +39,7 @@ Veiem un exemple:
 
 ### Video: Aritmètica Bàsica.
 
-Video de 9' sobre els algorismes que implementen les operacions aritmètiques bàsiques.
+Video de 9' sobre l'algorisme de la suma.
 
 <center>
 <iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
@@ -47,18 +47,18 @@ Video de 9' sobre els algorismes que implementen les operacions aritmètiques b�
 
 ---
 
-### Exercicis: Bases i Nombres
+### Com s'implementa la resta?
 
-Fes els següents exercici:
+El "*complement a un*" i el "*complement a dos*" són dues eines matemàtiques que faciliten molt les tasques aritmètiques en el sistema binari, sobretot la realització de restes i el treball amb nombres negatius.
 
-+ Canvi de base:
-  + Pensa com seria l'algorisme que passa un nombre escrit en base 10 a base `a`, on `a` és un nombre enter positiu qualsevol. 
-  + Codifica aquest algorisme en Python: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
-  + Comprova que l'algorisme és correcte fent servir aquest recurs: [https://www.rapidtables.com/convert/number/base-converter.html](https://www.rapidtables.com/convert/number/base-converter.html)
-  
-Intenta contestar de forma justificada les seguents preguntes:
-+ Quin és el nombre enter més gran que puc representar usant 64 dígits en base 2?
-+ Quin és el nombre enter més gran que puc representar usant 32 dígits en base 16?
+El "complement a un" (C1) d’un nombre binari és el nombre resultant d’invertir els uns i els zeros d’aquest nombre. Per exemple, el complement a un del nombre `1101` és el nombre `0010`.
+
+El "complement a dos" (C2) d’un nombre binari és el nombre resultant de sumar 1 al seu complement a un. És a dir, C2 = C1 + 1. Generalment s’assumeix que el C2 és la manera de representar el negatiu d’un número binari.
+
+Llavors, la **resta de dos nombres binaris pot obtenir-se sumant al minuend el complement a dos del subtrahend**.
+
++ Escriu un algorisme que resti dos nombres binaris que estan emmagatzemats en dues llistes: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
++ Quina és la complexitat de l'algorisme?
 
 ---
 
