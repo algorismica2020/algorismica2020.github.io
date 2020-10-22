@@ -17,11 +17,12 @@ Suposem que tenim un conjunt amb `N` elements. Per exemple, com aquest: (`a`,`b`
 + Fixeu-vos que si tenim `k` dígits en base `b` podem representar els nombres fins a `b^k-1`.
   + Exemple: Si tinc 2 dígits en base 2, el conjunt més gran que puc representar (amb el nombre `11`) és 3.
 
-Per tant, necessitem 
+Per tant, necessitem `\log_b(N+1)` dígits per escriure `N` en base `b`.
 
-$$\log_b(N+1)$$
+Demostració de la fòrmula anterior:
 
- dígits per escriure <code>N</code> en base <code>b</code>. 
+1.  Sabem que: `b^k-1 = N` 
+2. Si passem el `-1` a l'altre costat i apliquem logaritmes a cada costat de la igualtat: `\log_b b^k = \log_b (N + 1)` ens queda: `k  = \log_b (N+1)`
 
 ---
 
