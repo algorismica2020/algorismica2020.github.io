@@ -138,7 +138,15 @@ def primeFactors(n):
 
 + Executa aquest algorisme per algun nombre petit (p.e. `315`): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
 
-Aquest algorisme é una complexitat molt alta! Només el podem fer servir per nombres petits.
+Aquest algorisme té una complexitat molt alta! Només el podem fer servir per nombres petits.
 
+---
 
+### Video: Aritmètica Modular.
+
+Video de 9' sobre artimètica modular.
+
+<center>
+<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
+</center>
 
