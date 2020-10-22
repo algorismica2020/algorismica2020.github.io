@@ -74,11 +74,12 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
   + Contingut en línia (Jordi): [Algorismes Numèrics](http://algorismica2020.github.io/classes/numerics1.html)
   + Pràctica: 
     + 3.3 (Numeracio en diferents bases)
-    + 3.10 (Restriccions múltiples Tres condicions)
+    + 3.10 (Restriccions múltiples tres condicions)
     + 3.11 (La seqüència de Fibonacci)
 + Setmana del 26/10: 
   + Classe presencial: 
-    + Exercicis variars de càlcul de complexitat. 
+    + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
+    + Exercicis variats de càlcul de complexitat. 
   + Contingut en línia (Jordi): [Algorismes Numèrics II](http://algorismica2020.github.io/classes/numerics2.html)
   + Pràctica: 
     + 1.1 (Notació Gran O)
@@ -88,8 +89,8 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 + Setmana del 2/11: 
   + Classe presencial: 
     + **Examen curt de teoria**
-    + 3.11 (La seqüència de Fibonacci)
-    + Glossari i algorismes bàsics. Dubtes
+    + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
+    + 3.11 La seqüència de Fibonacci
   + Contingut en línia (Jordi): [Algorismes Numèrics III]   
   + Pràctica: 
     + 3.6 (Aritmètica modular)
