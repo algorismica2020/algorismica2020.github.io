@@ -8,8 +8,6 @@
 + `0.3n + 5n^1.5 + 2.5 n^1.175`
 + `0.01 n log n + n (log n)^2`
 
-![Captura de Pantalla 2020-10-22 a les 13.39.35](/Users/jordi/Desktop/Captura de Pantalla 2020-10-22 a les 13.39.35.png)
-
 3. Dos algorismes `A` i `B` tenen una complexitat  `O(0.1 n^2 log n)` i `O(2.5 n^2)`, respectivament, per un problema de mida `n`. 
 Si el problema que vols resoldre pots assegurar que té una mida `n < 10^9`, quins escolliries?
 
