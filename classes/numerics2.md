@@ -11,26 +11,20 @@ Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020
 ---
 ### Observació preliminar.
 
-Suposem que tenim un conjunt amb `N` elements. Per exemple, com aquest: (`a`,`b`,`c`,`d`,`e`,`f`,`g`,`h`)
+Suposem que tenim un conjunt amb `N` elements. Per exemple, com aquest: (`a`,`b`,`c`,`d`,`e`,`f`,`g`,`h`). En base 10, la cardinalitat d'aquest conjunt es representa amb el nombre `8`. Per tant, només cal un dígit per representar-ho. 
 
-+ En base 10, això es representa amb el nombre `8`. Per tant, només cal un dígit per representar la cardinalitat d'aquest conjunt. 
-+ Fixeu-vos que si tenim `k` dígits en base `b` podem representar els nombres fins a `b^k-1`.
-  + Exemple: Si tinc 2 dígits en base 2, el conjunt més gran que puc representar (amb el nombre `11`) és 3.
+Fixeu-vos que si tenim `k` dígits en base `b` podem representar tots els nombres fins a `b^k-1`. Per exemple, si tinc 2 dígits en base 2, la cardinalitat més gran que puc representar (amb el nombre `11`) és la del conjunt (`a`,`b`,`c`).
 
-Per tant, necessitem `\log_b(N+1)` dígits per escriure `N` en base `b`.
+A partir de les fòrmules anteriors es pot deduïr que necessitarem `\log_b(N+1)` dígits per escriure `N` en base `b`.
 
 Demostració de la fòrmula anterior:
-
-1.  Sabem que: `b^k-1 = N` 
+1. Sabem que: `b^k-1 = N` 
 2. Si passem el `-1` a l'altre costat i apliquem logaritmes a cada costat de la igualtat: `\log_b b^k = \log_b (N + 1)` ens queda: `k  = \log_b (N+1)`
 
 Veiem un exemple: 
-
-> `k=5, b=2` 
-
->	Si tenim 5 dígits en base 2, podem representar fins a `2^5 -1 = 32 - 1 = 31`.  Efectivament `1111 = 16 + 8 + 4 + 2 + 1 = 31`
-
->	Per altra banda, necessitarem `log_2 (31+1)` dígits per escriure `31` en base `b`, que són `5` dígits.
++ Suposem que tenim `k=5, b=2` 
++ Si tenim 5 dígits en base 2, podem representar fins a `2^5 -1 = 32 - 1 = 31`.  Efectivament `1111 = 16 + 8 + 4 + 2 + 1 = 31`
++ Per altra banda, necessitarem `log_2 (31+1)` dígits per escriure `31` en base `b`, que són `5` dígits.
 
 
 
