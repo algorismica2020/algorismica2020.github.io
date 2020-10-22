@@ -81,7 +81,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Càlcul complexitat
     + 3.6 (Aritmètica modular)
     + 3.9 (Primeritat i el teorema de Fermat)
-  + Contingut en línia (Jordi): [Algorismes Numèrics]
+  + Contingut en línia (Jordi): [Algorismes Numèrics II](http://algorismica2020.github.io/classes/numerics2.html)
   + Pràctica: 
     + 1.1 (Notació Gran O)
     + 3.2 (El màxim comú divisor i les seves aplicacions)
@@ -93,7 +93,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Preguntes encriptació / factorització
     + 3.11 (La seqüència de Fibonacci)
     + Glossari i algorismes bàsics. Dubtes
-  + Contingut en línia (Jordi): [Algorismes Numèrics]   
+  + Contingut en línia (Jordi): [Algorismes Numèrics III]   
   + Pràctica: 
     + 3.5 (Operacions amb nombres binaris)
     + 3.8 (Primeritat)
