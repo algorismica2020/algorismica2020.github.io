@@ -9,7 +9,7 @@
 + `0.01 n log n + n (log n)^2`
 
 3. Dos algorismes `A` i `B` tenen una complexitat  `O(0.1 n^2 log n)` i `O(2.5 n^2)`, respectivament, per un problema de mida `n`. 
-Si el problema que vols resoldre pots assegurar que té una mida `n < 10^9`, quins escolliries?
+Si el problema que vols resoldre sempre tindrà una mida `n < 10^9`, quin escolliries?
 
 
 
