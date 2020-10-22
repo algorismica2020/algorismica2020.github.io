@@ -112,7 +112,33 @@ Video de 9' sobre com enviar un missatge secret usant operacions aritmètiques s
 <iframe src="https://www.youtube.com/embed/MsqqpO9R5Hc" width="640" height="480"></iframe>
 </center>
 
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MsqqpO9R5Hc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </center>
+--- 
+
+### Factorització de nombres enters: un algorisme ingenu
+
+```python
+import math 
+
+def primeFactors(n): 
+    # Impremeix el nombre de 2 que divideixen n 
+    while n % 2 == 0: 
+        print(2) 
+        n = n / 2
+    # n és senar! 
+    # anem saltant de 2 en 2 ( i = i + 2)  
+    for i in range(3, int(math.sqrt(n))+1, 2): 
+        # mentre i divideix n, imprimim i i dividim n 
+        while n % i == 0: 
+            print(i) 
+            n = n / i 
+    # Imprimim el primer si és més gran que 2 
+    if n > 2: 
+        print(n)
+```
+
++ Executa aquest algorisme per algun nombre petit (p.e. `315`): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
+
+Aquest algorisme é una complexitat molt alta! Només el podem fer servir per nombres petits.
+
+
 
