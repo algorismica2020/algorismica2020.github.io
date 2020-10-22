@@ -250,15 +250,6 @@ Per aquest motiu cal evaluar molt bé la complexitat dels algorismes que farem s
 
 <center><img src="images/bob2.png" width="550" alt="Si l'Eve vol saber quin és el missatge...  (n,e) = (33,3) C=5  1. L'Eve factoritza n = pq  33 = 11 x 3; 2. Troba d tal que ed % (p-1)(q-1) = 1, d=7; 3. Desencripta el missatge amb d, M = 5^7 % 33 = 14"></center>
 
----
-
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-## Criptografia
-
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MsqqpO9R5Hc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
 
 ---
 
@@ -290,37 +281,6 @@ El temps d'execució d'un algorisme de factorització de propòsit general depè
 
 Per a un ordinador clàssic, GNFS és el millor algorisme publicat per als `n` grans. Aquest algorisme te una complexitat de tipus exponencial!
 
----
-
-#### <p style="background-color: #f18973;">Treball Personal Asíncron</p>
-
-## Factorització de nombres enters: un algorisme *ingenu*
-
-```python
-import math 
-
-def primeFactors(n): 
-    # Impremeix el nombre de 2 que divideixen n 
-    while n % 2 == 0: 
-        print(2) 
-        n = n / 2
-    # n és senar! 
-    # anem saltant de 2 en 2 ( i = i + 2)  
-    for i in range(3, int(math.sqrt(n))+1, 2): 
-        # mentre i divideix n, imprimim i i dividim n 
-        while n % i == 0: 
-            print(i) 
-            n = n / i 
-    # Imprimim el primer si és més gran que 2 
-    if n > 2: 
-        print(n)
-```
-
-+ Executa aquest algorisme per algun nombre petit (p.e. `315`): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb ) 
-
-<div class=warnred>
-  Aquest algorisme encara té una complexitat més alta! Només el podem fer servir per nombres petits.
-</div>
 
 
 ---
