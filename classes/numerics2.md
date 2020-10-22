@@ -11,13 +11,22 @@ Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020
 ---
 ### Exercici preliminar.
 
-Suposem que tenim un conjunt amb `N` elements. Per exemple, com aquest: (<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>,<i class="material-icons" style="color:red;">accessibility</i>).
+Suposem que tenim un conjunt amb `N` elements. Per exemple, com aquest: (`a`,`b`,`c`,`d`,`e`,`f`,`g`,`h`)
 
++ En base 10, això es representa amb el nombre `8`. Per tant, només cal un dígit per representar la cardinalitat d'aquest conjunt. 
++ Fixeu-vos que si tenim `k` dígits en base `b` podem representar els nombres fins a `b^k-1`.
+  + Exemple: Si tinc 2 dígits en base 2, el conjunt més gran que puc representar (amb el nombre `11`) és 3.
+
+Per tant, necessitem 
+
+$$\log_b(N+1)$$
+
+ dígits per escriure <code>N</code> en base <code>b</code>. 
 
 ---
 
 
-### Video: Artimètica Bàsica.
+### Video: Aritmètica Bàsica.
 
 Video de 9' sobre els algorismes que implementen les operacions aritmètiques bàsiques.
 
