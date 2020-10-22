@@ -77,27 +77,24 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 3.10 (Restriccions múltiples Tres condicions)
     + 3.11 (La seqüència de Fibonacci)
 + Setmana del 26/10: 
-  + Classe presencial: Revisió els exercicis de la pràctica. 
-    + Càlcul complexitat
-    + 3.6 (Aritmètica modular)
-    + 3.9 (Primeritat i el teorema de Fermat)
+  + Classe presencial: 
+    + Exercicis variars de càlcul de complexitat. 
   + Contingut en línia (Jordi): [Algorismes Numèrics II](http://algorismica2020.github.io/classes/numerics2.html)
   + Pràctica: 
     + 1.1 (Notació Gran O)
+    + 3.1 (Divisió entera)
     + 3.2 (El màxim comú divisor i les seves aplicacions)
-    + 3.6 (Aritmètica modular)
-    + 3.9 (Primeritat i el teorema de Fermat)
+    + 3.5 (Operacions amb nombres binaris)
 + Setmana del 2/11: 
   + Classe presencial: 
     + **Examen curt de teoria**
-    + Preguntes encriptació / factorització
     + 3.11 (La seqüència de Fibonacci)
     + Glossari i algorismes bàsics. Dubtes
   + Contingut en línia (Jordi): [Algorismes Numèrics III]   
   + Pràctica: 
-    + 3.5 (Operacions amb nombres binaris)
+    + 3.6 (Aritmètica modular)
     + 3.8 (Primeritat)
-    + 3.1 (Divisió entera)
+    + 3.9 (Primeritat i el teorema de Fermat)
 + Setmana del 9/11: 
   + Classe presencial: 
     + 4.2 (Alfabet aviació)
