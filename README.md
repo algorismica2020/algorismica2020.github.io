@@ -79,7 +79,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 + Setmana del 26/10: 
   + Classe presencial: 
     + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
-    + Exercicis variats de càlcul de complexitat. 
+    + [Exercicis variats de càlcul de complexitat](http://algorismica2020.github.io/classes/grano.html). 
   + Contingut en línia (Jordi): [Algorismes Numèrics II](http://algorismica2020.github.io/classes/numerics2.html)
   + Pràctica: 
     + 1.1 (Notació Gran O)
