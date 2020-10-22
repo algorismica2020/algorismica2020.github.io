@@ -5,7 +5,7 @@
 2. Quina és la complexitat `O()`d'aquests algorismes?
 + `5+0.0001n^3 + 0.025n`
 + `500n + 100n^1.5 + 50n log n`
-+ `0.3n + 5n^1.5 + 2.5 n^1.175`
++ `0.3n + 5n^1.5 + 2.5 n^1.75`
 + `0.01 n log n + n (log n)^2`
 
 3. Dos algorismes `A` i `B` tenen una complexitat  `O(0.1 n^2 log n)` i `O(2.5 n^2)`, respectivament, per un problema de mida `n`. 
