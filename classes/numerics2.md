@@ -96,5 +96,23 @@ Recorda que:
 
 ---
 
+### Video: Aritmètica Bàsica.
 
+Video de 9' sobre com enviar un missatge secret usant operacions aritmètiques simples.
+
+<center>
+<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
+</center>
+
+---
+
+### Video d'introducció a la criptografia.
+
+<center>
+<iframe src="https://www.youtube.com/embed/MsqqpO9R5Hc" width="640" height="480"></iframe>
+</center>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MsqqpO9R5Hc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </center>
 
