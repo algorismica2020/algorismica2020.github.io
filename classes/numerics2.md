@@ -141,5 +141,5 @@ Aquest algorisme té una complexitat molt alta! Només el podem fer servir per n
 Video de 16' sobre artimètica modular.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1wbLQWvM6B_swE0aI0E68T9h8IUipZM2S/preview" width="640" height="480"></iframe>ç
+<iframe src="https://drive.google.com/file/d/1wbLQWvM6B_swE0aI0E68T9h8IUipZM2S/preview" width="640" height="480"></iframe>
 </center>
