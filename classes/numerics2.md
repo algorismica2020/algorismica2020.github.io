@@ -33,10 +33,10 @@ Veiem un exemple:
 
 ### Video: Aritmètica Bàsica.
 
-Video de 9' sobre l'algorisme de la suma.
+Video de 7' sobre l'algorisme de la suma.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1YYrEGDUUByI9g3RmmkPaiEY02vS4uNuz/view" width="640" height="480"></iframe>
 </center>
 
 ---
