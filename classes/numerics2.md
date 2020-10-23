@@ -138,9 +138,9 @@ Aquest algorisme té una complexitat molt alta! Només el podem fer servir per n
 
 ### Video: Aritmètica Modular.
 
-Video de 9' sobre artimètica modular.
+Video de 16' sobre artimètica modular.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1--gMVxqJi6Q-Me9BkOGlThImksxfPIqZ/view" width="640" height="480"></iframe>
 </center>
 
