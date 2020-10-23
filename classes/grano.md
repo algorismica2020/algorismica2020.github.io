@@ -2,6 +2,8 @@
 
 1. Un algorisme d'ordenació de llistes te una complexitat `O(n log n)` per ordenar una llista de `n` elements. Si triga 1ms en ordenar 1000 elements, quant trigarà en ordenar-ne 1000000?
 
+[//]: # (This may be the most platform independent comment)
+
 2. Quina és la complexitat `O()`d'aquests algorismes?
 + `5+0.0001n^3 + 0.025n`
 + `500n + 100n^1.5 + 50n log n`
