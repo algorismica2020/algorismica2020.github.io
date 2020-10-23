@@ -36,7 +36,7 @@ Veiem un exemple:
 Video de 7' sobre l'algorisme de la suma.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1YYrEGDUUByI9g3RmmkPaiEY02vS4uNuz/view" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1YYrEGDUUByI9g3RmmkPaiEY02vS4uNuz/preview" width="640" height="480"></iframe>
 </center>
 
 ---
@@ -61,7 +61,7 @@ Llavors, la **resta de dos nombres binaris pot obtenir-se sumant al minuend el c
 Video de 11' sobre els algorismes de la multiplicació i la divisió.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1jJ4sHszSSgKcFRpbYd91dFz8qu3ddA6p/view" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1jJ4sHszSSgKcFRpbYd91dFz8qu3ddA6p/preview" width="640" height="480"></iframe>
 </center>
 
 ---
@@ -95,7 +95,7 @@ Recorda que:
 Video de 14' sobre com enviar un missatge secret usant operacions aritmètiques simples.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1--gMVxqJi6Q-Me9BkOGlThImksxfPIqZ/view" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1--gMVxqJi6Q-Me9BkOGlThImksxfPIqZ/preview" width="640" height="480"></iframe>
 </center>
 
 ---
@@ -141,6 +141,5 @@ Aquest algorisme té una complexitat molt alta! Només el podem fer servir per n
 Video de 16' sobre artimètica modular.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1--gMVxqJi6Q-Me9BkOGlThImksxfPIqZ/view" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1wbLQWvM6B_swE0aI0E68T9h8IUipZM2S/preview" width="640" height="480"></iframe>ç
 </center>
-
