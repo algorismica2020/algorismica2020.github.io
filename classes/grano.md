@@ -10,9 +10,12 @@
 + `0.3n + 5n^1.5 + 2.5 n^1.75`
 + `0.01 n log n + n (log n)^2`
 
+<!--- (Resposta: n^3, n^1.5, n^1.75, n (log n)^) --->
+
 3. Dos algorismes `A` i `B` tenen una complexitat  `O(0.1 n^2 log n)` i `O(2.5 n^2)`, respectivament, per un problema de mida `n`. 
 Si el problema que vols resoldre sempre tindrà una mida `n < 10^9`, quin escolliries?
-
+<!--- Resposta: L'algorisme A, atès que 0.1 * 10**9**2 * math.log(10**9) és menor que 2.5 *
+10*9*2 --->
 
 
 
