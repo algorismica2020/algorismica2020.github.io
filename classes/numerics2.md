@@ -58,10 +58,10 @@ Llavors, la **resta de dos nombres binaris pot obtenir-se sumant al minuend el c
 
 ### Video: Aritmètica Bàsica.
 
-Video de 9' sobre els algorismes de la multiplicació i la divisió.
+Video de 11' sobre els algorismes de la multiplicació i la divisió.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1jJ4sHszSSgKcFRpbYd91dFz8qu3ddA6p/view" width="640" height="480"></iframe>
 </center>
 
 ---
@@ -90,12 +90,12 @@ Recorda que:
 
 ---
 
-### Video: Aritmètica Bàsica.
+### Video: Aritmètica i Criptografia.
 
 Video de 9' sobre com enviar un missatge secret usant operacions aritmètiques simples.
 
 <center>
-<iframe src="https://drive.google.com/file/d/1cWEOLgZx3O7-Ip9mc38EYoBiqNZGZg1z/preview" width="640" height="480"></iframe>
+<iframe src="" width="640" height="480"></iframe>
 </center>
 
 ---
