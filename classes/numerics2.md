@@ -51,6 +51,8 @@ El "complement a dos" (C2) d’un nombre binari és el nombre resultant de sumar
 
 Llavors, la **resta de dos nombres binaris pot obtenir-se sumant al minuend el complement a dos del subtrahend**.
 
+> **Nota**: En el resultat de la suma ens pot apareixer un bit addicional per l'esquerra, ja que podem arrossegar un 1 per l’esquerra. Però com que el nombre resultant de la resta no pot ser més gran que el minuend, el bit sobrant s’ignora. 
+
 + Escriu un algorisme que resti dos nombres binaris que estan emmagatzemats en dues llistes, com per exemple `[1,0,0,0,1]` i `[0,0,1,1,1]`. Fes-ho aquí: : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/empty.ipynb )
 + Quina és la complexitat de l'algorisme?
 
