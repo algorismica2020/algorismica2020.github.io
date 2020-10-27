@@ -87,6 +87,9 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 3.3 (Numeracio en diferents bases)
     + 3.10 (Restriccions múltiples tres condicions)
     + 3.11 (La seqüència de Fibonacci)
+    
+---
+
 + Setmana del 26/10: 
   + Classe presencial: 
     + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
