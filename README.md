@@ -53,6 +53,11 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Problemes de  [Notebook basics Control](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsControl.ipynb). Exercici 1. [solució](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsControl-Solucio.ipynb)
     + Problemes de  [Notebook basics Cadenes](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsCadenes.ipynb). Exercici 1 i 2. [solució](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsCadenes-Solucio.ipynb)
     + Problemes de  [Notebook basics Llistes](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsLListes.ipynb). Exercici 1, 2, 6, 7, 8 i 9. [solució](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsLListes-Solucio.ipynb)
+
+---
+
+
+
 + Setmana del 12/10: 
   + Classe presencial: [Llibre de problemes de l'assignatura en pdf](https://github.com/algorismica2020/algorismica2020.github.io/raw/master/LlibreAlgorismicaAlumni.pdf)
     + 2.8 (Factorial menor)
@@ -65,6 +70,9 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 2.2 (Inversió económica, Futval2) 
     + 2.3 (Condicionals. Prou cerveses) 
     + 2.5 (Capicua)
+
+---
+
 
 + Setmana del 19/10: 
   + Classe presencial: 
@@ -89,11 +97,16 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 3.1 (Divisió entera)
     + 3.2 (El màxim comú divisor i les seves aplicacions)
     + 3.5 (Operacions amb nombres binaris)
+
+
+---
+
+
 + Setmana del 2/11: 
    + **Examen**: A causa de la situació de la COVID i davant la impossibilitat de fer exàmens presencials a l'aula, l'examen que estava previst per la setmana de 2 de novembre s'haurà de fer de forma remota, des de casa. Aquest examen **comptarà per la nota de l'avaluació continuada** i es realitzarà de la manera següent:
-    + L’examen es farà per tots els alumnes el **dimecres 4 de novembre, de 17h a 18h**, dins de l’horari que està reservat per la classe de teoria no presencial. 
-    + Els alumnes s’han de connectar una mica abans de les 17h a la sessió online que s’obrirà al campus virtual, baixar l’enunciat de l’examen al seu ordinador personal i seguir les instruccions que els professors donaran.
-    + Entre les 16 i les 17h han de realitzar l’examen al seu ordinador i finalment pujar-lo al campus virtual, a la tasca que s’obrirà pel lliurament. Durant aquesta hora els professors estaran connectats al BBCollaborate per solucionar qualsevol incidència. 
+      + L’examen es farà per tots els alumnes el **dimecres 4 de novembre, de 17h a 18h**, dins de l’horari que està reservat per la classe de teoria no presencial. 
+      + Els alumnes s’han de connectar una mica abans de les 17h a la sessió online que s’obrirà al campus virtual, baixar l’enunciat de l’examen al seu ordinador personal i seguir les instruccions que els professors donaran.
+      + Entre les 16 i les 17h han de realitzar l’examen al seu ordinador i finalment pujar-lo al campus virtual, a la tasca que s’obrirà pel lliurament. Durant aquesta hora els professors estaran connectats al BBCollaborate per solucionar qualsevol incidència. 
 
 > Si algun alumne preveu **abans de l’examen** algun tipus de problema pràctic que li impedeixi la participació en aquest examen, que escrigui a *jordi.vitria@ub.edu* i buscarem una solució.
 
@@ -107,6 +120,10 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 3.6 (Aritmètica modular)
     + 3.8 (Primeritat)
     + 3.9 (Primeritat i el teorema de Fermat)
+    
+---
+
+
 + Setmana del 9/11: 
   + Classe presencial: 
     + 4.2 (Alfabet aviació)
@@ -116,12 +133,22 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 4.1 (Acrònims)
     + 4.6 (Run Length Encoding)
     + 4.7 (Subcadena més llarga sense cap caràcter repetit)
+    
+
+---
+
+
 + Setmana del 16/11: 
   + Classe presencial: 
     + 4.8 (Subseqüència en comú més llarga)
   + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
   + Pràctica: 
     + 4.5 (Levensthein)
+    
+
+---
+
+
 + Setmana del 23/11: 
   + Classe presencial: 
     + **Examen curt de teoria**
@@ -132,6 +159,11 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 5.8 (Rotacions)
     + 5.23 (Sumatori parcial màxim 1. Força bruta)
     + 5.24 (Xifres i lletres Ordenació per selecció)
+    
+
+---
+
+
 + Setmana del 30/11: 
   + Classe presencial: 
     + Torres de Hanoi 
@@ -141,6 +173,12 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 5.6 (Negatius al davant)
     + 5.19 (Karatsuba)
     + 5.23 (Sumatori parcial màxim 2 (dividir i vèncer) i 3 (Kadane))
+    
+    
+
+---
+
+
 + Setmana del 7/12: Festiu
 + Setmana del 14/12: 
   + Classe presencial: 
@@ -150,6 +188,10 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 5.1 (Suma d’una llista)
     + 5.10 (Comptador inversions en una llista)
     + 5.22 (Ordenar llista aparellada)
+
+---
+
+
 + Setmana del 21/12: 
   + Classe presencial: 
     + **Examen curt de teoria**; 
