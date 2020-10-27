@@ -87,14 +87,14 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 3.2 (El màxim comú divisor i les seves aplicacions)
     + 3.5 (Operacions amb nombres binaris)
 + Setmana del 2/11: 
-  + **Examen**: A causa de la situació de la COVID i davant la impossibilitat de fer exàmens presencials a l'aula, l'examen que estava previst per la setmana de 2 de novembre s'haurà de fer de forma remota, des de casa. Aquest examen comptarà per la nota de l'avaluació continuada i es realitzarà de la manera següent:
-    + L’examen es farà per tots els alumnes el dimecres 4 de novembre, de 17 a 18h, dins de l’horari que està reservat per la classe de teoria no presencial. 
+   + **Examen**: A causa de la situació de la COVID i davant la impossibilitat de fer exàmens presencials a l'aula, l'examen que estava previst per la setmana de 2 de novembre s'haurà de fer de forma remota, des de casa. Aquest examen **comptarà per la nota de l'avaluació continuada** i es realitzarà de la manera següent:
+    + L’examen es farà per tots els alumnes el **dimecres 4 de novembre, de 17h a 18h**, dins de l’horari que està reservat per la classe de teoria no presencial. 
     + Els alumnes s’han de connectar una mica abans de les 17h a la sessió online que s’obrirà al campus virtual, baixar l’enunciat de l’examen al seu ordinador personal i seguir les instruccions que els professors donaran.
     + Entre les 16 i les 17h han de realitzar l’examen al seu ordinador i finalment pujar-lo al campus virtual, a la tasca que s’obrirà pel lliurament. Durant aquesta hora els professors estaran connectats al BBCollaborate per solucionar qualsevol incidència. 
 
-> Si algun alumne preveu abans de l’examen algun tipus de problema pràctic que li impedeixi la participació en aquest examen, que escrigui a jordi.vitria@ub.edu i buscarem una solució.
+> Si algun alumne preveu **abans de l’examen** algun tipus de problema pràctic que li impedeixi la participació en aquest examen, que escrigui a *jordi.vitria@ub.edu* i buscarem una solució.
 
-> Si algun alumne té algun problema durant la realització de l’examen que li impedeixi el lliurament dins del plaç definit, que escrigui a jordi.vitria@ub.edu i buscarem una solució.
+> Si algun alumne té algun problema **durant la realització de l’examen** que li impedeixi el lliurament dins del plaç definit, que escrigui a *jordi.vitria@ub.edu* i buscarem una solució.
  
   + Classe presencial: 
     + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
