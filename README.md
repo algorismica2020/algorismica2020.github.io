@@ -40,6 +40,9 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Pràctica de [repàs de Python - 1](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/PythonPractica1.ipynb), enllaçada des de la transparència 27 
   + Material complementari: 
      + [Curso Python. Sintaxis Básica II Tipos, operadores y variables](https://www.youtube.com/watch?v=u4I9PqhqCo8 )
+
+---
+
 + Setmana del 5/10:
   + Classe presencial: 
     + Problemes de  [Notebook Funcions](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Funcions.ipynb). Exercicis 1 i 2.
