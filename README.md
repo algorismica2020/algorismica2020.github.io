@@ -112,14 +112,14 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 > Si algun alumne té algun problema **durant la realització de l’examen** que li impedeixi el lliurament dins del plaç definit, que escrigui a *jordi.vitria@ub.edu* i buscarem una solució.
  
-  + Classe presencial: 
-    + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
-    + 3.11 La seqüència de Fibonacci
-  + Contingut en línia (Jordi): [Algorismes Numèrics III]   
-  + Pràctica: 
-    + 3.6 (Aritmètica modular)
-    + 3.8 (Primeritat)
-    + 3.9 (Primeritat i el teorema de Fermat)
+   + Classe presencial: 
+     + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
+     + 3.11 La seqüència de Fibonacci
+   + Contingut en línia (Jordi): [Algorismes Numèrics III]   
+   + Pràctica: 
+     + 3.6 (Aritmètica modular)
+     + 3.8 (Primeritat)
+     + 3.9 (Primeritat i el teorema de Fermat)
     
 ---
 
