@@ -23,7 +23,7 @@ Demostració de la fòrmula anterior:
 
 Veiem un exemple: 
 + Suposem que tenim `k=5, b=2` 
-+ Si tenim 5 dígits en base 2, podem representar fins a `2^5 -1 = 32 - 1 = 31`.  Efectivament `1111 = 16 + 8 + 4 + 2 + 1 = 31`
++ Si tenim 5 dígits en base 2, podem representar fins a `2^5 -1 = 32 - 1 = 31`.  Efectivament `11111 = 16 + 8 + 4 + 2 + 1 = 31`
 + Per altra banda, necessitarem `log_2 (31+1)` dígits per escriure `31` en base `b`, que són `5` dígits.
 
 
