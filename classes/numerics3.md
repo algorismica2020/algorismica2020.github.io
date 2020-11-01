@@ -17,12 +17,6 @@ La forma més obvia de trobar el **màxim comú divisor** de dos nombres és tro
  
 El problema és que **no es coneix** cap algorisme eficient per **factoritzar** els nombres: No hi ha cap algorisme publicat per poder factoritzar-lo en temps polinòmic, és a dir, no existeix cap algorisme publicat que pugui factoritzar-lo en temps `O(n^k)` independentment de quina sigui la constant `k`.
 
-**Curiositat**: El millor algorísme que es coneix té aquesta complexitat:
-
-$${\displaystyle O\left(\exp \left(\left({\begin{matrix}{\frac {64}{9}}\end{matrix}}n\right)^{1 \over 3}(\log n)^{2 \over 3}\right)\right)}$$
-
-per factoritzar un nombre de `n` bits.
-
 Fa més de 2000 anys que Euclides va enunciar un algorisme alternatiu per trobar el màxim comú divisor de dos nombres `a` i `b`.
 
 ```python
