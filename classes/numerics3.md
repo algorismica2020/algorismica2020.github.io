@@ -29,7 +29,7 @@ mcd(1071, 462)
 > 21
 ```
 
-Quina complexitat té per nombres grans?
+#### Quina complexitat té per nombres grans?
 
 La primera cosa que hem de veure és quantes vegades s'executa el `while`, o el que és el mateix, com es van reduint els nombres a mesura que anem calculant.
 
