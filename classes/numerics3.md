@@ -20,12 +20,12 @@ El problema és que **no es coneix** cap algorisme eficient per **factoritzar** 
 Fa més de 2000 anys que Euclides va enunciar un algorisme alternatiu per trobar el màxim comú divisor de dos nombres `a` i `b`.
 
 ```python
-def gcd(a,b):
+def mcd(a,b):
     while a:      # aquí es fa un truc, si 'a!=0', 'a' s'avalua com a True
         a,b = b%a, a
     return b
 
-gcd(1071, 462)
+mcd(1071, 462)
 > 21
 ```
 
