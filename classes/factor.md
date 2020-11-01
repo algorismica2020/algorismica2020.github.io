@@ -25,8 +25,9 @@ def primeFactors(n):
 ### Com funciona?
 + Primer, mirem quantes vegades és divisible per 2. Un cop ho hem trobat, l'hem reduït a un nombre senar.
 + Llavors anem comprovant si és divisible per cada possible sombre senar que és menor que `sqrt(n)`. 
++ Un cop els hem comprovat tots, si el nombre que resta és `>2`, és el darrer factor.
 
-### Perquè ho fem fins `sqrt(n)`?
+### Perquè ho fem fins `sqrt(n)`? 
 Ho podem veure a partir de dues observacions:
 
 1. Si un nombre `n` no és primer, al menys un dels seus factors és menor que `sqrt(n)`
@@ -37,5 +38,7 @@ Ho podem veure a partir de dues observacions:
 2. Si un nombre `n` no és primer, hi ha com a màxim un factor més gran que `sqrt(n)`. 
 
 > Si existissin dos primers més grans, el seu producte seria més gran que `n`!
+
+### Perqué el darrer residu és un factor?
 
 Per tant, un cop he comprovat tots els nombres fins a `sqrt(n)`, el nombre que em queda és un primer o 1. No hi ha cap alternativa més.
