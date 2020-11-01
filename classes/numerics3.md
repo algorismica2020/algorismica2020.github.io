@@ -36,7 +36,10 @@ La primera cosa que hem de veure és quantes vegades s'executa el `while`, o el 
 > Cal fixar-se que a cada iteració els arguments `(a,b)` es converteixen a `(b mod a, a)`: canviem l’ordre i el més gran queda reduït al mòdul del petit.
 
 > Es pot demostrar que això vol dir que **en dues iteracions successives els dos arguments decreixen al menys a la meitat**, és a dir, perden un bit en la seva representació.
---
 
 
-Si inicialment eren enters de `n` bits, en `2n` iteracions arribarem al final de l’algorisme. Com que cada iteració implica una divisió d’ordre quadràtic, `(a mod b)` , el temps total serà `O(n^3)`.
+Per tant, si inicialment eren enters de `n` bits, en `2n` iteracions arribarem al final de l’algorisme. Com que cada iteració implica una divisió d’ordre quadràtic, `(a mod b)` , el temps total serà `O(n^3)`.
+
+---
+
+
