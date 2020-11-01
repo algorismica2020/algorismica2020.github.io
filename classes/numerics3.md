@@ -42,4 +42,20 @@ Per tant, si inicialment eren enters de `n` bits, en `2n` iteracions arribarem a
 
 ---
 
+### Test de primeritat
 
+Video de 7' sobre el test de primeritat. 
+
+<center>
+<iframe src="" width="640" height="480"></iframe>
+</center>
+
+---
+
+### Cerca de nombres primers grans
+
+Video de 7' sobre la complexitat de trobar nombres primers grans. 
+
+<center>
+<iframe src="" width="640" height="480"></iframe>
+</center>
