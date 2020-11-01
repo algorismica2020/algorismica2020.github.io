@@ -119,7 +119,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
      + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
      + 3.11 La seqüència de Fibonacci
      + [Factorització ingenua de nombres enters](https://algorismica2020.github.io/classes/factor.html)
-   + Contingut en línia (Jordi): [Algorismes Numèrics III]   
+   + Contingut en línia (Jordi): [Algorismes Numèrics III](https://algorismica2020.github.io/classes/numerics3.html)
    + Pràctica: 
      + 3.6 (Aritmètica modular)
      + 3.8 (Primeritat)
