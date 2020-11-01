@@ -15,8 +15,7 @@ La forma més obvia de trobar el **màxim comú divisor** de dos nombres és tro
 
 > `1035 = 3^2*5*23`  i  `759 = 3*11*23`, per tant `mcd = 3*23 = 69`
  
-El problema és que no es coneix cap algorisme eficient per **factoritzar** els nombres!
-No hi ha cap algorisme publicat per poder factoritzar-lo en temps polinòmic, és a dir, no existeix cap algorisme publicat que pugui factoritzar-lo en temps `O(n^k)` independentment de quina sigui la constant `k`.
+El problema és que **no es coneix** cap algorisme eficient per **factoritzar** els nombres: No hi ha cap algorisme publicat per poder factoritzar-lo en temps polinòmic, és a dir, no existeix cap algorisme publicat que pugui factoritzar-lo en temps `O(n^k)` independentment de quina sigui la constant `k`.
 
 **Curiositat**: El millor algorísme que es coneix té aquesta complexitat:
 
