@@ -106,7 +106,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 
 + Setmana del 2/11: 
-   + **Examen**: A causa de la situació de la COVID i davant la impossibilitat de fer exàmens presencials a l'aula, l'examen que estava previst per la setmana de 2 de novembre s'haurà de fer de forma remota, des de casa. Aquest examen **comptarà per la nota de l'avaluació continuada** i es realitzarà de la manera següent:
+   + **Examen**: A causa de la situació de la COVID, l'examen que estava previst per la setmana de 2 de novembre el farem de forma remota, des de casa. Aquest examen **comptarà per la nota de l'avaluació continuada** i es realitzarà de la manera següent:
       + L’examen es farà per tots els alumnes el **dimecres 4 de novembre, de 17h a 18h**, dins de l’horari que està reservat per la classe de teoria no presencial. 
       + Els alumnes s’han de connectar una mica abans de les 17h a la sessió online que s’obrirà al campus virtual, baixar l’enunciat de l’examen al seu ordinador personal i seguir les instruccions que els professors donaran.
       + Entre les 17 i les 18h han de realitzar l’examen al seu ordinador i finalment pujar-lo al campus virtual, a la tasca que s’obrirà pel lliurament. Durant aquesta hora els professors estaran connectats al BBCollaborate per solucionar qualsevol incidència. 
@@ -118,6 +118,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
    + Classe presencial: 
      + Repàs dels continguts de teoria i pràctiques de la setmana anterior.
      + 3.11 La seqüència de Fibonacci
+     + [Factorització ingenua de nombres enters](https://algorismica2020.github.io/classes/numerics2.html)
    + Contingut en línia (Jordi): [Algorismes Numèrics III]   
    + Pràctica: 
      + 3.6 (Aritmètica modular)
