@@ -515,16 +515,17 @@ Això ens suggereix un test directe per comprovar si un nombre és primer. Però
 ## Nombres primers
 
 ```python
+import random
 def fermat(num, test_count):
     if num == 1:
         return False
     for x in range(test_count):
-        val = randint(1, num-1)             # genera nombre aleatori
-        if pow(val, num-1, num) != 1:     # la potència a Python es 
-            return False                    # basa en l'algorisme modular
+        val = random.randint(1, num-1)     
+        if pow(val, num-1) % num != 1:      
+            return False                   
     return True
 
-fermat(41651,10)
+fermat(41652,10)
 > True
 ```
 
