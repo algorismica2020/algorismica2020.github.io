@@ -544,9 +544,11 @@ Aquest algorisme té dues limitacions per nombres grans:
 
 ## Nombres primers
 
-D’entrada, es coneixen uns certs nombres compostos, anomenats nombres de Carmichael, que passen el test i no són primers... però són pocs i és poc probable que en trobem un de forma aleatòria. Per altra banda **existeixen algorismes modificats de Fermat que els eviten**.
+Respecte al segon punt, hi ha dos aspectes a tenir en compte:
 
-A més a més hem de veure què passa amb els nombres compostos que no són nombres de Carmichael...
++ Es coneixen uns certs nombres compostos, anomenats nombres de Carmichael, que compleixen el teorema de Fermat i no són primers... però són pocs i és poc probable que en trobem un de forma aleatòria. Per altra banda **existeixen algorismes modificats de Fermat que els eviten**.
+
++ La resta de nombres compostos que no són nombres de Carmichael poden complir el teorema de Fermat per alguns valors `a`.
 
 --
 
@@ -567,7 +569,7 @@ Si ignorem els nombres de Carmichael, podem dir que:
 + Si `N` és primer, llavors `a^(N-1)` és congruent amb 1 mòdul `N` per tots el `a < N`.
 + Si `N` no és primer, llavors `a^(N-1)` no serà congruent amb 1 mòdul `N` per com a mínim la meitat dels valors `a < N`.
 
-I per tant el comportament de l’algorisme proposat és:
+I per tant el comportament de l’algorisme proposat, si fem el test per un nombre de valors `a` prou gran, és:
 
 + El test retornarà `True` en tots els casos si `N` és primer.
 + El test retornarà `True` per la meitat o menys dels casos en que `N` no és primer.
