@@ -67,5 +67,5 @@ Video de 5' sobre la complexitat de trobar nombres primers grans.
 Video de 5' sobre la complexitat de l'aritmètica modular i la criptografia. 
 
 <center>
-<iframe src="https://drive.google.com/file/d/1e6y6_vnWojrN_clYpFMh-i-rFmixt3MJ/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1e6y6_vnWojrN_clYpFMh-i-rFmixt3MJ/preview" width="640" height="480"> </iframe>
 </center>
