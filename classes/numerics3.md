@@ -44,28 +44,28 @@ Per tant, si inicialment eren enters de `n` bits, en `2n` iteracions arribarem a
 
 ### Test de primeritat
 
-Video de 7' sobre el test de primeritat. 
+Video de 20' sobre el test de primeritat. 
 
 <center>
-<iframe src="" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/10jEVSRbG61xc3mU-RFj2qV-sUcLew5fy/preview" width="640" height="480"></iframe>
 </center>
 
 ---
 
 ### Cerca de nombres primers grans
 
-Video de 7' sobre la complexitat de trobar nombres primers grans. 
+Video de 5' sobre la complexitat de trobar nombres primers grans. 
 
 <center>
-<iframe src="" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1AARAQIqGfl6vNplDV2-UyMMctSVtA-kU/preview" width="640" height="480"></iframe>
 </center>
 
 ---
 
 ### Recapitulació sobre aritmètica modular i criptografia
 
-Video de 7' sobre la complexitat de l'aritmètica modular i la criptografia. 
+Video de 5' sobre la complexitat de l'aritmètica modular i la criptografia. 
 
 <center>
-<iframe src="" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1e6y6_vnWojrN_clYpFMh-i-rFmixt3MJ/preview" width="640" height="480"></iframe>
 </center>
