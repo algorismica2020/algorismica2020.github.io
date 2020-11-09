@@ -130,6 +130,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 9/11: 
   + Classe presencial: 
+    + Repàs de la classe de teoria.
     + 4.2 (Alfabet aviació)
     + 4.4 (Totes les subcadenes)
   + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
@@ -137,10 +138,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 4.1 (Acrònims)
     + 4.6 (Run Length Encoding)
     + 4.7 (Subcadena més llarga sense cap caràcter repetit)
-    
-
 ---
-
 
 + Setmana del 16/11: 
   + Classe presencial: 
