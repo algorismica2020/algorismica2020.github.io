@@ -17,6 +17,6 @@ Video de 9 min introduint els [algorismes de text i un algorisme de cerca ingèn
 
 ### Càlcul de complexitat en algorismes de text: Notebook
 
-Obre el (notebook de Complexitat en Algorismes de Text)[https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/ComplexitatText.ipynb] i observa el càlcul de la complexitat
+Obre el [notebook de Complexitat en Algorismes de Text](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/ComplexitatText.ipynb) i observa el càlcul de la complexitat
 
 ---
