@@ -222,11 +222,11 @@ def is_unique(input):
 ```
 
 
-Quina complexitat té aquest algorisme (en funció del nombre de caràcters `n` del text i del nombre `m` de caràcters possibles)?
+Quina complexitat té aquest algorisme (en funció del nombre de caràcters `n` del text i del nombre `m` de caràcters diferents a l'string)?
 
 --
 
-+ Sabem que no pot ser menor que `O(n)`: al menys cal mirar-los 1 cop!
++ Sabem que no pot ser menor que `O(n)`: al menys cal mirar tots els caràcters una vegada!
 
 
 ---
@@ -235,16 +235,16 @@ Quina complexitat té aquest algorisme (en funció del nombre de caràcters `n` 
 
 + El cost de l'operador `list.append()` és `O(1)`. 
 
-+ El cost de l'operador `in` a la tercera línia és lineal respecte a la mida de `char_seen`. Per tant, a la primera iteració costa 1, a la segona 2, etc. Total: (`1 + 2 + 3 + 4 + 5 + 6 +...+m`). I això és una sèrie que podem calcular: 
++ El "in" de la tercera línia tindrà un cost de `char_seen`. Per tant, per al primer char d'n s'executarà 1 vegada, pel segon 2, etc. Total: (`1 + 2 + 3 + 4 + 5 + 6 +...+m`). I això és una sèrie que podem calcular (sumatori d'una sèrie aritmètica): 
 
 $$
 \sum_{i = 1}^m i = \frac{m(m+1)}{2} \approx m^2
 $$ 
 
-La tercerca línea té una complexitat `O(m^2)`.
+La primera iteració i el "in" combinats, tenen una complexitat `O(m^2)`.
 
 
-Per tant, el cost total de l'algorisme, en el pitjor dels casos, és `O(m^2)`, o `O(n^2)` en el cas que `n` i `m` siguin semblants.
+Per tant, el cost total de l'algorisme, en el pitjor dels casos, és `O(m^2)`, o `O(n^2)` en el cas que `n` i `m` siguin semblants, és a dir que tots els caràcters siguin diferents.
 
 > El *pitjor dels casos* és aquell on tenim un *string* molt gran format per caràcters no repetits.
 
@@ -253,14 +253,14 @@ Per tant, el cost total de l'algorisme, en el pitjor dels casos, és `O(m^2)`, o
 ## Processament de cadenes de caràcters
 
 
-De fet, el que fem és:
+De fet, el que fem és un recorregut sobre char_seen, que podem explicitar amb un for:
 
 ```python
-def is_unique(n):
+def is_unique(input):
   char_seen = []
-  for char in n:
-    for i in char_seen:
-      if char == i:
+  for char in input:
+    for c in char_seen:
+      if char == c:
         return False
     char_seen.append(char)
   return True
@@ -268,12 +268,17 @@ def is_unique(n):
 
 Això té clarament una complexitat `O(m^2)`.
 
+
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/ComplexitatText.ipynb)
+
+
 Es pot fer millor?
+
 
 --
 
 La resposta és positiva, però cal aplicar algorismes de *hashing*, un tema que 
-veurem més endavant.
+es veu més endavant.
 
 ---
 
