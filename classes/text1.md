@@ -13,7 +13,7 @@ Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020
 
 ### Video: Introducció als algorismes de text
 
-Video de 9 min introduint els [algorismes de text i un algorisme de cerca ingènua](le.php/3335992/mod_resource/content/3/T3-1-TextIntroiComplexitat/T3-1-TextIntroiComplexitat_player.html)
+Video de 9 min introduint els [algorismes de text i un algorisme de cerca ingènua](https://campusvirtual.ub.edu/pluginfile.php/3335992/mod_resource/content/3/T3-1-TextIntroiComplexitat/T3-1-TextIntroiComplexitat_player.html)
 
 ### Càlcul de complexitat en algorismes de text: Notebook
 
