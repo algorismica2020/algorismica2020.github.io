@@ -134,7 +134,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 4.2 (Alfabet aviació)
     + 4.4 (Totes les subcadenes)
     + Podeu practicar list comprehensions amb [Exercicis](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsListComprehensions.ipynb) i les corresponents [Solucions](https://colab.research.google.com/github/algorismica2019/problemes/blob/master/BasicsListComprehensions-Solucio.ipynb)
-  + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters](http://algorismica2020.github.io/classes/text.html)   
+  + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters](http://algorismica2020.github.io/classes/text1.html)   
   + Pràctica: 
     + 4.1 (Acrònims)
     + 4.6 (Run Length Encoding)
