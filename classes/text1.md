@@ -20,8 +20,11 @@ Video de 9 min introduint els [algorismes de text i un algorisme de cerca ingèn
 Obre el [notebook de Complexitat en Algorismes de Text](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/ComplexitatText.ipynb) i observa el càlcul de la complexitat
 
 ---
-<-## Cerca optimitzada de cadenes de caràcters
+<!--
+## Cerca optimitzada de cadenes de caràcters
+-->
+<!--
+### Video: Algorismes de Horspool
 
-<-### Video: Algorismes de Horspool
-
-<-Video de 9 min introduint els [l'algorisme de Horspool](https://campusvirtual.ub.edu/pluginfile.php/3335992/mod_resource/content/3/T3-2-TextHorspool/T3-1-TextHorspool_player.html), corresponent a les transparències 15 a 25 del tema.
+Video de 9 min introduint els [l'algorisme de Horspool](https://campusvirtual.ub.edu/pluginfile.php/3335992/mod_resource/content/3/T3-2-TextHorspool/T3-1-TextHorspool_player.html), corresponent a les transparències 15 a 25 del tema.
+-->
