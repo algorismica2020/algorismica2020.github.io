@@ -143,7 +143,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 16/11: 
   + Classe presencial: 
-    + 4.8 (Subseqüència en comú més llarga)
+    + 4.8 (Subseqüència en comú més llarga) | [Notebook](https://colab.research.google.com/drive/17YwxOI-pn5VPgLZIBTwxhTPURbfG5Iu6?usp=sharing)
   + Contingut en línia (Mireia): [Algorismes per cadenes de caràcters]   
   + Pràctica: 
     + 4.5 (Levensthein)
