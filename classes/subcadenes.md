@@ -1,13 +1,13 @@
 ```python
 a =  "abcd"
-def cadena(a):
+def subcadenes(a):
   l = len(a)
   while l >= 1:
     for j in range(0,len(a)+1-l):
       print(a[j:l+j])
     l -= 1
    
-cadena(a)
+subcadenes(a)
 >>> abcd
 >>> abc
 >>> bcd
