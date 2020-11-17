@@ -30,3 +30,9 @@ Video de 9 min introduint els [l'algorisme de Horspool](https://campusvirtual.ub
 
 Obre el [notebook de l'Algorisme de Horspool](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Horspool.ipynb) i mira les explicacions, taula de salts i com evoluciona el text i el patró. Pots fer proves amb diferents textos i patrons
 
+### Vídeo en anglès sobre l'algorsimes de Horspool
+
+[Mike Slade Boyer Moore Horspool Algorithm, 6.38 min](https://www.youtube.com/watch?v=PHXAOKQk2dw)
+
+
+
