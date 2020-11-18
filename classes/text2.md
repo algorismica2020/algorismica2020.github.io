@@ -1,38 +1,27 @@
-# Sessió en línia del dia 9/11/2020: Text I
+# Sessió en línia del dia 16/11/2020: Text II
 
 Aquesta sessió té una durada aproximada de 60 minuts i està formada per alguns videos sobre els aspectes teòrics del tema i diversos exercicis. 
 Es recomana seguir aquests continguts en el mateix ordre que apareixen en aquesta pàgina.
 
-Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020.github.io/slides/text.html)  
-
-> **AVÍS**: Recordeu que si voleu conservar els notebooks que obriu des d'aquesta pàgina heu de baixar-los al vostre ordinador abans de tancar Colab.
+Es recomana consultar [els apunts complets d'aquest tema](https://algorismica2020.github.io/slides/text.html)  
 
 
 ---
-## Introducció i cerca ingènua de cadenes de caràcters
+## Cerca aproximada de caràcters
 
-### Video: Introducció als algorismes de text
+### Video: Levensthein
 
-Video de 9 min introduint els [algorismes de text i un algorisme de cerca ingènua](https://campusvirtual.ub.edu/pluginfile.php/3335992/mod_resource/content/3/T3-1-TextIntroiComplexitat/T3-1-TextIntroiComplexitat_player.html), corresponent a les transparències 1 a 15 del tema.
+Video de 23 min introduint l'[algorisme de Levenshtein](https://campusvirtual.ub.edu/pluginfile.php/3370096/mod_resource/content/2/T3-3-Text-Levensthein/T3-2-Levensthein_player.html), corresponent a les transparències 26 a 54 del tema.
 
-### Càlcul de complexitat en algorismes de text: Notebook
+### Exercicis
 
-Obre el [notebook de Complexitat en Algorismes de Text](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/ComplexitatText.ipynb) i observa el càlcul de la complexitat
++ Completeu la matriu de distància de p = "LEVENSHTEIN" i t="MEILENSTEIN". En teniu una part feta a la diapositiva 39. Podeu comprovar el resultat a la diapositiva 45.
++ Construiu la matriu d'operacions d'edició de p="GAMBOL" i t="GUMBO", teniu la matriu de distància a la diapositiva 43
++ Recorreu el camí enrerra des de la darrera casella de la darrera fila a la matriu d'operacions d'edició de la diapositiva 54. A quina subcadena arribem? Comproveu que efectivament la distància és 1.
 
----
-## Cerca optimitzada de cadenes de caràcters
+### Vídeo en anglès sobre l'algorisme de Levenshtein (contingut opcional)
 
-### Video: Algorismes de Horspool
-
-Video de 9 min introduint els [l'algorisme de Horspool](https://campusvirtual.ub.edu/pluginfile.php/3339445/mod_resource/content/2/T3-2-Text-CercaAvancada/T3-2-Text-CercaAvancada.html), corresponent a les transparències 16 a 25 del tema.
-
-### Algorisme de Horspool explicat i mostrant creació de taula i avanç amb xivatos: Notebook
-
-Obre el [notebook de l'Algorisme de Horspool](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/Horspool.ipynb) i mira les explicacions, taula de salts i com evoluciona el text i el patró. Pots fer proves amb diferents textos i patrons
-
-### Vídeo en anglès sobre l'algorsimes de Horspool
-
-[Mike Slade Boyer Moore Horspool Algorithm, 6.38 min](https://www.youtube.com/watch?v=PHXAOKQk2dw)
+[Tushar Roy - Minimun Edit Distance Dynamic Programming, 9.46 min](https://www.youtube.com/watch?v=We3YDTzNXEk)
 
 
 
