@@ -160,7 +160,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
   + Classe presencial: 
     + Repàs [Fitxers](https://github.com/algorismica2019/problemes/blob/master/Fitxers.ipynb)
     + Repàs [List comprehensions](https://github.com/algorismica2019/problemes/blob/master/ListComprehensions.ipynb)
-  + Contingut en línia (Mireia): [Algorismes de Força Bruta] 
+  + Contingut en línia (Mireia): [Algorismes de Força Bruta](http://algorismica2020.github.io/classes/forcabruta.html). 
   + Pràctica: 
     + 5.8 (Rotacions)
     + 5.23 (Sumatori parcial màxim 1. Força bruta)
