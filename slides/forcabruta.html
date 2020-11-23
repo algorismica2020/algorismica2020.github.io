@@ -319,10 +319,10 @@ Una forma d’afrontar la intractabilitat són els **algorismes aproximats**: al
 
 
 ---
-## Cerca exahustiva
+## Cerca per força bruta
 
 
-La **cerca exhaustiva** (o cerca per força bruta) consisteix en una exploració sistemàtica de l’espai de solucions possibles a un problema donat. 
+La **cerca per força bruta** (o cerca exhaustiva) consisteix en una exploració sistemàtica de l’espai de solucions possibles a un problema donat. 
 
 Pot dividir-se en varies parts: 
 + generar totes les possibles solucions, 
@@ -332,23 +332,18 @@ Pot dividir-se en varies parts:
 La resolució de problemes per cerca exhaustiva sol comportar l’exploració d’espais molt grans de solucions, per la qual cosa resulta pràctica només per a instàncies petites del problema.
 
 ---
-name:TSP
+## El problema del viatjant de comerç com a problema intractable
 
-## TSP o el problema del viatjant de comerç.
 
-El problema TSP es pot resoldre per cerca exahustiva si tenim un conjunt reduït de ciutats.
+El problema del viatjant de comerç que varem veure a l'inici del curs no té una **solució exacta** més eficient que la cerca exhaustiva: no es coneix cap algorisme exacte en temps polinòmic. És un problema NP.
 
-*Definició*: Donat un conjunt de llocs o ciutats, es tracta de trobar l'ordre a seguir per tal de tal que el camí fet pel viatjant de comerç passant per tots els llocs, des del punt de partida fins al punt d'arribada, sigui el més curt possible.
-
-El problema del viatjant de comerç es presenta en moltes aplicacions pràctiques, per exemple en la planificació d'un viatge, en logística o en el disseny del microxips. 
+Aquest problema es presenta en moltes aplicacions pràctiques, per exemple en la planificació d'un viatge, en logística o en el disseny del microxips. 
 
 Encara apareix més freqüentment com a subproblema, per exemple en el problema de la distribució de mercaderies, en el problema de la planificació de la ruta per donar servei als clients o en la seqüenciació del genoma. 
 
-
 ---
 
-## TSP o el problema del viatjant de comerç.
-
+## Modelitzant el problema del viatjant de comerç
 
 El problema del viatjant de comerç es pot modelitzar amb l'ajuda d'un graf utilitzant els vèrtex i les arestes. 
 
@@ -360,19 +355,17 @@ Cada aresta `a_ij` té una determinada longitud que, depenent del context, sign
 
 ---
 
-## TSP o el problema del viatjant de comerç.
-
+## Pas a de la cerca exhaustiva: trobar les rutes pel viatjant de comerç.
 
 Una ruta (també coneguda com **circuit hamiltonià**) és un circuit que passa per tots els vèrtexs i en el que cada vèrtex surt exactament una vegada. 
 
-Per definir l'algorisme farem servir aquesta observació: una seqüència de `n` vèrtexs diferents = una seqüència de `n+1` vèrtexs que comencen i acaben al mateix vèrtex.
-
+Farem una petita trampa, i la ruta tornarà a passar pel vèrtex inicial, ja que el punt de sortida ha de ser el mateix que el d'arribada.
 
 L'objectiu és trobar la ruta més curta possible.
 
 ---
 
-## TSP o el problema del viatjant de comerç.
+## Generar les rutes = Crear permutacions de ciutats
 
 Generar totes les possibles rutes és el mateix que generar **totes les possibles permutacions** dels vèrtexs del mig. Recordeu que el nombre de permutacions de `n` elements és `n!`.
 
@@ -381,8 +374,7 @@ Generar totes les possibles rutes és el mateix que generar **totes les possible
 <center><img src="images/cerca3.png" width="500"></center>
 
 ---
-## TSP o el problema del viatjant de comerç.
-
+## Generació de rutes, una petita optimització
 
 De fet, podem fer-ho una mica millor si ens adonem que podem obviar la meitat de les rutes: la ruta `B-C-D-B` té la mateixa longitud que la ruta `B-D-C-B`
 
@@ -390,94 +382,80 @@ Per tant, podem triar dues ciutats del mig (per exemple `D` i `C`) i tenir en co
 
 Tot i això, el nombre de rutes és `(n-1)!/2`....
 
-Com generem les possibles permutacions?
+--
+
+Generarem les rutes (permutacions) amb l'algorisme de Johnson-Trotter
 
 ---
 
 ## Algorisme de Johnson-Trotter
 
-Algorisme de Johnson-Trotter per generar permutacions:
-
-1. Primer associa un símbol a cada enter.
-
-2. Després assigna una direcció a cada símbol:
- 
-<center><img src="images/trotter.png" width="200"></center>
-
-El símbol `k` es diu **mòbil** si el símbol contigu en la direcció que assenyala és menor que ell (a l’exemple, `3` i `4` són mòbils).
-
----
-
-## Algorisme de Johnson-Trotter
-
-Entrada: una llista d’enters.
+Entrada: una llista d’enters amb una fletxa de direcció.
 
 Sortida: una llista amb totes les permutacions.
 
-```
-1. Inicialitza la primera permutació amb tots els elements 1,2,...,n mòbils: 
-    tots amb una fletxa mirant a l'esquerra.
-2. Mentre hi hagi un element mòbil:
-    2.1 Troba l’enter mòbil k més gran
-    2.2 Intercanvia k i l’element adjacent al qual assenyala
-    2.3 Inverteix la direcció de tots els elements que són més grans que k
-    2.4 Afegeix la permutació a la llista.
-```
+Procediment:
 
-<center><img src="images/trotter2.png" width="500"></center>
+1. Diem que un enter és mòbil si la fletxa apunta a un enter menor que ell.
+
+2. Inicialitza la primera permutació amb tots els elements 1,2,...,n mòbils: 
+    tots amb una fletxa mirant a l'esquerra.
+3. Mentre hi hagi un element mòbil:
+
+    3.1 Troba l’enter mòbil ´´k´´ més gran
+	
+    3.2 Intercanvia k i l’element adjacent al qual assenyala
+	
+    3.3 Inverteix la direcció de tots els elements que són més grans que k
+	
+    3.4 Afegeix la permutació a la llista.
 
 ---
-## TSP o el problema del viatjant de comerç.
+name: johnson-trotter
+## Exemple:
 
-
-El problema del viatjant de comerç no té una **solució exacta** més eficient que la cerca exhaustiva: no es coneix cap algorisme exacte en temps polinòmic.
-
-D’això en diem problemes **NP-hard**.
-
-Hi ha algorismes que troben solucions probablement bones, tot i que no podem estar segurs que siguin òptimes.
+<img src="images/trotter2.png" width="90%">
 
 ---
 name: knapsack
 
 ## El problema de la motxilla.
 
-El **problema de la motxilla**, altrament dit KP (en anglès, *Knapsack Problem*) és un problema d'optimització combinatòria.
+El **problema de la motxilla**, altrament dit  *Knapsack Problem* (KP) és un problema d'optimització combinatòria.
 
-Modelitza una situació anàloga al fet d'omplir una motxilla, en la que no es pot posar més d'un cert pes, amb tot o una part d'un conjunt d'objectes. Aquests objectes tenen un pes i un valor determinat. 
-Els objectes que es posen dins la motxilla han de **maximitzar el valor total** dels objectes transportats sense sobrepassar el pes màxim.
+Modelitza una situació anàloga al fet d'omplir una motxilla, seleccionant els objectes que maximitzen el valor del total de la motxila, a partir d'un conjunt d'objectes donat, sense sobrepassar un pes establert.
+
+Cada objecte té un pes i un valor determinat.
 
 <center><img src="images/motx.png" width="300"></center>
 
 ---
-## El problema de la motxilla.
-
-
-Com es generen les possibles solucions?
-
---
-
-Generar les possibles solucions d’aquest problema és el mateix que generar tots els **possibles subconjunts d’un conjunt**. El nombre de subconjunts diferents d'un conjunt de `n` elements és (`O(2^n)`).
-
-Un cop generats els subconjunts podríem seleccionar les que “caben” a la motxilla, i per últim, entre les que hi caben, quina és la més valuosa.
-
----
-## El problema de la motxilla.
+## Aplicacions del problema de la motxilla
 
 És útil per modelar:
 
 + sistemes de suport a la gestió del portafolis financers: per equilibrar la selecció i la diversificació amb l'objectiu de trobar el millor equilibri entre el rendiment i el risc d'un capital col·locat en diferents actius financers (accions...);
 
-+ en la càrrega d'un vaixell o d'un avió: tot l'equipatge que es pot portar sense sobrepès;
++ la càrrega d'un vaixell o d'un avió: tot l'equipatge que es pot portar sense sobrepès;
 
-+ en el tall dels materials: per minimitzar les pèrdues degudes als talls (de diferents mides) realitzats en barres de ferro;
++ el tall dels materials: per minimitzar les pèrdues degudes als talls (de diferents mides) realitzats en barres de ferro;
 
-+ en el problema de emplenat de contenidors o *bin packing*.
++ el problema d'emplenat de contenidors o *bin packing*.
 
 ---
-## El problema de la motxilla.
+## Com es generen les possibles solucions en el problema de la motxilla?
+
+--
+
+Generar les possibles solucions d’aquest problema és el mateix que generar tots els **possibles subconjunts d’un conjunt**. El nombre de subconjunts diferents d'un conjunt de `n` elements és `(2^n)`.
+
+Un cop generats els subconjunts podríem seleccionar les solucions que “caben” a la motxilla, i per últim, entre les que hi caben, quina és la més valuosa.
 
 
-**Com generem els subconjunts d’un conjunt?**
+<center><img src="images/motxilla.png" width="500" /></center>
+
+---
+## Com generem els subconjunts d’un conjunt?
 
 Ens basarem en fer una correspondència entre els `2^n` subconjunts d’un conjunt `A={a_1,...,a_n}` de `n` elements i els `2^n` strings de bits de longitud `n`, `b_1,...,b_n`.
 
@@ -487,12 +465,9 @@ Ens basarem en fer una correspondència entre els `2^n` subconjunts d’un conju
 
 ---
 
-## El problema de la motxilla.
+## Generant els subconjunts...
 
-
-**Com generem els subconjunts d’un conjunt?**
-
-Feta aquesta associació, podem generar tots els subconjunts d’un conjunt de `n` elements generant de forma successiva els nombres binaris des de `0` fins a `2^(n-1)`, posant els `0`’s que siguin necessaris al davant:
+Feta aquesta associació, podem generar tots els subconjunts d’un conjunt de `n` elements generant de forma successiva els nombres binaris des de `0` fins a 2<sup>n-1</sup>, posant els `0`’s que siguin necessaris al davant:
 
 > `000  001  010  011  100  101  110  111`
 
@@ -500,7 +475,7 @@ Feta aquesta associació, podem generar tots els subconjunts d’un conjunt de `
 
 El problema de la motxilla **no té una solució exacta més eficient que la cerca exhaustiva**: no es coneix cap algorisme exacte en temps polinòmic.
 
-D’això en diem problemes NP-hard.
+D’això en diem problemes NP.
 
 
 
