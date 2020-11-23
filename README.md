@@ -158,8 +158,8 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
       + Els alumnes s’han de connectar una mica abans de les 17h a la sessió online que s’obrirà al campus virtual, baixar l’enunciat de l’examen al seu ordinador personal i seguir les instruccions que els professors donaran.
       + Entre les 17 i les 18h han de realitzar l’examen al seu ordinador i finalment pujar-lo al campus virtual, a la tasca que s’obrirà pel lliurament. Durant aquesta hora els professors estaran connectats al BBCollaborate per solucionar qualsevol incidència. 
   + Classe presencial: 
-    + Repàs Fitxers
-    + Repàs List comprehensions
+    + Repàs [Fitxers](https://github.com/algorismica2019/problemes/blob/master/Fitxers.ipynb)
+    + Repàs [List comprehensions](https://github.com/algorismica2019/problemes/blob/master/ListComprehensions.ipynb)
   + Contingut en línia (Mireia): [Algorismes de Força Bruta] 
   + Pràctica: 
     + 5.8 (Rotacions)
