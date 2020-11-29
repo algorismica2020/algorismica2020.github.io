@@ -172,6 +172,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 30/11: 
   + Classe presencial: 
+    + Comentar examen setmana anterior.
     + [Torres de Hanoi](http://algorismica2020.github.io/slides/hanoi.html) 
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
   + Pràctica: 
