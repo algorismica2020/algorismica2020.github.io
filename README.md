@@ -172,7 +172,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 30/11: 
   + Classe presencial: 
-    + Torres de Hanoi 
+    + [Torres de Hanoi](http://algorismica2020.github.io/slides/hanoi.html) 
     + Exercicis teorema màster. Notebook basics Python. Complexitat. 
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
   + Pràctica: 
