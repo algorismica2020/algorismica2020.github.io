@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation">
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool.">
+
+    <title>Algorismes: Dividir i Vèncer </title>
+
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/print.css" media="print">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, 
+      .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .red { color: #fa0000; }
+      .green { color: #00fa77; }
+      .blue { color: #0000fa; }
+      .light { color: #aaaaaa; }
+      .bold { font-family: 'Yanone Kaffeesatz'; font-size: 1.5em;
+              line-height: 0.9em;}
+      .code {font-family: 'Ubuntu Mono';}
+      .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.75em;
+        line-height: 0.4em;
+      }
+
+      .summary {
+        background:#003366;
+        color: #ffffcc;
+      }
+	  
+	  .summary a{
+        color: #ffddaa;
+	  }
+
+      .exam {
+        background: #802222;
+        color: #ffffcc;
+        text-shadow: 0 0 20px #333;
+      }
+
+      .inverse {
+        background: #800000;
+        color: #ffffcc;
+      }
+
+      .inverse h1, 
+      .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.6em;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    margin-bottom: 10px;
+}
+
+summary {
+    font-weight: normal;
+    padding: .5em;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+div.warnred {    
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+    border-left: 5px solid #dfb5b4;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+div.warnblue {    
+    background-color: #99ccff;
+    border-color: #dFb5b4;
+    border-left: 5px solid #0066ff;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+    </style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+  <body>
+  <textarea id="source">
+
+
+class: center, middle
+
+<center><img src="images/ub.png" width="150"></center>
+
+
+# **ALGORÍSMICA**
+## Les torres de Hanoi
+
+
+Jordi Vitrià, Mireia Ribera
+
+.blue[jordi.vitria@ub.edu] |  .blue[ribera@ub.edu]
+
+---
+
+
+## El problema de les torres de Hanoi
+
+
+<center><img src="images/hanoi.png" width="350"></center>
+
+<small>There is a legend about an Indian temple which contains a large room with three time-worn posts in it surrounded by 64 golden disks. Brahmin priests, acting out the command of an ancient prophecy, have been moving these disks, in accordance with the rules of the puzzle, since that time. The puzzle is therefore also known as the Tower of Brahma puzzle. According to the legend, when the last move of the puzzle is completed, the world will end.
+
+If the legend were true, and if the priests were able to move disks at a rate of one per second, using the smallest number of moves, it would take them 
+`2^(64−1)` seconds or roughly 585 billion years; it would take 18,446,744,073,709,551,615 turns to finish.</small>
+
+---
+
+## El problema de les torres de Hanoi
+
+
+Les torres de Hanoi és un joc usat típicament com a exemple de **recursivitat**. 
+
+A l'inici estan col·locats de més gran a més petit en la primera vareta. El joc consisteix en passar tots els discs a la tercera vareta tenint en compte que només es pot canviar de vareta un disc cada vegada i que mai no podem tenir un disc col·locat sobre un que sigui més petit.
+
+---
+## El problema de les torres de Hanoi
+
+
+Analitzem un problema simple que sabem resoldre: passar tres discs des de la primera vareta a la última:
+
+<center><img src="images/han.png" width="300"></center>
+
+Expressat en paraules, podem explicar-ho com:
+
++ Fins el pas 4, he passat el cercle més gran del lloc A al lloc que li toca, C, amb l'ajuda de la vareta del mig, la B. 
++ Fins el pas 6, he passat el cercle més gran que encara no estava col·locat a la vareta C amb l'ajuda de la vareta A.
++ El pas 7 tanca el problema.
+
+---
+
+## El problema de les torres de Hanoi
+
+
+Per resoldre el problema amb `n` peces podem fer-nos aquesta pregunta: podem expressar la solució de forma recursiva amb el procediment anterior?
+
+La resposta és si i la idea bàsica per resoldre-ho amb un algorisme recursiu és:
+
++ Per poder passar la peça grossa d'`A` a `C` cal passar les que estan a sobre d'`A` a `B` amb l’ajut de `C`.
++ Llavors puc passar la peça que queda a `A` a `C` i oblidar-me d’ella, ja està ben col·locada!
++ Ara tinc la pila a `B`.  Per tant el que queda és passar les peces de `B` a `C` amb l’ajuda d'`A` i ja hauré acabat.
+
+Aquesta idea bàsica es pot repetir recursivament!
+
+---
+
+## El problema de les torres de Hanoi
+
+```python
+def moveTower(height,fromPole, toPole, withPole):  # height és el nombre de discs 
+    if height >= 1:                                # que hi ha al pal origen
+        moveTower(height-1,fromPole,withPole,toPole)
+        moveDisk(fromPole,toPole)
+        moveTower(height-1,withPole,toPole,fromPole)
+    return
+def moveDisk(fp,tp):
+    print("moving disk from",fp,"to",tp)
+
+moveTower(3,"A","B","C")
+```
+
+
+
+```python
+moving disk from A to B
+moving disk from A to C
+moving disk from B to C
+moving disk from A to B
+moving disk from C to A
+moving disk from C to B
+moving disk from A to B
+```
+
+Després veurem que la complexitat és exponencial `O(2^n)`.
+
+
+---
+
+## El problema de les torres de Hanoi
+
+Les crides recursives generen aquest arbre (a cada node hi ha els paràmetres, que recordem eren: `height`, `fromPole`, `toPole`, `withPole`):
+
+<center><img src="images/hanoi1.png" width="550"></center>
+
+per exemple: `3ABC` vol dir que hi ha tres discs a `A`, que es mouran a `B` amb l'ajut de `C`; `1CAB` vol dir que hi ha 1 disc a `C`, que es mouran a `A` amb l'ajut de `B`.
+
+---
+
+## El problema de les torres de Hanoi
+
+L'ordre de generació de la solució és:
+<center><img src="images/hanoi2.png" width="400"></center>
+
+```python
+def moveTower(height,fromPole, toPole, withPole): 
+    if height >= 1:
+        moveTower(height-1,fromPole,withPole,toPole)
+        moveDisk(fromPole,toPole)
+        moveTower(height-1,withPole,toPole,fromPole)
+    return
+```
+---
+
+## El problema de les torres de Hanoi
+
++ Què passaria amb l'arbre si enlloc de 3 peces en tenim 4?
+
+--
+
+> *Que tindria un nivell més amb el doble de fulles.*
+
+--
+
++ Quantes vegades es crida recursivament la funció (quantes fulles i nodes te l'arbre) si tenim `n` peces?
+
+--
+
+$$ 1 + 2 + 4 + 8 + \dots + 2^n = \sum_{0}^n 2^i = 2^{n+1} - 1$$
+
+--
+
++ Quina és la complexitat de l'algorisme?
+
+--
+
+> *Si fa* `(2^(n+1)-1)` *crides i cada una de les crides com a màxim
+executa instruccions de cost* `O(1)`*, el cost és* `O(2^(n+1))`*. És a dir,  ordre exponencial,* `O(2^n)`.
+
+
+
+
+</textarea>
+  <script src="common/remark-latest.min.js"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true
+    });
+    var slideshow = remark.create({
+                // Set the slideshow display ratio
+                // Default: '4:3'
+                // Alternatives: '16:9', ...
+                ratio: '4:3',
+
+                // Navigation options
+                navigation: {
+                  // Enable or disable navigating using scroll
+                  // Default: true
+                  // Alternatives: false
+                  scroll: true,
+
+                  // Enable or disable navigation using touch
+                  // Default: true
+                  // Alternatives: false
+                  touch: true,
+
+                  // Enable or disable navigation using click
+                  // Default: false
+                  // Alternatives: true
+                  click: false
+                },
+
+                // Customize slide number label, either using a format string..
+                slideNumberFormat: 'Slide %current% of %total%',
+                // .. or by using a format function
+                slideNumberFormat: function (current, total) {
+                  return 'Slide ' + current + ' of ' + total;
+                },
+
+                // Enable or disable counting of incremental slides in the slide counting
+                countIncrementalSlides: true
+              }); 
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+  <script type="text/javascript">
+// Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+  </script>
+</body>
+
+</html>
