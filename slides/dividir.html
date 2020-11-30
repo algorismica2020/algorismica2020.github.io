@@ -203,122 +203,72 @@ Jordi Vitrià, Mireia Ribera
 
 ---
 
-## La recursió
-
-Per poder comprendre l'estratègia de dividir i vèncer ens cal aprofundir en el concepte de la recursió. I l'estudiarem a través d'un exemple clàssic: les torres de Hanoi
-
----
-name:Hanoi
-
-## Exemple: el problema de les torres de Hanoi
+## Estratègies recursives per resoldre problemes.
 
 
-<center><img src="images/hanoi.png" width="350"></center>
+Suposem que volem sumar una llista llarga de nombres. 
 
-There is a legend about an Indian temple which contains a large room with three time-worn posts in it surrounded by 64 golden disks. Brahmin priests, acting out the command of an ancient prophecy, have been moving these disks, in accordance with the rules of the puzzle, since that time. The puzzle is therefore also known as the Tower of Brahma puzzle. According to the legend, when the last move of the puzzle is completed, the world will end.
+Els ordinadors (i les persones) només saben fer sumes de 2 en dos xifres. Per tant, hem de fer un algorisme que expressi la suma dels elements d'una llista en termes de sumes de 2 elements.
 
-If the legend were true, and if the priests were able to move disks at a rate of one per second, using the smallest number of moves, it would take them 
-`2^(64−1)` seconds or roughly 585 billion years; it would take 18,446,744,073,709,551,615 turns to finish.
+La forma més intuitiva és resoldre el problema de **forma seqüencial**, començant per la suma dels dos primers elements, acumular el resultat i anar fent sumes amb la resta dels elements de la llista fins que arribem al final:
 
----
-
-## Exemple: el problema de les torres de Hanoi
-
-
-Les torres de Hanoi és un joc usat típicament com a exemple de **recursivitat**. 
-
-A l'inici estan col·locats de més gran a més petit en la primera vareta. El joc consisteix en passar tots els discs a la tercera vareta tenint en compte que només es pot canviar de vareta un disc cada vegada i que mai no podem tenir un disc col·locat sobre un que sigui més petit.
-
-La idea bàsica per resoldre-ho amb un algorisme recursiu és que:
-
-+ Per poder passar la peça grossa de `A` a `C` cal passar les que estan a sobre de `A` a `B` amb l’ajut de `C`.
-+ Llavors puc passar la peça que queda a `A` a `C` i oblidar-me d’ella, ja està ben col·locada!
-+ Ara tinc la pila a `B`.  Per tant el que queda és passar les peces de `B` a `C` amb l’ajuda de `A` i ja hauré acabat.
-
-Aquesta idea bàsica es pot repetir recursivament!
-
----
-
-## Exemple: el problema de les torres de Hanoi
 ```python
-def moveTower(height,fromPole, toPole, withPole):  # height és el nombre de discs 
-    if height >= 1:                                # que hi ha al pal origen
-        moveTower(height-1,fromPole,withPole,toPole)
-        moveDisk(fromPole,toPole)
-        moveTower(height-1,withPole,toPole,fromPole)
-    return
-def moveDisk(fp,tp):
-    print("moving disk from",fp,"to",tp)
+a = [4,6,3,2,8,7,5,1]
 
-moveTower(3,"A","B","C")
+def sum1(a):
+    sum = 0
+    for i in a:
+        sum += i
+    return sum
+
+print(sum(a)) 
+>> 36
+```
+
+<div class=warnred>
+.bold[Pregunta]: <br>
+
+Quina complexitat té aquest algorisme?</div> 
+</div> 
+---
+## Estratègies recursives per resoldre problemes.
+
+
+Però també ho podem reformular d'una altra manera: **anar dividint de forma recursiva el problema en subproblemes més petits** i senzills, **fins que arribem a un cas molt simple**, que resolem, per després reconstruïr el resultat del problema global:
+
+<center><img src="images/dv2.png" width="550"></center>
+
+
+
+---
+
+
+
+## Estratègies recursives per resoldre problemes.
+
+L'implementació podria ser:
+
+```python
+def sum2(a):
+    if len(a) == 2:
+        return a[0]+a[1]
+    return sum2[0,len(a/2)]+sum2[len(a)/2,len(a)]
 ```
 
 
+En aquest cas la divisió recursiva en problemes més petits no ha resultat ser una gran idea des del punt de vista de la complexitat computacional: farem el mateix nombre de sumes que si ho féssim de forma sequencial! Però a vegades ho pot ser!
 
-```python
-moving disk from A to B
-moving disk from A to C
-moving disk from B to C
-moving disk from A to B
-moving disk from C to A
-moving disk from C to B
-moving disk from A to B
-```
+<div class=warnred>
+.bold[Exercici]: <br>
 
-Després veurem que la complexitat és exponencial `O(2^n)`.
+Adapteu aquest algorisme per processar llistes amb un nombre senar d'elements
+</div> 
 
+<div class=warnred>
+.bold[Pregunta]: <br>
 
----
-
-## Exemple: el problema de les torres de Hanoi
-
-Les crides recursives generen aquest arbre (a cada node hi ha els paràmetres, que recordem eren: `height`, `fromPole`, `toPole`, `withPole`):
-
-<center><img src="images/hanoi1.png" width="550"></center>
-
-per exemple: `3ABC` vol dir que hi ha tres discs a `A`, que es mouran a `B` amb l'ajut de `C`; `1CAB` vol dir que hi ha 1 disc a `C`, que es mouran a `A` amb l'ajut de `B`.
-
----
-
-## Exemple: el problema de les torres de Hanoi
-
-L'ordre de generació de la solució és:
-<center><img src="images/hanoi2.png" width="400"></center>
-
-```python
-def moveTower(height,fromPole, toPole, withPole): 
-    if height >= 1:
-        moveTower(height-1,fromPole,withPole,toPole)
-        moveDisk(fromPole,toPole)
-        moveTower(height-1,withPole,toPole,fromPole)
-    return
-```
----
-
-## Exemple: el problema de les torres de Hanoi
-
-+ Què passaria amb l'arbre si enlloc de 3 peces en tenim 4?
-
---
-
-> *Que tindria un nivell més amb el doble de fulles.*
-
---
-
-+ Quantes vegades es crida recursivament la funció (quantes fulles i nodes te l'arbre) si tenim `n` peces?
-
---
-
-$$ 1 + 2 + 4 + 8 + \dots + 2^n = \sum_{0}^n 2^i = 2^{n+1} - 1$$
-
---
-
-+ Quina és la complexitat de l'algorisme?
-
---
-
-> *Si fa* `(2^(n+1)-1)` *crides i cada una de les crides com a màxim
-executa instruccions de cost* `O(1)`*, el cost és* `O(2^(n+1))`*. És a dir,  ordre exponencial,* `O(2^n)`.
+Quina complexitat té aquest algorisme?</div> 
+</div> 
 
 
 ---
@@ -349,6 +299,8 @@ Les **qüestions a resoldre** són tres:
 
 ## Exemple: Suma (recursiva) dels elements d'una llista.
 
+La suma seqüencial dels elements d'un a llista també es pot expressar recursivament:
+
 ```python
 def sum(l):
    if len(l) == 1:
@@ -360,20 +312,29 @@ a =[5,7,3,8,10]
 
 ```
 
-+ Quina complexitat té aquest algorisme?
+<div class=warnred>
+.bold[Pregunta]: <br>
+
+Quina complexitat té aquest algorisme?</div> 
+</div> 
 
 --
+
 > `O(n)` 
-<center><img src="images/suma recursiva.png" width="220" alt="una cadena amb un darrer element '4' amb un retorn de 4, un element '3,4' amb un retorn de 3 + 4 = 7, un element '7,3,4' amb un retorn de 7+7 = 14, un element '5,7,3,4' amb un retorn de 14+5=19"></center>
+<center><img src="images/suma recursiva.png" width="150" alt="una cadena amb un darrer element '4' amb un retorn de 4, un element '3,4' amb un retorn de 3 + 4 = 7, un element '7,3,4' amb un retorn de 7+7 = 14, un element '5,7,3,4' amb un retorn de 14+5=19"></center>
 
 
 ---
 
 ## Algorismes de dividir i vèncer: relacions de recurrència.
 
-L’esquema general d’aquests algorismes és: tenim un problema de mida `n`, que reformulem mitjançant la solució d’`a` problemes de mida `n/b` i llavors combinem les respostes en un temps `O(n^d)`. 
+L’esquema general d’aquests algorismes és: 
 
-La seva complexitat serà per tant:
+> Tenim un problema de mida `n`, que reformulem mitjançant la solució d’`a` problemes de mida `n/b` i llavors combinem les respostes en un temps `O(n^d)`. 
+
+En el cas de l'algorisme `suma2`, tenim `a`= 2, `b` = 2 i `d` = 1.
+
+La complexitat d'un problema d'aquest tipus es pot deduïr a partir de vuere la seva relació de recurrència:
 
 
 $$ T(n) = a T(n/b) + O(n^d) $$
@@ -400,7 +361,7 @@ ___
 
 Fixeu-vos que en el cas 1 el que mana és el cost de la combinació de solucions per què `d` és molt gran. 
 
-En el cas 3, en canvi, el que mana és `log b` d'`a` que serà gran quan hi hagi molts subproblemes i no es redueixin gaire en cada divisió. 
+En el cas 3, en canvi, el que mana és `log_b` d'`a` que serà gran quan hi hagi molts subproblemes i no es redueixin gaire en cada divisió. 
 
 En el cas 2 àmbdues complexitats estan equilibrades.
 
@@ -408,7 +369,7 @@ En el cas 2 àmbdues complexitats estan equilibrades.
 
 ## Algorismes de dividir i vèncer: relacions de recurrència.
 
-** Exemple:**
+** Exemple 1:**
 
 Si tenim un determinat problema que es pot  dividir en 2 subproblemes (`a = 2`), cada un dels quals processa unes dades que són `1/2` de les originals (`b = 2`), i la reconstrucció de la solució en costa `O(n^2)`...
 
@@ -419,6 +380,18 @@ Si tenim un determinat problema que es pot  dividir en 2 subproblemes (`a = 2`),
 --
 
 i per tant resulta `O(n^2)`.
+
+---
+
+## Algorismes de dividir i vèncer: relacions de recurrència.
+
+** Exemple 2:**
+
+Si tenim un determinat problema que es pot  dividir en 16 subproblemes (`a = 16`), cada un dels quals processa unes dades que són `1/4` de les originals (`b = 4`), i la reconstrucció de la solució en costa `O(n)`...
+
+--
+
+la complexitat és `O(n^2)`.
 
 ---
 
