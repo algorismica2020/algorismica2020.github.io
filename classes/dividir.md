@@ -56,7 +56,12 @@ Video de 7' sobre el Teorema Màster.
 
 Calculeu la complexitat d'una sèrie d'algorismes que tenen aquestes relacions de recurrència:
 
-+ $n$
++ `3 T(n/2) + n^2`
++ `4 T(n/2) + n^2`
++ `2 T(n/4) + n^0.51`
++ `3 T(n/2) + n`
+
+### Video: 
 
 
 
