@@ -48,4 +48,16 @@ Aquest és un algorisme **correcte** (retorna el nombre corresponent a la suma d
 
 ### Com calcular la complexitat d'un algorisme que implementa l'estratègia de D&C
 
+Video de 7' sobre el Teorema Màster.
+
+<iframe src="https://drive.google.com/file/d/1pL0jhQIID0wUYWrK7DOYbvcEF5Uun3_1/preview" width="640" height="480"></iframe>
+
+### Exercici
+
+Calculeu la complexitat d'una sèrie d'algorismes que tenen aquestes relacions de recurrència:
+
++ $n$
+
+
+
 
