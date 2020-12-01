@@ -9,4 +9,10 @@ Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020
 
 ---
 
+> En la cultura popular, divideix i venceràs fa referència a un refrany que implica resoldre un problema difícil, dividint-lo en parts més simples tantes vegades com sigui necessari, fins que la resolució de les parts es torna òbvia i senzilla. La solució del problema principal es construeix amb les solucions de les parts en que s'ha dividit el problema.
+
+> En el camp de les ciències de la computació, el terme divideix i venceràs (DiV) fa referència a un dels paradigmes més importants de disseny algorítmic. El mètode es basa en la resolució recursiva d'un problema dividint-lo en dos o més subproblemes d'igual tipus o similar. El procés continua fins que els subproblemes arriben a ser prou senzills perquè es resolguin directament. Al final, les solucions a cadascun dels subproblemes es combinen per donar la solució del problema original.
+
+> Font: https://ca.wikipedia.org/wiki/Algorisme_divideix_i_vencer%C3%A0s
+
 ### Video: X
