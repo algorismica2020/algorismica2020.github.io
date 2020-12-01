@@ -45,3 +45,7 @@ Aquest és un algorisme **correcte** (retorna el nombre corresponent a la suma d
 + La solució s'obté al anar sumants els elements individuals a la solució recursiva de la resta de la llista.
 
 És eficient aquest algorisme? Fem `n` operacions de suma, pel que no guanyem res respecte a la solució *ingènua* del problema.
+
+### Com calcular la complexitat d'un algorisme que implementa l'estratègia de D&C
+
+
