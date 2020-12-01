@@ -61,7 +61,12 @@ Calculeu la complexitat d'una sèrie d'algorismes que tenen aquestes relacions d
 + `2 T(n/4) + n^0.51`
 + `3 T(n/2) + n`
 
-### Video: 
+### Video: Algorisme Mergesort
+
+Video de 10' sobre l'algorisme MergeSort, un algorisme d'ordenació de llites amb complexitat `O(n log n)`.
+
+<iframe src="https://drive.google.com/file/d/1jVpXCr1VVunRujjsJyzwnsXQHC5FFMmc/preview" width="640" height="480"></iframe>
+
 
 
 
