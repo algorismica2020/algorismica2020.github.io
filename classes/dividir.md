@@ -17,7 +17,7 @@ Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020
 
 ### Video: Introducció
 
-Video de 9' sobre l'estratègia de D&V.
+Video de 10' sobre l'estratègia de D&V.
 
 <iframe src="<iframe src="https://drive.google.com/file/d/15MczHDPJgylXbh1p5K5UkUthgu0gRyTZ/preview" width="640" height="480"></iframe>" width="640" height="480"></iframe>
 
