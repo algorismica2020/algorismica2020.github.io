@@ -21,3 +21,15 @@ Video de 10' sobre l'estratègia de D&V.
 
 <iframe src="https://drive.google.com/file/d/15MczHDPJgylXbh1p5K5UkUthgu0gRyTZ/preview" width="640" height="480"></iframe>
 
+### Com resoldre un problema amb aquesta estratègia?
+
+Les qüestions a resoldre són tres:
++ Com anem dividint el problema, de forma recursiva, en subproblemes?
++ Com aturem la recursió i donem una solució al darrer subproblema?
++ Com combinem les solucions recursives per assolir la solució del problema complet?
+
+Una possible solució pel problema de la suma dels elements d'una llista seria:
+
+```python
+as
+```
