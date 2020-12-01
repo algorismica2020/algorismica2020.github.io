@@ -174,7 +174,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
   + Classe presencial: 
     + Comentar examen setmana anterior.
     + [Torres de Hanoi](http://algorismica2020.github.io/slides/hanoi.html) 
-  + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
+  + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer](http://algorismica2020.github.io/classes/dividir.html).   
   + Pràctica: 
     + 5.6 (Negatius al davant)
     + 5.19 (Karatsuba)
