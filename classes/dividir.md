@@ -31,5 +31,17 @@ Les qüestions a resoldre són tres:
 Una possible solució pel problema de la suma dels elements d'una llista seria:
 
 ```python
-as
+def sum(l):
+   if len(l) == 1:
+        return l[0]
+   else:
+        return l[0] + sum(l[1:])
 ```
+
+Aquest és un algorisme **correcte** (retorna el nombre corresponent a la suma dels elements de la llista), que ha respost a les tres preguntes de la següent manera:
+
++ La divisió del problema és en dues subllistes, la primera formada per 1 elements i la segona formada per la resta d'elements.
++ La recursió s'atura quan hi ha un únic element a la llista, que és retornat.
++ La solució s'obté al anar sumants els elements individuals a la solució recursiva de la resta de la llista.
+
+És eficient aquest algorisme? Fem `n` operacions de suma, pel que no guanyem res respecte a la solució *ingènua* del problema.
