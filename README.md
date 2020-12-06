@@ -186,7 +186,11 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 ---
 
 
-+ Setmana del 7/12: Festiu
++ Setmana del 7/12: Durant aquesta setmana, a causa dels dies fesius, no afegirem cap contingut de teoria ni haureu de fer cap pràctica. 
+
+
+---
+
 + Setmana del 14/12: 
   + Classe presencial: 
     + 5.23 (Xifres i lletres QS) 
@@ -213,7 +217,6 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + 5.15 (Menor, major relatius)
     + 5.20 (Cerca binària. Preg. 3 Cerca quasi ordenada)
 
-    
     
 ## Material d'estudi 
 
