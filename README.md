@@ -195,7 +195,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
   + Classe presencial: 
     + 5.23 (Xifres i lletres QS) 
     + Exercicis teorema màster. Notebook basics Python. Complexitat. 
-  + Examen de teoria presencial (tentatiu, ja ho confirmarem) el dia 16/12.
+  + Examen de teoria (tentativament presencial, ja ho confirmarem) el dia 16/12.
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
   + Pràctica: 
     + 5.1 (Suma d’una llista)
