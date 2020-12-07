@@ -187,7 +187,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 
 + Setmana del 7/12: **Durant aquesta setmana, a causa dels dies festius, no afegirem cap contingut de teoria ni haureu de fer cap pràctica.** Aprofiteu per estudiar els temes de teoria fets fins ara i posar-vos al dia de pràctiques! 
-
+  + El dia 9, de 12:30h a 13:00h farem classe de repàs voluntaria. 
 
 ---
 
@@ -195,7 +195,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
   + Classe presencial: 
     + 5.23 (Xifres i lletres QS) 
     + Exercicis teorema màster. Notebook basics Python. Complexitat. 
-
+  + Examen de teoria presencial (tentatiu, ja ho confirmarem) el dia 16/12.
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
   + Pràctica: 
     + 5.1 (Suma d’una llista)
@@ -207,15 +207,9 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 21/12: 
   + Classe presencial: 
-    + **Examen curt de teoria**; 
     + [El problema del viatjant de comerç](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/Traveling%20Salesman%20Problem_def.ipynb)
     + 5.15 (Menor i major relatius)
   + Contingut en línia (Mireia): [Algorismes de Cerca]  
-  + Pràctica: 
-    + 5.9 (Valor igual al seu índex)
-    + 5.11 (Elements pic)
-    + 5.15 (Menor, major relatius)
-    + 5.20 (Cerca binària. Preg. 3 Cerca quasi ordenada)
 
     
 ## Material d'estudi 
