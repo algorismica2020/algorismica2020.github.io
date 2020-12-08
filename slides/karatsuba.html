@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation">
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool.">
+
+    <title>Algorismes: Karatsuba </title>
+
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/print.css" media="print">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, 
+      .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .red { color: #fa0000; }
+      .green { color: #00fa77; }
+      .blue { color: #0000fa; }
+      .light { color: #aaaaaa; }
+      .bold { font-family: 'Yanone Kaffeesatz'; font-size: 1.5em;
+              line-height: 0.9em;}
+      .code {font-family: 'Ubuntu Mono';}
+      .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.75em;
+        line-height: 0.4em;
+      }
+
+      .summary {
+        background:#003366;
+        color: #ffffcc;
+      }
+	  
+	  .summary a{
+        color: #ffddaa;
+	  }
+
+      .exam {
+        background: #802222;
+        color: #ffffcc;
+        text-shadow: 0 0 20px #333;
+      }
+
+      .inverse {
+        background: #800000;
+        color: #ffffcc;
+      }
+
+      .inverse h1, 
+      .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.6em;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    margin-bottom: 10px;
+}
+
+summary {
+    font-weight: normal;
+    padding: .5em;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+div.warnred {    
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+    border-left: 5px solid #dfb5b4;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+div.warnblue {    
+    background-color: #99ccff;
+    border-color: #dFb5b4;
+    border-left: 5px solid #0066ff;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+    </style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+  <body>
+  <textarea id="source">
+
+
+class: center, middle
+
+<center><img src="images/ub.png" width="150"></center>
+
+
+# **ALGORÍSMICA**
+## Karatsuba
+
+
+Jordi Vitrià, Mireia Ribera
+
+.blue[jordi.vitria@ub.edu] |  .blue[ribera@ub.edu]
+
+---
+
+
+## Karatsuba
+
+Usant l'algorisme que hem après a l'escola, sabem que dos nombres, `A` i `B`, de `n` **dígits** (tant se val si són bits o els símbols del sistema de numeració decimal) es poden multiplicar amb  \\( O(n) \\) operacions.
+
+**Propietat de la multiplicació (sistema decimal)**: 
+
++ Sigui \\( A = A_1 10^{n/2} + A_0 \\) amb \\( A_0 < 10^{n/2} \\)
++ Sigui \\( B = B_1 10^{n/2} + B_0 \\) amb \\( B_0 < 10^{n/2} \\). 
++ Llavors \\( C = A * B = (A_1 10^{n/2} + A_0)(B_1 10^{n/2} + B_0) \\) es pot calcular com:
+   \\[ A_1 B_1 10^{n} + (A_1 B_0 + A_0 B_1) 10^{n/2} + A_0 B_0\\]
+
+
+
+*Exemple*:
+
+\\[ 2925 \times 6872 = (29 \times 10^2 + 25) \times (68 \times 10^2 + 72) = \\]
+\\[ 29   \times 68 \times 10^4 + (29 \times 72 + 25 \times 68) \times 10^2 + 25 \times 72   \\]
+
+
+---
+
+
+## Karatsuba
+
+Hem de fer 4 multiplicacions: \\( A_1 B_1,  A_1 B_0,  A_0 B_1,  A_0 B_0 \\), atès que les operacions relacionades amb els exponents són simples escriptures amb desplaçament. 
+
+L'algorisme recursiu funcionaria d'aquesta manera:
+
+<center><img src="images/karatsuba.001.png" width="600"></center>
+
+---
+
+
+## Karatsuba
+
+<center><img src="images/karatsuba.002.png" width="600"></center>
+
+---
+
+
+## Karatsuba
+
+<center><img src="images/karatsuba.003.png" width="600"></center>
+
+
+---
+
+
+## Karatsuba
+
+<center><img src="images/karatsuba.004.png" width="600"></center>
+
+---
+
+
+## Karatsuba
+
+Però el matemàtic rus Anatoli Karatsuba (1937-2008) es va adonar que el càlcul de els tres termes
+\\( (A_1 B_1,  (A_1 B_0 +  A_0 B_1),  A_0 B_0) \\) es pot fer en tres multiplicacions i no en 4!
+
++ Suposem que tenim 4 nombres \\( a, b, c, d \\) i volem calcular \\( ac, (ad + bc), bd \\). 
++ Sabem que \\( (a+b)(c+d) = ac + ad + bc + bd \\)
++ Si calculem primer \\( ac \\) i \\( bd \\), llavors podem calcular \\( (ad + bc) \\) d'aquesta manera: 
+\\( (ad + bc) = (a+b)(c+d) - ac - bd \\)
+
+I això són 3 crides recursives enlloc de 4:
+
++ Descomposem els nombres en 4 parts, \\( a, b, c, d \\).
++ Calculem recursivament \\( ac \\).
++ Calculem recursivament \\( bd \\).
++ Calculem recursivament \\( (a+b)(c+d) \\).
++ Calculem \\( (ab + bc) \\) com \\( (a + b)(c + d) – ac – bd \\).
++ Afegim \\(n\\) zeros al final de \\( ac \\) i n'hi diem A.
++ Afegim \\(n\\) zeros al final de \\( ab + bc \\) i n'hi diem B.
++ Retornem \\( A + B + bd \\).
+
+---
+
+
+## Karatsuba
+
+<center><img src="images/karatsuba.005.png" width="500"></center>
+
+
+La recursivitat s'atura quan queda un sol dígit. 
+
+L'algorisme que hem vist és només vàlid per xifres que es poden escriure amb un nombre parell de dígits, però no és dificil generalitzar-ho a totes!
+
+
+
+---
+
+## Karatsuba
+
+Per calcular la seva complexitat podem fer servir el teorema Master.
+
+En el cas de l'algorisme de Karatsuba tenim 3 crides recursives (\\( a = 3 \\)), que intenten resoldre un problema que té \\( \frac{1}{2} \\) de la mida original (\\( b = 2 \\)) i l'algorisme fa una sèrie d'operacions que són sumes i restes de complexitat \\( O(n) \\) (\\( d = 1 \\)).
+
+Amb aquests valors aplica el tercer cas del teorema Master i tenim:
+
+\\[ O(n^{\log_2 3}) = O(n^{1.585})  \\]
+
+---
+
+## Teorema Master (versió alternativa)
+
+<center><img src="images/master.png" width="300"></center>
+
+
+
+</textarea>
+  <script src="common/remark-latest.min.js"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true
+    });
+    var slideshow = remark.create({
+                // Set the slideshow display ratio
+                // Default: '4:3'
+                // Alternatives: '16:9', ...
+                ratio: '4:3',
+
+                // Navigation options
+                navigation: {
+                  // Enable or disable navigating using scroll
+                  // Default: true
+                  // Alternatives: false
+                  scroll: true,
+
+                  // Enable or disable navigation using touch
+                  // Default: true
+                  // Alternatives: false
+                  touch: true,
+
+                  // Enable or disable navigation using click
+                  // Default: false
+                  // Alternatives: true
+                  click: false
+                },
+
+                // Customize slide number label, either using a format string..
+                slideNumberFormat: 'Slide %current% of %total%',
+                // .. or by using a format function
+                slideNumberFormat: function (current, total) {
+                  return 'Slide ' + current + ' of ' + total;
+                },
+
+                // Enable or disable counting of incremental slides in the slide counting
+                countIncrementalSlides: true
+              }); 
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+  <script type="text/javascript">
+// Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+  </script>
+</body>
+
+</html>
