@@ -228,7 +228,7 @@ print(sum(a))
 <div class=warnred>
 .bold[Pregunta]: <br>
 
-Quina complexitat té aquest algorisme?</div> 
+Quantes sumes realitza aquest algorisme?</div> 
 </div> 
 ---
 ## Estratègies recursives per resoldre problemes.
@@ -246,13 +246,13 @@ Però també ho podem reformular d'una altra manera: **anar dividint de forma re
 
 ## Estratègies recursives per resoldre problemes.
 
-L'implementació podria ser:
+L'implementació podria ser (per llistes amb un nombre d'elements que sigui potència de 2):
 
 ```python
 def sum2(a):
     if len(a) == 2:
         return a[0]+a[1]
-    return sum2[0,len(a/2)]+sum2[len(a)/2,len(a)]
+    return sum2(a[0:int(len(a)/2)]) + sum2(a[int(len(a)/2):len(a)])
 ```
 
 
@@ -261,13 +261,13 @@ En aquest cas la divisió recursiva en problemes més petits no ha resultat ser 
 <div class=warnred>
 .bold[Exercici]: <br>
 
-Adapteu aquest algorisme per processar llistes amb un nombre senar d'elements
+Adapteu aquest algorisme per processar llistes amb un nombre d'elements que no sigui potència de 2.
 </div> 
 
 <div class=warnred>
 .bold[Pregunta]: <br>
 
-Quina complexitat té aquest algorisme?</div> 
+Quantes sumes realitza aquest algorisme?</div> 
 </div> 
 
 
@@ -332,7 +332,7 @@ L’esquema general d’aquests algorismes és:
 
 > Tenim un problema de mida `n`, que reformulem mitjançant la solució d’`a` problemes de mida `n/b` i llavors combinem les respostes en un temps `O(n^d)`. 
 
-En el cas de l'algorisme `suma2`, tenim `a`= 2, `b` = 2 i `d` = 1.
+En el cas de l'algorisme `suma2`, tenim `a`= 2, `b` = 2 i `d` = 0.
 
 La complexitat d'un problema d'aquest tipus es pot deduïr a partir de vuere la seva relació de recurrència:
 
@@ -353,17 +353,23 @@ ___
 
 **Teorema:** Si `T(n)=aT(n/b)+O(n^d)` per algunes constants `a>0`, `b>1`, i `d>=0`, llavors:
 
-+  **cas 1**: `T(n) = O(n^d) ` si `d > log_b a`  
-+  **cas 2**: `T(n) = O(n^d log n) ` si `d = log_b a `
-+  **cas 3**: `T(n) = O(n^(log_b a))` si `d < log_b a`
++  **cas 1**: \\( T(n) = O(n^d) \\) si \\( d > \log_b a \\), o el que és el mateix \\( a < b^d \\).
++  **cas 2**: \\( T(n) = O(n^d \log_b n) \\) si \\( d = \log_b a \\), o el que és el mateix  \\( a = b^d \\).
++  **cas 3**: \\( T(n) = O(n^{\log_b a}) \\) si \\( d < \log_b a \\), o el que és el mateix  \\( a > b^d \\).
 
 ___ 
 
 Fixeu-vos que en el cas 1 el que mana és el cost de la combinació de solucions per què `d` és molt gran. 
 
-En el cas 3, en canvi, el que mana és `log_b` d'`a` que serà gran quan hi hagi molts subproblemes i no es redueixin gaire en cada divisió. 
+En el cas 3, en canvi, el que mana és \\( \log_b a \\) que serà gran quan hi hagi molts subproblemes i no es redueixin gaire en cada divisió. 
 
 En el cas 2 àmbdues complexitats estan equilibrades.
+
+<div class=warnred>
+.bold[Aplicació de l'algorisme]: <br>
+
+L'algorisme <code>suma2</code> té <code>a</code>= 2, <code>b</code> = 2 i <code>d</code> = 0. Per tant aplica el cas 3 del teorema i té <code>O(n)</code></div> 
+</div> 
 
 ---
 
