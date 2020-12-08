@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation">
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool.">
+
+    <title>Algorismes: Strassen </title>
+
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/print.css" media="print">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, 
+      .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .red { color: #fa0000; }
+      .green { color: #00fa77; }
+      .blue { color: #0000fa; }
+      .light { color: #aaaaaa; }
+      .bold { font-family: 'Yanone Kaffeesatz'; font-size: 1.5em;
+              line-height: 0.9em;}
+      .code {font-family: 'Ubuntu Mono';}
+      .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.75em;
+        line-height: 0.4em;
+      }
+
+      .summary {
+        background:#003366;
+        color: #ffffcc;
+      }
+	  
+	  .summary a{
+        color: #ffddaa;
+	  }
+
+      .exam {
+        background: #802222;
+        color: #ffffcc;
+        text-shadow: 0 0 20px #333;
+      }
+
+      .inverse {
+        background: #800000;
+        color: #ffffcc;
+      }
+
+      .inverse h1, 
+      .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.6em;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    margin-bottom: 10px;
+}
+
+summary {
+    font-weight: normal;
+    padding: .5em;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+div.warnred {    
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+    border-left: 5px solid #dfb5b4;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+div.warnblue {    
+    background-color: #99ccff;
+    border-color: #dFb5b4;
+    border-left: 5px solid #0066ff;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+    </style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+  <body>
+  <textarea id="source">
+
+
+class: center, middle
+
+<center><img src="images/ub.png" width="150"></center>
+
+
+# **ALGORÍSMICA**
+## Strassen
+
+
+Jordi Vitrià, Mireia Ribera
+
+.blue[jordi.vitria@ub.edu] |  .blue[ribera@ub.edu]
+
+---
+
+
+## Algorismes de dividir-i-vèncer: multiplicació de matrius
+
+<center><img src="images/matmul.png" width="650"></center>
+
+Suposant que els nombres de la matriu són "petits" (es poden escriure amb menys de 64 bits) i són matrius quadrades de `n` files i `n` columnes, la implementació directa de la multiplicació de matrius és \\( O(n^3) \\) perquè s’han de calcular \\( n^2 \\) elements, i cada càlcul és \\( O(n) \\).
+
+Fins a 1969 es pensava que no es podia fer d’una altra manera!
+
+
+---
+
+## Algorismes de dividir-i-vèncer: multiplicació de matrius
+
+Però el 1969, el Dr. Volker Strassen va trobar una manera més òptima:
+
+Es va basar en que el producte de dues matrius `(n x n)` es pot calcular a partir de la seva descomposició en blocs `(n/2 x n/2)`.
+
+Suposem que volem multiplicar \\( X \\) per \\( Y \\), ambdues de `(n x n)` elements. Llavors tenim aquestes igualtats si descomposem les matrius en 4 parts de la mateixa mida:
+
+<center><img src="images/matmul2.png" width="550"></center>
+
+---
+## Algorismes de dividir-i-vèncer: multiplicació de matrius
+
+
+Aquesta descomposició es pot expressar recursivament.  
+
+La recurrència consisteix en passar d’una matriu `(n x n)` a 8 matrius `(n/2 x n/2)`. 
+
+La funció de recurrència d'aquest algorisme és \\(T(n) = 8 T(n/2) + O(n^2)\\) , atès que:
++ Hi ha 8 crides recursives; \\( (a = 8) \\).
++ El nombre de files/columnes és `(n/2)`; \\( (b = 2) \\). 
++ La reconstrucció de la solució són `n^2` sumes, amb \\(O(n^2)\\); \\( (d = 2) \\)
+
+Que resulta en una complexitat, aplicant el teorema Master, de \\(O(n^3)\\), la mateixa que la multiplicació convencional de matrius.
+
+---
+## Algorismes de dividir-i-vèncer: multiplicació de matrius
+
+
+Però Strassen es va adonar que aquestes operacions, fent la mateixa descomposició que abans, es podien agrupar així:
+
+<center><img src="images/matmul3.png" width="550"></center>
+
+Cada una de les \\( P_i \\) representa una crida recursiva per les multiplicacions i la reconstrucció torna a ser de l'ordre de `n^2` sumes.
+---
+
+## Algorismes de dividir-i-vèncer: multiplicació de matrius
+
+
+La complexitat ara és:
+
+ \\[ T(n) = 7 T(n/2) + O(n^2) \\]
+
+ i aplicant el cas 3 del teorema Master (\\( 7 > 2^2 \\)) resulta en una complexitat de \\( O(n^{\log_2 7}) \\), que és aproximadament \\( O(n^{2.81}) \\).
+
+```python
+1000000**3
+>>> 1000000000000000000
+
+1000000**2.81
+>>> 72443596007499056
+```
+
+Funciona 100 vegades més ràpid!
+
+
+</textarea>
+  <script src="common/remark-latest.min.js"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true
+    });
+    var slideshow = remark.create({
+                // Set the slideshow display ratio
+                // Default: '4:3'
+                // Alternatives: '16:9', ...
+                ratio: '4:3',
+
+                // Navigation options
+                navigation: {
+                  // Enable or disable navigating using scroll
+                  // Default: true
+                  // Alternatives: false
+                  scroll: true,
+
+                  // Enable or disable navigation using touch
+                  // Default: true
+                  // Alternatives: false
+                  touch: true,
+
+                  // Enable or disable navigation using click
+                  // Default: false
+                  // Alternatives: true
+                  click: false
+                },
+
+                // Customize slide number label, either using a format string..
+                slideNumberFormat: 'Slide %current% of %total%',
+                // .. or by using a format function
+                slideNumberFormat: function (current, total) {
+                  return 'Slide ' + current + ' of ' + total;
+                },
+
+                // Enable or disable counting of incremental slides in the slide counting
+                countIncrementalSlides: true
+              }); 
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+  <script type="text/javascript">
+// Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+  </script>
+</body>
+
+</html>
