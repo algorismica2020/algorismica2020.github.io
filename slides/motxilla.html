@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation">
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool.">
+
+    <title>Algorismes: Motxilla </title>
+
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="common/print.css" media="print">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, 
+      .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .red { color: #fa0000; }
+      .green { color: #00fa77; }
+      .blue { color: #0000fa; }
+      .light { color: #aaaaaa; }
+      .bold { font-family: 'Yanone Kaffeesatz'; font-size: 1.5em;
+              line-height: 0.9em;}
+      .code {font-family: 'Ubuntu Mono';}
+      .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.75em;
+        line-height: 0.4em;
+      }
+
+      .summary {
+        background:#003366;
+        color: #ffffcc;
+      }
+	  
+	  .summary a{
+        color: #ffddaa;
+	  }
+
+      .exam {
+        background: #802222;
+        color: #ffffcc;
+        text-shadow: 0 0 20px #333;
+      }
+
+      .inverse {
+        background: #800000;
+        color: #ffffcc;
+      }
+
+      .inverse h1, 
+      .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+        font-size: 0.6em;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    margin-bottom: 10px;
+}
+
+summary {
+    font-weight: normal;
+    padding: .5em;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+div.warnred {    
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+    border-left: 5px solid #dfb5b4;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+div.warnblue {    
+    background-color: #99ccff;
+    border-color: #dFb5b4;
+    border-left: 5px solid #0066ff;
+    padding: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+    </style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+  <body>
+  <textarea id="source">
+
+
+class: center, middle
+
+<center><img src="images/ub.png" width="150"></center>
+
+
+# **ALGORÍSMICA**
+## El problema de la motxilla
+
+
+Jordi Vitrià, Mireia Ribera
+
+.blue[jordi.vitria@ub.edu] |  .blue[ribera@ub.edu]
+
+---
+
+## El problema de la motxilla
+
+**Problema**: Ens donen el pes i el valor de `n` items, que s'han de posar en un motxilla que aguanta un pes de `W`. Quin és el valor màxim que podem portar?
+
+```python
+from itertools import combinations
+def brute_force(number, capacity, weight_cost):
+    :param number: number of existing items
+    :param capacity: the capacity of knapsack
+    :param weight_cost: list of tuples like: [(weight, cost), (weight, cost), ...]
+    """
+    best_cost = None
+    best_combination = []
+    # generating combinations by all ways: C by 1 from n, C by 2 from n, ...
+    for way in range(number):
+        for comb in combinations(weight_cost, way + 1):
+            weight = sum([wc[0] for wc in comb])
+            cost = sum([wc[1] for wc in comb])
+            if (best_cost is None or best_cost < cost) and weight <= capacity:
+                best_cost = cost
+                best_combination = [0] * number
+                for wc in comb:
+                    best_combination[weight_cost.index(wc)] = 1
+    return best_cost, best_combination
+
+brute_force(4, 64, [(8,50),(16,100),(32,150),(40,200)])
+> (350, [1, 1, 0, 1])
+```
+
+---
+
+## El problema de la motxilla
+
+**Problema**: Ens donen el pes i el valor de `n` items, que s'han de posar en un motxilla que aguanta un pes de `W`. Quin és el valor màxim que podem portar?
+
+```python
+def knapSack(W, wt, val, n):
+   # versió recursiva
+   # els vectors han d'estar ordenats per pes
+   if n == 0 or W == 0 :
+      return 0
+   # Si el pes és > que el que soporta la motxilla, s'elimina
+   if (wt[n-1] > W):
+      return knapSack(W, wt, val, n-1)
+   # retornem el retorn de l'item n-1
+   else:
+      return max(val[n-1] + knapSack(W-wt[n-1], wt, val, n-1),
+         knapSack(W, wt, val, n-1))
+
+
+val = [50,100,150,200,12]
+wt = [8,16,32,40,100]
+W = 64
+n = len(val)
+print (knapSack(W, wt, val, n))
+> 350
+```
+
+---
+
+## El problema de la motxilla
+
+
+<center><img src="images/motxilla1.png" width="500"></center>
+
+
+
+
+</textarea>
+  <script src="common/remark-latest.min.js"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true
+    });
+    var slideshow = remark.create({
+                // Set the slideshow display ratio
+                // Default: '4:3'
+                // Alternatives: '16:9', ...
+                ratio: '4:3',
+
+                // Navigation options
+                navigation: {
+                  // Enable or disable navigating using scroll
+                  // Default: true
+                  // Alternatives: false
+                  scroll: true,
+
+                  // Enable or disable navigation using touch
+                  // Default: true
+                  // Alternatives: false
+                  touch: true,
+
+                  // Enable or disable navigation using click
+                  // Default: false
+                  // Alternatives: true
+                  click: false
+                },
+
+                // Customize slide number label, either using a format string..
+                slideNumberFormat: 'Slide %current% of %total%',
+                // .. or by using a format function
+                slideNumberFormat: function (current, total) {
+                  return 'Slide ' + current + ' of ' + total;
+                },
+
+                // Enable or disable counting of incremental slides in the slide counting
+                countIncrementalSlides: true
+              }); 
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+  <script type="text/javascript">
+// Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+  </script>
+</body>
+
+</html>
