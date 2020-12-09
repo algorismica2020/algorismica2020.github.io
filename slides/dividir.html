@@ -316,7 +316,6 @@ a =[5,7,3,8,10]
 .bold[Pregunta]: <br>
 
 Quina complexitat té aquest algorisme?</div> 
-</div> 
 
 --
 
@@ -330,11 +329,14 @@ Quina complexitat té aquest algorisme?</div>
 
 L’esquema general d’aquests algorismes és: 
 
-> Tenim un problema de mida `n`, que reformulem mitjançant la solució d’`a` problemes de mida `n/b` i llavors combinem les respostes en un temps `O(n^d)`. 
+> Tenim un problema de mida `n`, que reformulem mitjançant la solució d’`a` problemes de mida `n/b` i llavors combinem les respostes en un temps \\( O(n^d) \\). 
 
-En el cas de l'algorisme `suma2`, tenim `a`= 2, `b` = 2 i `d` = 0.
+<div class=warnred>
+.bold[Observació]: <br>
 
-La complexitat d'un problema d'aquest tipus es pot deduïr a partir de vuere la seva relació de recurrència:
+En el cas de l'algorisme <code>suma2</code>, tenim a= 2, b = 2 i d = 0.</div> 
+
+La complexitat d'un problema d'aquest tipus es pot deduïr a partir de veure la seva relació de recurrència:
 
 
 $$ T(n) = a T(n/b) + O(n^d) $$
@@ -353,9 +355,9 @@ ___
 
 **Teorema:** Si `T(n)=aT(n/b)+O(n^d)` per algunes constants `a>0`, `b>1`, i `d>=0`, llavors:
 
-+  **cas 1**: \\( T(n) = O(n^d) \\) si \\( d > \log_b a \\), o el que és el mateix \\( a < b^d \\).
-+  **cas 2**: \\( T(n) = O(n^d \log_b n) \\) si \\( d = \log_b a \\), o el que és el mateix  \\( a = b^d \\).
-+  **cas 3**: \\( T(n) = O(n^{\log_b a}) \\) si \\( d < \log_b a \\), o el que és el mateix  \\( a > b^d \\).
++  **Cas 1**: \\( T(n) = O(n^d) \\) si \\( d > \log_b a \\), o el que és el mateix \\( a < b^d \\).
++  **Cas 2**: \\( T(n) = O(n^d \log n) \\) si \\( d = \log_b a \\), o el que és el mateix  \\( a = b^d \\).
++  **Cas 3**: \\( T(n) = O(n^{\log_b a}) \\) si \\( d < \log_b a \\), o el que és el mateix  \\( a > b^d \\).
 
 ___ 
 
