@@ -300,17 +300,21 @@ L'algorisme que hem vist és només vàlid per xifres que es poden escriure amb 
 
 Per calcular la seva complexitat podem fer servir el teorema Master.
 
-En el cas de l'algorisme de Karatsuba tenim 3 crides recursives (\\( a = 3 \\)), que intenten resoldre un problema que té \\( \frac{1}{2} \\) de la mida original (\\( b = 2 \\)) i l'algorisme fa una sèrie d'operacions que són sumes i restes de complexitat \\( O(n) \\) (\\( d = 1 \\)).
+En el cas de l'algorisme de Karatsuba tenim 3 crides recursives (\\( a = 3 \\)), que intenten resoldre un problema que té \\( \frac{1}{2} \\) de la mida original (\\( b = 2 \\)) i l'algorisme fa una sèrie d'operacions que són sumes i restes (amb operands grans) de complexitat \\( O(n) \\) (\\( d = 1 \\)).
 
-Amb aquests valors aplica el tercer cas del teorema Master i tenim:
+Amb aquests valors aplica el tercer cas del teorema Master \\( (3 > 2^1) \\) i tenim:
 
 \\[ O(n^{\log_2 3}) = O(n^{1.585})  \\]
 
 ---
 
-## Teorema Master (versió alternativa)
+## Teorema Master
 
-<center><img src="images/master.png" width="300"></center>
+**Teorema:** Si `T(n)=aT(n/b)+O(n^d)` per algunes constants `a>0`, `b>1`, i `d>=0`, llavors:
+
++  **Cas 1**: \\( T(n) = O(n^d) \\) si \\( a < b^d \\).
++  **Cas 2**: \\( T(n) = O(n^d \log n) \\) si  \\( a = b^d \\).
++  **Cas 3**: \\( T(n) = O(n^{\log_b a}) \\) si  \\( a > b^d \\).
 
 
 
