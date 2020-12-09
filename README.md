@@ -187,7 +187,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 
 + Setmana del 7/12: **Durant aquesta setmana, a causa dels dies festius, no afegirem cap contingut de teoria ni haureu de fer cap pràctica.** Aprofiteu per estudiar els temes de teoria fets fins ara i posar-vos al dia de pràctiques! 
-  + El dia 9, de 12:30h a 13:00h farem classe de repàs voluntaria: [Karatsuba](https://algorismica2020.github.io/slides/karatsuba.html)  | [Strassen](https://algorismica2020.github.io/slides/strassen.html) | [Motxilla](https://algorismica2020.github.io/slides/motxilla.html)
+  + El dia 9, de 12:30h a 14:00h farem classe de repàs voluntaria: [Karatsuba](https://algorismica2020.github.io/slides/karatsuba.html)  | [Strassen](https://algorismica2020.github.io/slides/strassen.html) | [Motxilla](https://algorismica2020.github.io/slides/motxilla.html)
 
 ---
 
