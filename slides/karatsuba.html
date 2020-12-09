@@ -206,12 +206,12 @@ Jordi Vitrià, Mireia Ribera
 
 ## Karatsuba
 
-Usant l'algorisme que hem après a l'escola, sabem que dos nombres, `A` i `B`, de `n` **dígits** (tant se val si són bits o els símbols del sistema de numeració decimal) es poden multiplicar amb  \\( O(n) \\) operacions.
+Usant l'algorisme que hem après a l'escola, sabem que dos nombres, `A` i `B`, de `n` **dígits** (tant se val si són bits o els símbols del sistema de numeració decimal) es poden multiplicar amb  \\( O(n^2) \\) operacions.
 
 **Propietat de la multiplicació (sistema decimal)**: 
 
 + Sigui \\( A = A_1 10^{n/2} + A_0 \\) amb \\( A_0 < 10^{n/2} \\)
-+ Sigui \\( B = B_1 10^{n/2} + B_0 \\) amb \\( B_0 < 10^{n/2} \\). 
++ Sigui \\( B = B_1 10^{n/2} + B_0 \\) amb \\( B_0 < 10^{n/2} \\) 
 + Llavors \\( C = A * B = (A_1 10^{n/2} + A_0)(B_1 10^{n/2} + B_0) \\) es pot calcular com:
    \\[ A_1 B_1 10^{n} + (A_1 B_0 + A_0 B_1) 10^{n/2} + A_0 B_0\\]
 
@@ -277,7 +277,7 @@ I això són 3 crides recursives enlloc de 4:
 + Calculem recursivament \\( (a+b)(c+d) \\).
 + Calculem \\( (ab + bc) \\) com \\( (a + b)(c + d) – ac – bd \\).
 + Afegim \\(n\\) zeros al final de \\( ac \\) i n'hi diem A.
-+ Afegim \\(n\\) zeros al final de \\( ab + bc \\) i n'hi diem B.
++ Afegim \\(n/2 \\) zeros al final de \\( ab + bc \\) i n'hi diem B.
 + Retornem \\( A + B + bd \\).
 
 ---
