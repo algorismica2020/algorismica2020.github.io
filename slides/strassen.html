@@ -236,7 +236,7 @@ La recurrència consisteix en passar d’una matriu `(n x n)` a 8 matrius `(n/2 
 La funció de recurrència d'aquest algorisme és \\(T(n) = 8 T(n/2) + O(n^2)\\) , atès que:
 + Hi ha 8 crides recursives; \\( (a = 8) \\).
 + El nombre de files/columnes és `(n/2)`; \\( (b = 2) \\). 
-+ La reconstrucció de la solució són `n^2` sumes, amb \\(O(n^2)\\); \\( (d = 2) \\)
++ La reconstrucció de la solució són \\( n^2 \\) sumes, amb \\(O(n^2)\\); \\( (d = 2) \\)
 
 Que resulta en una complexitat, aplicant el teorema Master, de \\(O(n^3)\\), la mateixa que la multiplicació convencional de matrius.
 
@@ -248,7 +248,7 @@ Però Strassen es va adonar que aquestes operacions, fent la mateixa descomposic
 
 <center><img src="images/matmul3.png" width="550"></center>
 
-Cada una de les \\( P_i \\) representa una crida recursiva per les multiplicacions i la reconstrucció torna a ser de l'ordre de `n^2` sumes.
+Cada una de les \\( P_i \\) representa una crida recursiva per les multiplicacions i la reconstrucció torna a ser de l'ordre de \\( n^2 \\) sumes.
 ---
 
 ## Algorismes de dividir-i-vèncer: multiplicació de matrius
