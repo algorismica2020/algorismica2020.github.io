@@ -193,22 +193,20 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 
 + Setmana del 14/12: 
   + Classe presencial: 
-    + 5.23 (Xifres i lletres QS) 
-    + Exercicis teorema màster. Notebook basics Python. Complexitat. 
-  + Examen de teoria (tentativament presencial, ja ho confirmarem) el dia 16/12.
+    + 5.24 (Xifres i lletres) | [Notebook](https://colab.research.google.com/drive/1Tbl8JnkXxo99zlYxbsk8M_kUz1QhGJKx?usp=sharing)
+    + Exercicis teorema màster. 
+  + Examen de teoria (PRESENCIAL) el dia 16/12 a les 17h.
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
   + Pràctica: 
     + 5.1 (Suma d’una llista)
     + 5.10 (Comptador inversions en una llista)
     + 5.22 (Ordenar llista aparellada)
-
+    
 ---
-
 
 + Setmana del 21/12: 
   + Classe presencial: 
     + [El problema del viatjant de comerç](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/Traveling%20Salesman%20Problem_def.ipynb)
-    + 5.15 (Menor i major relatius)
   + Contingut en línia (Mireia): [Algorismes de Cerca]  
 
     
