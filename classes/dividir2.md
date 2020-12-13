@@ -20,20 +20,19 @@ Algorisme Master:
 ---
 
 
-### Video: Introducció
+### Video: QuickSort
 
-Video de 10' sobre l'algorisme QuickSort.
+Video de 15' sobre l'algorisme QuickSort.
 
-<iframe src="https://drive.google.com/file/d/15MczHDPJgylXbh1p5K5UkUthgu0gRyTZ/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1EYQL5EqCh5e7q9_83NeyHrLE2p5nUSAj/preview" width="640" height="480"></iframe>
 
 --- 
 
 
-### Video: Introducció
+### Video: Mediana
 
 Video de 10' sobre el càlcul de la mediana.
 
-<iframe src="https://drive.google.com/file/d/15MczHDPJgylXbh1p5K5UkUthgu0gRyTZ/preview" width="640" height="480"></iframe>
 
 
 
