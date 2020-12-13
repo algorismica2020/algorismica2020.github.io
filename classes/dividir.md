@@ -1,4 +1,4 @@
-# Sessió en línia del dia 30/12/2020: Dividir i Vèncer
+# Sessió en línia del dia 30/11/2020: Dividir i Vèncer
 
 Es recomana seguir aquests continguts en el mateix ordre que apareixen en aquesta pàgina.
 
