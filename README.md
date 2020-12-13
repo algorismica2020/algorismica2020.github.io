@@ -197,7 +197,7 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
     + Exercicis extres de càlcul de complexitat | [Notebook](https://colab.research.google.com/drive/13K6Nsed537ztLwBV9wfveXcvFZq7GPnL?usp=sharing)
     
   + Examen de teoria (PRESENCIAL) el dia 16/12 a les 17h.
-  + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
+  + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer II](https://algorismica2020.github.io/classes/dividir2.html)    
   + Pràctica: 
     + 5.1 (Suma d’una llista)
     + 5.10 (Comptador inversions en una llista)
