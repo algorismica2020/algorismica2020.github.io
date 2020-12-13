@@ -33,6 +33,8 @@ Video de 15' sobre l'algorisme QuickSort.
 
 Video de 10' sobre el càlcul de la mediana.
 
+<iframe src="https://drive.google.com/file/d/1ssT3z_VJ1TMz0wX-6N2vpoeNqZu4o72z/preview" width="640" height="480"></iframe>
+
 
 
 
