@@ -194,7 +194,8 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 + Setmana del 14/12: 
   + Classe presencial: 
     + 5.24 (Xifres i lletres) | [Notebook](https://colab.research.google.com/drive/1Tbl8JnkXxo99zlYxbsk8M_kUz1QhGJKx?usp=sharing)
-    + Exercicis teorema màster. 
+    + Exercicis teorema màster | [Notebook](https://colab.research.google.com/drive/13K6Nsed537ztLwBV9wfveXcvFZq7GPnL?usp=sharing)
+    
   + Examen de teoria (PRESENCIAL) el dia 16/12 a les 17h.
   + Contingut en línia (Jordi): [Algorismes de Dividir i Vèncer]   
   + Pràctica: 
