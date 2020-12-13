@@ -22,13 +22,18 @@ Algorisme Master:
 
 ### Video: Introducció
 
-Video de 10' sobre l'estratègia de D&V.
+Video de 10' sobre l'algorisme QuickSort.
 
 <iframe src="https://drive.google.com/file/d/15MczHDPJgylXbh1p5K5UkUthgu0gRyTZ/preview" width="640" height="480"></iframe>
 
+--- 
 
 
+### Video: Introducció
 
+Video de 10' sobre el càlcul de la mediana.
+
+<iframe src="https://drive.google.com/file/d/15MczHDPJgylXbh1p5K5UkUthgu0gRyTZ/preview" width="640" height="480"></iframe>
 
 
 
