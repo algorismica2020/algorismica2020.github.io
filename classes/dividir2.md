@@ -13,9 +13,9 @@ Els apunts complets d'aquest tema es poden veure [aquí](https://algorismica2020
 
 Algorisme Master:
 
-+  **Cas 1**: \\( T(n) = O(n^d) \\) si \\( a < b^d \\).
-+  **Cas 2**: \\( T(n) = O(n^d \log n) \\) si  \\( a = b^d \\).
-+  **Cas 3**: \\( T(n) = O(n^{\log_b a}) \\) si  \\( a > b^d \\).
++  **Cas 1**: $ T(n) = O(n^d) $ si $ a < b^d $.
++  **Cas 2**: $ T(n) = O(n^d \log n) $ si  \\( a = b^d $.
++  **Cas 3**: $ T(n) = O(n^{\log_b a}) $ si  \\( a > b^d $.
 
 ---
 
