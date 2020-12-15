@@ -582,7 +582,7 @@ Si repetim l’algorisme `k` vegades per nombres `a` escollits aleatòriament, l
 
 Si `k=100`, la probabilitat és menor que `2^(-100)`.
 
-Amb un nombre moderat de tests podem determinar si un nombre és primer!
+Amb un nombre moderat de tests podem determinar si un nombre és primer. Aquesta tasca acaba tenint una complexitat `O(n^3)`.
 
 ---
 
@@ -606,7 +606,7 @@ El **teorema dels nombres primers de Lagrange** ens assegura que no tindrem prob
 $$ \frac{1}{ln 2^2} \approx \frac{1.44}{n}$$
 
 
-Pel cas `n=1000`, generarem al voltant de `1000` nombres aleatoris per trobar un primer.
+Pel cas `n=1000`, generarem al voltant de `1000` nombres aleatoris per trobar un primer. Generar  `n` nombres aleatoris té una complexitat `O(n)`.
 
 ---
 
@@ -615,9 +615,9 @@ Pel cas `n=1000`, generarem al voltant de `1000` nombres aleatoris per trobar un
 Abans hem dit que l'esquema de comunicació secreta té sentit si:
 
 + Factoritzar `n = p*q` és pràcticament impossible. 
-+ Trobar `(p,q)` “grans” es basa en un mètode eficient.
 + Calcular `x^y % n` es es basa en un mètode eficient.
-+ Calcular `e*d % ((p-1)(q-1)) == 1` es basa en un mètode eficient.
++ Trobar `(p,q)` “grans” es basa en un mètode eficient `O(n) x O(n^3) = O(n^4)`.
++ Calcular `e*d % ((p-1)(q-1)) == 1` es basa en un mètode eficient `O(n^3)`.
 
 Només ens falta solucionar el darrer punt!
 --
@@ -628,7 +628,7 @@ La solució del darrer punt és:
 + Definim  `e=3`.
 + Llavors `d` és el que s’anomena invers de `e` mòdul `(p-1)(q-1)` i aquest nombre es pot calcular amb una petita variació de l’algorisme d’Euclides!
 
-.bold[Per tant, els algorísmes de més alta complexitat en un procés criptogràfic tenen `O(n^3)`]. 
+.bold[Per tant, els algorísmes de més alta complexitat en un procés criptogràfic tenen `O(n^4)`]. 
 
 
 
