@@ -125,18 +125,24 @@
 
       /* Two-column layout */
       .left-column {
-        color: #777;
-        width: 20%;
+        background-color: #eff;
+        width: 28%;
         height: 92%;
         float: left;
+		font-size: 0.6em;
+		font-family: Arial;
       }
+	  .left-column strong {
+		font-weight:800;
+	  }
         .left-column h2:last-of-type, .left-column h3:last-child {
           color: #000;
         }
       .right-column {
-        width: 75%;
+		padding-top:0;
+		margin-top:0;
+        width: 67%;
         float: right;
-        padding-top: 1em;
       }
 details {
     border: 1px solid #aaa;
@@ -209,8 +215,7 @@ El concepte de cerca inclou diferents idees:
 
 + Cerca d’un determinat element en una llista (màx, x=“a”, el que compleix una certa condició, etc.).
 +  Cerca d’un determinat element en una llista *ordenada*.
-+ Cerca en un arbre.
-+ Cerca en un graf.
++ Cerca en una estructura de dades complexa, tal com un graf o un arbre.
 + Satisfacció de restriccions.
 + Etc.
 
@@ -230,6 +235,7 @@ def linsearch(list,ele):
   else:
         return -1
 ``` 
+
 ---
 ## Algorismes de cerca: cerca lineal (millorat)
 
@@ -251,12 +257,13 @@ Recordeu de que `list.append(ele)` té una complexitat `O(1)` i per això surt a
 
 Si enlloc de ser `O(1)` fos `O(n)` (com per exemple `list.insert(ele)`) ja no valdria la pena.
 
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/CercaLineal.ipynb)
 ---
 name:cercbin
 
-## Algorismes de cerca: cerca binària
+## Algorismes de cerca en llistes ordenades
 
-I si la llista està ordenada (un diccionari, els nombres de la loteria, etc.) ho podem fer millor?
+I si la llista està ordenada (un diccionari, els nombres de la loteria, etc.), ho podem fer millor?
 
 
 <center><img src="images/cerca11.png" width="550" alt="resultats de la loteria i pàgina d'un diccionari"></center>
@@ -267,13 +274,13 @@ I si la llista està ordenada (un diccionari, els nombres de la loteria, etc.) h
 ## Algorismes de cerca: cerca binària
 
 
-La **cerca binària** ho fa comparant l’element cercat `K` a l’element central de la llista: si hi ha correspondència ja l’hem trobat, sinó, busquem a la subllista (de la dreta o de l'esquerra) que correspon. 
+La **cerca binària** consisteix en comparar l’element cercat `K` amb l’element central de la llista: si hi ha correspondència ja l’hem trobat, altrament, busquem a la subllista (de la dreta o de l'esquerra) que correspon. 
 
 <center><img src="images/cerca12.png" width="550" alt=""></center>
 
 
 ---
-## Algorismes de cerca: cerca binària
+## Cerca binària: exemple amb lletres
 
 
 <center><img src="images/cerca13.png" width="650" alt="en el vector ordenat de les lletres A a X es busca la lletra J, els diferents passos són comparar-lo amb L, amb F, amb I i finalment amb J"></center>
@@ -281,29 +288,35 @@ La **cerca binària** ho fa comparant l’element cercat `K` a l’element centr
 > Com acaba l’algorisme si `J` no hi és?
 
 ---
-## Algorismes de cerca: cerca binària
+## Cerca binària: exemple amb nombres
 
-Anem a veure com funcionaria per `K=70`. 
-
-`l` (low) indica el límit inferior de la subllista a buscar, `h` (high) el límit superior, `m` (middle) el punt de comparació.
+`l` (low) indica el límit inferior de la subllista a buscar, `h` (high) el límit superior, `m` (middle) el punt de comparació,  K el nombre a buscar, en aquest cas **K=70**.
 
 <center><img src="images/cerca14.png" width="650" alt="es busca 70 en una llista de nombres ordenats, es mostren els límits inferiors, superiors i mitjos de la cerca"></center>
 
+A la primera iteració comparem 55 amb 70. Com que 55 és menor seguim la cerca per la dreta.
+
+A la segona iteració comparem 85 amb 70. Com que 85 és més gran seguim la cerca per l'esquerra
+
+A la tercera iteració comparem 74 amb 70. Com que 74 és més gran seguim la cerca per l'esquerra.
+
+A la quarta iteració comparem 70 amb 70. Com que són iguals, acabem.
+
 ---
-## Algorismes de cerca: cerca binària
+## Cerca binària: complexitat
 
 
 Per analitzar la seva complexitat calcularem el nombre de vegades que la clau de la cerca, `K`, es compara amb un element de la llista.
 
-En el pitjor dels casos (quan l’element no hi és), tenim aquesta relació de recurrència: `T(n) = T(n/2) + 1`.
+En el pitjor dels casos (quan l’element no hi és), tenim aquesta relació de recurrència: `T(n) = T(n/2) + 1`. Ja que només fem una crida recursiva, i a cada crida dividim el problema per la meitat.
 
 
-Segons el teorema Màster això és `O(log_2 n)`: per una llista de 1.000.000 elements són 20 comparacions!
+Segons el teorema Màster això és `O(log`<sub>2</sub>`n)`: per una llista de 1.000.000 elements són 20 comparacions!
 
 Evidentment és un algorisme recursiu, però és pot implementar fàcilment de forma no recursiva.
 
 ---
-## Algorismes de cerca: cerca binària
+## Cerca binària: algorisme i complexitat
 
 ```python
 def binsearch(nums, K):
@@ -316,25 +329,26 @@ def binsearch(nums, K):
         else: return mid                           
     return -1 
 ```
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/CercaBinaria.ipynb)
 
 El cas promig és més difícil d’analitzar, però es pot demostrar que és només una mica millor que el pitjor cas (tot i que del mateix ordre).
 
 > Observació: *Si tenim una llista desordenada de mida n i només hem de buscar un element (o pocs), apliquem una cerca exhaustiva.  Però si hem de fer moltes cerques (de l’ordre de n), val la pena ordenar-la primer i fer cerca binària dels elements després!*
 
-En general considerem que **la complexitat de la cerca binària sobre una llista ordenada és de `O(log_2 n)`**.
+En general considerem que **la complexitat de la cerca binària sobre una llista ordenada és de `O(log`<sub>2</sub> `n)`**.
 
 ---
 
-##  Cerca dels extrems d'una funció.
+##  Exemple de problema: cerca dels extrems d'una funció.
 
-Imaginem ara que tenim un vector no ordenat, com pot ser el corresponent als valors discrets d’una funció multimodal.  
+Algunes cerques no són tan senzilles com buscar un element o el màxim dins una llista acotada.
 
-Com busquem el màxim? Quin tipus de cerca hi podem aplicar?
+Per exemple, en la funció següent, com busquem el màxim? quin tipus de cerca hi podem aplicar?
 
 <center><img src="images/fun1.png" width="450" alt="gràfic d'una funcio multimodal" ></center>
 
 ---
-##  Cerca dels extrems d'una funció.
+##  Exemple - Solució amb cerca exhaustiva
 
 Podem aplicar-hi cerca exhaustiva (de complexitat `O(n)`, on `n` és el nombre de `x` de la funció que conisderem):
 
@@ -348,23 +362,25 @@ def frange(start, stop, step):
 # definim un range sobre floats per conveniència 
     current = start 
     while current < stop:
-        yield current
+        yield current   #yield proveeix un resultat i segueix
         current += step
 
-def linsearchfunc1d():
-    x=0.0  # inicialització punt x, corresponent al valor màxim de func1d
-    maxim=0.0  # inicialització valor màxim
+def linsearchfunc1d():   # la funció de cerca 
+    x = -1  #valor inicial d'x
+    maxim=func1d(x)  # valor inicial d'y 
     for i in frange(-1.0,2.0,0.01):
         if func1d(i)>maxim: 
             maxim=func1d(i)
             x=i
-    print(maxim)
+    print(x, maxim)
 
 ```
 
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/CercaExhaustiva.ipynb)
+
 ---
 
-##  Cerca dels extrems d'una funció.
+##  Cerca exhaustiva = intractable
 
 Si el nombre de punts a mostrejar és molt gran tenim un problema!
 
@@ -374,31 +390,33 @@ En aquest cas si analitzem els punts amb una precisió de `0.01` analitzaríem `
 
 No podem fer cerca exhaustiva!
 ---
-##  Cerca dels extrems d'una funció.
+##  Exemple - Solució amb cerca aleatòria
 
-Té sentit fer una cerca aleatòria? (= anar generant nombres de forma aleatòria dins del rang de les variables  i quedar-se el màxim).
+Té sentit fer una cerca aleatòria? (= anar generant nombres de forma aleatòria dins del rang de les variables i comparar el valor de la funció).
 
 <center><img src="images/fun4.png" width="450" alt="distribució aleatòria de punts en el domini de la funció anterior"></center>
 
 ---
-##  Cerca dels extrems d'una funció.
+##  Cerca aleatòria - Algorisme i reflexió
 
-La cerca aleatòria és:
+L'algorisme de cerca aleatòria quedaria com segueix:
 
 ```python
 def rsearchfunc1d():
     import random
-    x=0.0
-    maxim=0.0
-    for i in range(1000):
+    x = -1  #valor inicial d'x
+    maxim=func1d(x)  # valor inicial d'y 
+    for i in range(1000): #provem 1000 valors aleatòriament
       xtemp = (random.random()*3.0)-1.0   # valors entre -1 i 2
       if func1d(xtemp)>maxim: 
           maxim=func1d(xtemp)
-            x=xtemp
-    return maxim    
+          x=xtemp
+    return x, maxim    
 ```
 
 En general, la cerca totalment aleatòria **no** és una bona solució: tenim el cost de la cerca afitat, però depèn molt de l’aleatorietat i té un resultat molt semblant, si no equivalent, a la cerca lineal, per força bruta. 
+
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/CercaExhaustiva.ipynb)
 
 ---
 name:genetic
@@ -408,7 +426,7 @@ name:genetic
 Anem a veure un tipus d’algorisme aproximat que ens fa una cerca, amb un cert component aleatori més intel·ligent, de l’espai de solucions: la cerca basada en **algorismes genètics**.
 
 
-El terme algorismes genètics s’utilitza per a referir-se a una família bastant àmplia de models computacionals de càlcul basats en els mecanismes d’evolució biològica.
+El terme *algorismes genètics* s’utilitza per a referir-se a una família bastant àmplia de models computacionals de càlcul basats en els mecanismes d’evolució biològica.
 
 La idea de selecció natural va ser introduïda per Charles Darwin el 1859 dins del seu llibre *L’Origen de Les Espècies*.
 
@@ -416,13 +434,11 @@ Aquesta idea pot servir d’analogia per a construir mètodes de cerca en proble
 
 
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: Darwin
 
 Darwin va assentar les bases del principi d'evolució per selecció natural amb les següents idees:
 
-+ Cada individu tendeix a passar els seus trets característics a la seva descendència. 
-
-+ Tot i així, la natura produeix individus amb trets diferents. 
++ Cada individu tendeix a passar els seus trets característics a la seva descendència. Tot i així, la natura produeix individus amb trets diferents. 
 
 + Els individus més adaptats tendeixen a tenir més descendència, i a la llarga, la població tendeix a ser "millor".
 
@@ -430,49 +446,31 @@ Darwin va assentar les bases del principi d'evolució per selecció natural amb 
 
 --
 
-A més a més la natura disposa d'una sèrie de mecanismes reguladors externs a aquest procés però igualment interessants: el mecanisme de diversitat, els paràsits, les organitzacions socials, etc.
+A més a més, la natura disposa d'una sèrie de mecanismes reguladors externs a aquest procés però igualment interessants: el mecanisme de diversitat, els paràsits, les organitzacions socials, etc.
 
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: Darwin i creuament
 
 
 Els mecanismes biològics que fan possible l’evolució són avui coneguts. 
 
-A la natura, podem veure com la transmissió de la informació genètica (genoma) es fa a través de la reproducció sexual. Aquest procediment permet als descendents ser diferents dels seus antecessors, tot i que conservant la majoria de trets. 
+A la natura, podem veure com la transmissió de la informació genètica (genoma) es fa a través de la reproducció sexual. Aquest procediment permet als descendents ser diferents dels seus antecessors, tot i conservar la majoria de trets. 
 
-El mecanisme sobre el que està basada la reproducció es troba a nivell molecular, i consisteix en l'aparellament de cromosomes (lloc on trobem el genoma), l'intercanvi d'informació, i la posterior partició. D'això n'hi direm **creuament**. 
+El mecanisme sobre el que està basada la reproducció es troba a nivell molecular, i consisteix en l'aparellament de cromosomes (on trobem el genoma), l'intercanvi d'informació, i la posterior partició. És el que anomenem **creuament**. 
 
 La probabilitat de que dos individus es creuin depèn de la seva adaptació al medi.
-
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: terminologia
 
 
 Per inspiració d’aquests mecanismes usarem terminologia de biologia per als nostre problemes:
-+ Gens
-+ Genoma
-+ Cromosomes
++ Cromosomes: cadascun dels individus de la població
 + Creuaments i mutacions.
 + Funció d’adaptació.
-+ Mecanismes  correctors/moduladors: diversitat, parasitisme, organització social, etc.
++ Mecanismes  correctors/moduladors: diversitat.
 
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
-
-El **cicle** normal d'un algorisme genètic és:
-
-+ avaluar l'adaptació de tots els individus de la població (amb la funció d’adaptació). Aquesta funció incorpora l’objectiu del problema.
-
-+ crear una nova població mitjançant reproducció fent servir: 
-  + creuament 
-  + mutació dels cromosomes dels individus + descartar la població antiga (hem d’assegurar que el resultat d’aplicar els operadors genera possibles solucions al problema.)
-
-+ iterar sobre la nova població.
-
-Cada una de les iteracions d'aquest cicle es coneix com  a **generació**. 
-
----
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: decisions a prendre
 
 Quan dissenyem un algorisme genètic per resoldre un problema caldrà decidir algunes qüestions:
 
@@ -481,241 +479,579 @@ Quan dissenyem un algorisme genètic per resoldre un problema caldrà decidir al
 + Com seleccionarem els individus per reproduir-se?
 + Com creuarem i mutarem els individus?
 + Quina és la probabilitat de mutació?
-+ Necessitem mecanismes moduladors (p.e. diversitat)?
++ Necessitem mecanismes moduladors (per exemple, diversitat)?
 
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: visió general
 
+El **cicle** normal d'un algorisme genètic consisteix en, a partir d'una població amb individus, en la que cada individu és una possible solució...
+
++ avaluar l'adaptació de cada individu de la població, segons una funció relacionada amb l’objectiu del problema.
+
++ seleccionar els individus que es creuaran en base a la seva adaptació
+
++ crear una nova població mitjançant: 
+  + creuaments 
+  + mutacions
+
+sempre garantint que el resultat dels creuaments i mutacions són també possibles solucions al problema.
+
++ iterar sobre la nova població fins assolir una certa fita.
+
+Cada una de les iteracions d'aquest cicle es coneix com  a **generació**. 
+
+---
+## Algorismes genètics: visió general - representació 
+
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- **decidir com representar la població**
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+Normalment es considera que la millor **representació** dels cromosomes possible és la **binària**. 
+
+El creuament, la mutació, i d'altres operacions que es poden utilitzar, són aleshores simples operacions a nivell de bit. 
+]
+---
+
+## Algorismes genètics: visió general - avaluar l'adaptació
+
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- **avaluar adaptació**
+	- **funció adaptació**
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+Avaluar l'adaptació ens permet saber si anem trobant solucions millors o si ens apropem a un valor desitjat.
 
 La **funció d’adaptació** és pròpia de cada problema que volem resoldre.
 
-En el problema que hem posat com a exemple (la funció multimodal), la funció d’adaptació és el valor de `f(x): (math.sin(10*math.pi*(x))+1.0)`. 
+En el problema  de la funció multimodal, per exemple, la funció d’adaptació és el valor de:
 
-> Per tant, la màxima adaptació correspon al màxim d’aquesta funció multimodal. 
+ `f(x): (math.sin(10*math.pi*(x))+1.0)`. 
 
---
+La màxima adaptació correspon al màxim d’aquesta funció multimodal. 
+]
 
-El problema del viatjant de comerç també és un problema candidat a ser resolt amb algorismes genètics.
-
-> La funció d’adaptació seria `1/d`, on `d` és la distància recorreguda (i així un valor de la funció alt és una bona solució).
-
-> Un cromosoma representaria un circuit que és potencialment solució del problema. 
 
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: visió general - avaluar l'adaptació al TSP
 
+.left-column[
+#### Esquema d'un algorisme genètic
 
-Normalment es considera que la millor **representació** dels cromosomes possible és la binària. El creuament, la mutació, i d'altres operacions que es poden utilitzar, són aleshores simples operacions a nivell de bit. 
+- decidir com representar la població
+- **avaluar adaptació**
+	- **funció adaptació**
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
 
-Suposem doncs que tenim una població inicial de quatre individus amb les següents característiques:
+.right-column[
+El problema del viatjant de comerç també és un problema candidat a ser resolt amb algorismes genètics.
 
-|   individu     | valor adaptació | possibilitat de selecció |
-|----------------|-----------------|--------------------------|
-|  000110010111  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32%              |
-|  111010101100  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6        |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24%              |
-|  001110101001  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6        |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24%              |
-|  111011011100  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5        |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20%              |
+La funció d’adaptació seria `1/d`, on `d` és la distància recorreguda. D'aquesta manera un valor elevat de la funció d'adaptació equival a una bona solució.
 
-I suposem que definim la probabilitat de selecció en funció del valor d'adaptació (q) com a 
+Un cromosoma representaria un circuit que és potencialment solució del problema. 
+]
+
+---
+## Algorismes genètics: adaptació i selecció (introducció al problema)
+
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- **mètode estàndard**
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+Suposem doncs que tenim una població inicial de quatre individus amb una adaptació de `8,6,6` i `5` respectivament, i que definim la probabilitat de selecció en funció del valor d'adaptació, *q<sub>i</sub>* com a 
 
 $$ f_i = \dfrac {q_i}{\sum_j q_j} $$ 
 
-Com els seleccionem i els creuem?
+
+|   individu     | valor adaptació (*q<sub>i</sub>*)  | probabilitat de selecció (*f<sub>i</sub>*) |
+|:----------------:|:-----------------:|:--------------------------:|
+|  000110010111  |8      |32%              |
+|  111010101100  |6        |24%              |
+|  001110101001  |6        |24%              |
+|  111011011100  |5        |20%              |
+
+
+]
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: visió general - adaptació i selecció (ruleta)
 
+.left-column[
+#### Esquema d'un algorisme genètic
 
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- **mètode estàndard**
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
 Una primera alternativa per la selecció és triar parelles aleatòriament tenint en compte la seva probabilitat de selecció.
 
-> És com si fem rodar una ruleta i ens va donant individus; l’individu amb més probabilitat de selecció ocupa més posicions a la ruleta.
+És com si fem rodar una ruleta i ens va donant individus; l’individu amb més probabilitat de selecció ocupa més posicions a la ruleta.
 
-Imaginem que la selecció ens ha donat aquestes dues parelles:
+Exemple:
 
 <center><img src="images/gen2.png" width="400" alt="4 gens de la població es combinen de 2 a 2 per fer 2 parelles" ></center>
-
-I ara, com les creuem?
-
+]
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: visió general - creuament
 
+.left-column[
+#### Esquema d'un algorisme genètic
 
-La forma més simple de creuament és generar un punt de tall aleatòriament i intercanviar:
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- **crear nova generació**
+	- **creuament**
+	- mutació
+]
+
+.right-column[
+Un cop obtingudes les parelles anteriors, com les creuem?
+
+La forma més simple de creuament és generar un punt de tall aleatori i intercanviar:
 
 
 <center><img src="images/gen3.png" width="550" alt="als dos membres de la parella se'ls posa un punt de tall, per exemple en el bit 4, la nova generació es crea combinant els bits 0..3 del pare amb els bits 4...n de la mare i viceversa"></center>
-
+]
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics: visió general - mutació
 
+.left-column[
+#### Esquema d'un algorisme genètic
 
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- **crear nova generació**
+	- creuament
+	- **mutació**
+]
+
+.right-column[
 Per a **mutar-los** canviarem el valor d’un quants bits de la població de forma aleatòria.
 
 La probabilitat de que un bit canviï de valor és `β` i la que probabilitat de no canviar és `(1- β)`, però sempre `β < (1- β)`.
-
+]
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
-
+## Algorismes genètics : visió general - recapitulació
 
 En resum, la **funció d’adaptació** depèn del problema que volem resoldre.
-+ La representació òptima, és en la majoria de casos i si no hi ha motius fonamentats per dubtar-ho, la binària.
-+ La representació ha facilitar que el resultat d’aplicar els operadors genètics sigui vàlid.
+
+La **representació** òptima, és en la majoria de casos i si no hi ha motius fonamentats per dubtar-ho, la binària. La representació ha de facilitar que el resultat d’aplicar els operadors genètics sigui vàlid.
 
 L’operació de **creuament** crea dos nous individus seleccionant punts de creuament en els cromosomes seleccionats i intercanviant les seves parts.
 
-L’operació de **mutació** consisteix en la selecció aleatòria d’algun dels gens del cromosoma i el canvi del seu valor. La probabilitat de mutació ha de ser petita (si no ho convertim en cerca aleatòria!).
+L’operació de **mutació** consisteix en la selecció aleatòria d’algun dels gens del cromosoma i el canvi del seu valor. La probabilitat de mutació ha de ser petita, altrament l'algorisme esdevindria una cerca aleatòria!
 
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics a fons: selecció
 
-Probabilitat de supervivència:
+.left-column[
+#### Esquema d'un algorisme genètic
 
-+ El valor d’adaptació de cada individu depèn del problema concret.
-+ La probabilitat de supervivència a la següent generació és una ponderació del valor d’adaptació, i es pot fer de diverses maneres: el mètode estàndard (que ja hem vist), el mètode d’ordenació, el mètode de la diversitat, etc.
-+ A partir d’ara suposarem que la generació següent es forma a partir d’una selecció entre els elements del conjunt format pels cromosomes progenitors i pels cromosomes descendents, però seguint una **estratègia elitista**: el(s) millor(s) cromosomes passen automàticament (així assegurem que una bona solució no es perd mai).
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
 
+.right-column[
+La generació següent es forma a partir d’una selecció entre els elements del conjunt format pels cromosomes progenitors i pels cromosomes descendents, però seguint una **estratègia elitista**: el(s) millor(s) cromosomes passen automàticament. Així assegurem que una bona solució no es perd mai.
+
+La probabilitat de selecció per a la següent generació és una ponderació del valor d’adaptació, i es pot fer de diverses maneres: el mètode estàndard (que ja hem vist), el mètode d’ordenació, el mètode de la diversitat, etc.
+]
 ---
 
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics a fons: selecció - mètode estàndard
+
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- **mètode estàndard**
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+Recordem aquest mètode:
+
+|   individu     | valor adaptació (*q<sub>i</sub>*)  | probabilitat de selecció (*f<sub>i</sub>*) |
+|:----------------:|:-----------------:|:--------------------------:|
+|  000110010111  |8        |32%              |
+|  111010101100  |6        |24%              |
+|  001110101001  |6        |24%              |
+|  111011011100  |5        |20%              |
 
 
-Ponderació del valor d’adaptació. 
-
-+ **Mètode Estàndard**. Donat un cromosoma `i`, aquest és avaluat com a possible solució al problema en qüestió. Com a resultat obté un valor d’adaptació `q`. Llavors definim la seva probabilitat de selecció com $$ f_i = \dfrac {q_i}{\sum_j q_j} $$ 
-
-|   individu     | valor adaptació | possibilitat de selecció |
-|----------------|-----------------|--------------------------|
-|  000110010111  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32%              |
-|  111010101100  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6        |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24%              |
-|  001110101001  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6        |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24%              |
-|  111011011100  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5        |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20%              |
-
-
-> Un dels inconvenients associat al mètode estàndard és el poc pes que dóna al cromosomes "dolents", fet que els impedeix de passar a les futures generacions, i per tant, transmetre les poques coses que tinguin bones. Un altre possible inconvenient és que moltes vegades la funció d’avaluació és qualitativa: ordena de forma correcta però els seus valors no són precisos.
-
+El mètode estàndard té dos inconvenients: 
++ impedeix que els cromosomes "dolents" passin a les futures generacions i puguin transmetre les poques coses que tinguin bones 
++ com que sovint la funció d’adaptació és qualitativa, l'ordre és correcte però els valors no són precisos.
+]
 ---
 
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics a fons: selecció - mètode d'ordenació (introducció)
 
-+ **Mètode d'Ordenació**:  Per insensibilitzar el mètode de selecció respecte al valor d'adaptació del problema, podem ordenar els cromosomes segons aquest valor, i els ponderem segons aquesta regla: 
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- **mètode d'ordenació**
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+Per insensibilitzar el mètode de selecció respecte al valor d'adaptació del problema, podem ordenar els cromosomes segons aquest valor, i els ponderem segons aquesta regla: 
 
   + Establim un valor aleatori `p` entre `0` i `1`.
   + Al primer cromosoma li assignem aquesta probabilitat
   + Al segon li assignem la probabilitat `p*(1-p)` 
   + La probabilitat de l'`i`-èssim cromosoma és `p * (1 – la probabilitat que s’hagi triat algun cromosoma anterior)`.
-
+]
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics a fons: selecció - mètode d'ordenació (exemple)
 
-> Per exemple, suposem que `p=0.667`. Llavors:
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- **mètode d'ordenació**
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+Per exemple, suposem que `p=0.667`. Llavors:
 
  <center><img src="images/gen5.png" width="550" alt="càlcul de la probabilitat segons el mètode d'ordenació"></center>
-
+]
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics a fons: selecció - mètode de la diversitat
 
-+ Ponderació del valor d’adaptació: **Mètode de Diversitat**. Aquest mètode es basa en l'anomenat principi de diversitat: és quasi tan bo ser diferent com estar adaptat. 
+.left-column[
+#### Esquema d'un algorisme genètic
 
-> Definim la diversitat d'un grup de cromosomes com:
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- mètode d'ordenació
+	- **mètode de la diversitat**
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
 
-  <center><img src="images/gen6.png" width="550" alt="La distància que usem pot ser des del nombre de bits diferents entre cada cromosoma a una funció definida per l'usuari a partir del coneixement del problema. En el nostre exemple considerarem la distància euclidiana sobre punts el pla. En el cas més general podríem fer servir la distància de Hamming"></center>
+.right-column[
+El principi de diversitat ens diu que és quasi tan bo ser diferent com estar adaptat. 
 
-> on `d_i` és una mesura de distància entre cromosomes. 
+Definim la diversitat d'un grup de cromosomes com:
 
+<center><img src="images/gen6.png" width="550" alt="La distància que usem pot ser des del nombre de bits diferents entre cada cromosoma a una funció definida per l'usuari a partir del coneixement del problema. En el nostre exemple considerarem la distància euclidiana sobre punts el pla. En el cas més general podríem fer servir la distància de Hamming"></center>
+
+on *d<sub>i</sub>* és una mesura de distància entre cromosomes. 
+]
 ---
 
-## Distància de Hamming
+## Algorismes genètics a fons: selecció - mètode de la diversitat - distància entre dos cromosomes
 
-> La **distància de Hamming** entre dues cadenes de la mateixa longitud és el nombre de posicions diferents. Si considerem cadenes de bits, correspon al nombre de bits que s'han de canviar d'una cadena perquè passi a tenir el valor d'una altra cadena.
+.left-column[
+#### Esquema d'un algorisme genètic
 
-> Exemple: la distància de Hamming entre 011101  i  011011 és de 2 ja que per arribar de la primera cadena a la segona cal canviar 2 bits
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- **mètode de la diversitat**
+		- **distància de Hamming**
+- crear nova generació
+	- creuament
+	- mutació
+]
 
+.right-column[
+Per a calcular la distància entre dos cromosomes usem la **distància de  Hamming**.
+
+La **distància de Hamming** entre dues cadenes de la mateixa longitud és el nombre de posicions diferents. Si considerem cadenes de bits, correspon al nombre de bits que s'han de canviar d'una cadena perquè passi a tenir el valor d'una altra cadena.
+
+Exemple: la distància de Hamming entre 011101  i  011011 és de 2 ja que per arribar de la primera cadena a la segona cal canviar 2 bits
+]
 ---
 
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics a fons: selecció - mètode de la diversitat - aplicació
 
-Ponderació del valor d’adaptació: Mètode de Diversitat. 
+.left-column[
+#### Esquema d'un algorisme genètic
 
-Com l’apliquem?
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- mètode d'ordenació
+	- **mètode de la diversitat**
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
 
-+ El millor cromosoma passa automàticament a la següent generació (estratègia elitista).
-+ Calculem la diversitat de tots els cromosomes respecte als que han passat a la + següent generació.
-+ Ordenem els cromosomes segons la seva funció d’avaluació.
-+ Sumem els nombres que representen l’ordre obtingut per cada cromosoma als passos 2 i 3. I reordenem segons aquest valor.
-+ Triem el cromosoma que passa a la següent generació segons el mètode d’ordenació i si queden cromosomes per triar, i tornem al punt 2. 
+.right-column[
+Per aplicar el mètode de la diversitat, seguim els següents passos:
 
+1. El millor cromosoma passa automàticament a la següent generació (estratègia elitista).
+1. Calculem la diversitat de tots els cromosomes respecte als que ja han passat a la següent generació.
+1. Ordenem els cromosomes segons la seva funció d’adaptació.
+1. Sumem els nombres que representen l’ordre obtingut per cada cromosoma als passos 2 i 3. I reordenem segons aquest valor.
+1. Triem el cromosoma que passa a la següent generació segons el mètode d’ordenació i si queden cromosomes per triar, i tornem al punt 2. 
+]
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
+## Algorismes genètics a fons: selecció - mètode de la diversitat - exemple
 
-**Ponderació del valor d’adaptació: Mètode de Diversitat.**
+.left-column[
+#### Esquema d'un algorisme genètic
 
-Exemple:
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- mètode d'ordenació
+	- **mètode de la diversitat**
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
 
+.right-column[
   <center><img src="images/gen7.png" width="250" alt="cromosomes 0100 0001 q=100; cromosomes 0001 0100 q=44; cromosomes 0011 0001 q=32; cromosomes 0001 0010 q=22,5; cromosomes 0001 0001 q=1; cromosomes 0111 0101 q=0"></center>
 
 El cromosoma millor passa a la següent generació. En el nostre cas és el cromosoma `(0100 0001)`. 
 
 Per tant resten per triar 2 cromosomes entre `(0001 0100)`, `(0011 0001)`, `(0001 0010)`, `(0001 0001)`,  `(0111 0101)`.
+]
+---
+## Algorismes genètics a fons: selecció - mètode de la diversitat - exemple (2n pas)
+
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- mètode d'ordenació
+	- **mètode de la diversitat**
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+Construirem una taula dels cromosomes indicant la diversitat de cada cromosoma respecte als ja seleccionats:
+
+  <center><img src="images/gen8.png" width="550" alt="s'aplica l'ordenació estandard, la diversitat i ordenació i es calcula la probabilitat per cada cromosoma"></center>
+]
 
 ---
-## Algorismes de cerca: cerca amb algorismes genètics.
 
+## Algorismes genètics a fons: selecció - mètode de la diversitat - exemple (3er pas).
 
-Construirem la taula segons el mètode de diversitat segons la diversitat de cada cromosoma amb respecte al que ja ha passat:
+.left-column[
+#### Esquema d'un algorisme genètic
 
-  <center><img src="images/gen8.png" width="650" alt="s'aplica l'ordenació estandard, la diversistat i ordenació i es calcula la probabilitat per cada parella donada de cromosomes"></center>
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- **selecció**
+	- mètode estàndard
+	- mètode d'ordenació
+	- **mètode de la diversitat**
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
 
----
-
-
-## Algorismes de cerca: cerca amb algorismes genètics.
-
-
+.right-column[
 Llavors triem el següent que passa, i resulta que és el cromosoma 
 `(0001 0100)`. A partir d'aquest moment repetim el procés anterior, però calculant la diversitat respecte al dos cromosomes que ja han passat:
 
-  <center><img src="images/gen9.png" width="650" alt="en el cas d'empats per a l'ordenació resultat de la suma div+ord desempatem segons el valor d'ordenació pura"></center>
-
+  <center><img src="images/gen9.png" width="550" alt="en el cas d'empats per a l'ordenació resultat de la suma div+ord desempatem segons el valor d'ordenació pura"></center>
+]
 ---
 
-## Exemple: Optimització d'una funció multimodal.
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (introducció)
 
 
-El problema és trobar la `x` dins del rang `[-1 .. 2]` que maximitza `f`:
+Volem trobar la `x` dins del rang `[-1 .. 2]` que maximitza `f`:
 
   <center><img src="images/gen10.png" width="350" alt="gràfic d'una funció multimodal"></center>
 
 ---
 
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (representació i precisió)
 
-## Exemple: Optimització d'una funció multimodal.
+.left-column[
+#### Esquema d'un algorisme genètic
 
-+ Utilitzarem un vector binari com a cromosoma per a representar el valor real de la variable `x`. La longitud del vector dependrà del domini i la precisió.
+- **decidir com representar la població**
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
 
-+ En el cas estudiat, el domini de la variable `x` és `[-1,2]`, té longitud 3.
+.right-column[
++ Utilitzarem un vector binari com a cromosoma per a representar el valor real de la variable `x`. La longitud del vector dependrà del domini `[-1,2]` i de la precisió.
 
-+ Suposem que volem 6 decimals (1.000.000 de valors per cada unitat). 
++ Suposem que volem una precisió de 6 decimals (1.000.000 de valors per cada unitat). 
 Per tant, necessitem mostrejar el rang en 3.000.000 posicions, o sigui, 22 bits:
 `2.097.152 = 2^21 < 3.000.000 < 2^22 = 4.194.304`.
-
+]
 ---
 
-## Exemple: Optimització d'una funció multimodal.
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (representació binària i real)
 
-La transformació d'una seqüència binària `[b_21,...,b_0]` a un nombre real `x` es fa en dos passos:
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- **decidir com representar la població**
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
+La transformació d'una seqüència binària `[b`<sub>21</sub>`,...,b`<sub>0</sub>`]` a un nombre real `x` es fa en dos passos:
 
 + Primer convertim la seqüència de base 2 a base 10.
 +  Després trobem el nombre real corresponent:
 
-  <center><img src="images/gen11.png" width="250" alt="x=-1.0+ x' 3 / (2^22 -1)"></center>
+  <center><img src="images/gen11.png" width="250" alt="x=-1.0+ x' * 3 / (2^22 -1)"></center>
 
 
 > on `-1.0` és el límit esquerra de l'interval i `3` la longitud. 
-
+]
 ---
 
-## Exemple: Optimització d'una funció multimodal.
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (algorisme, part 1)
 
-L'algorisme te els següents passos:
+L'algorisme té els següents passos:
 
 + Escollim com a població inicial 50 individus de forma aleatòria:
 
@@ -733,19 +1069,40 @@ def initpop(n,long):
     return pop
 
 ```
+
+Notebook a Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/FuncioMultimodal-AlgGenetics.ipynb)
 ---
 
-## Exemple: Optimització d'una funció multimodal.
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (algorisme, part 2)
 
-+ La funció d'avaluació serà equivalent a la funció del gràfic `f`:
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- **avaluar adaptació**
+	- **funció adaptació**
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- crear nova generació
+	- creuament
+	- mutació
+]
+
+.right-column[
++ La funció d'daptació serà equivalent a la funció del gràfic `f`:
 
 ```python
 
-# Definim la funció d'avaluació d’un cromosoma de len(r) bits.
+# Definim la funció d'adaptació 
+# d’un cromosoma de len(r) bits.
 
-def cost(r):
+def fit(r):
     import math
-           # Transformem els bits en un valor real a l'interval [-1,2]
+           # Transformem els bits en un valor real 
+		   # a l'interval [-1,2]
     sum=0.0
     for i in range(len(r)):
         sum = sum + r[i]*(2**i)
@@ -753,34 +1110,63 @@ def cost(r):
            # Avaluem el cromosoma
     y = x * math.sin(10*math.pi*(x))+1.0
     return y
-
-
 ```
-
+]
 ---
 
-## Exemple: Optimització d'una funció multimodal.
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (mutació)
 
+.left-column[
+#### Esquema d'un algorisme genètic
 
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- **crear nova generació**
+	- creuament
+	- **mutació**
+]
+
+.right-column[
 Per fer la mutació imposem una probabilitat de mutació `pm = 0.01` per a cada bit.  
 
 Per exemple, 
 
-+ si tenim el cromosoma `v3 = (1110000000111111000101)`, que té com a valor f(x3) 2.250650
++ si tenim el cromosoma `v3 = 1110000000111111000101`, que té com a valor f(x3) 2.250650
 
 + seleccionem el cinquè bit per mutar,
 
-+ obtindrem `v3' = (1110100000111111000101)`. 
++ obtindrem `v3' = 1110100000111111000101`. 
 
 +  el nou cromosoma representa el valor `x3'=1.721638`, i per tant `f(x3') = 2.343555`
 
 +  `f(x3')` s'ha incrementat respecte `f(x3)`.
-
-
+]
 ---
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (algorisme, part 3)
 
-## Exemple: Optimització d'una funció multimodal.
+.left-column[
+#### Esquema d'un algorisme genètic
 
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- **crear nova generació**
+	- creuament
+	- **mutació**
+]
+
+.right-column[
 ```python
 # Definim la mutació amb probabilitat mutprob
 
@@ -793,9 +1179,27 @@ def mutacio(r,mutprob):
     return r
 
 ```
+]
 ---
-## Exemple: Optimització d'una funció multimodal.
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (algorisme, part 4)
 
+.left-column[
+#### Esquema d'un algorisme genètic
+
+- decidir com representar la població
+- avaluar adaptació
+	- funció adaptació
+- selecció
+	- mètode estàndard
+	- mètode d'ordenació
+	- mètode de la diversitat
+		- distància de Hamming
+- **crear nova generació**
+	- **creuament**
+	- mutació
+]
+
+.right-column[
 Per al creuament d’una parella de cromosomes escollirem aleatòriament un punt de tall i intercanviarem informació per crear els dos descendents. 
 
 ```python
@@ -807,10 +1211,10 @@ def creuament(r1,r2):
     return r1[:i]+r2[i:],r1[i:]+r2[:i]
 
 ```
-
+]
 ---
 
-## Exemple: Optimització d'una funció multimodal.
+## Aplicació dels algorismes genètics a l'optimització d'una funció multimodal (algorisme, part 5)
 
 Si iterem l'algorisme 150 generacions trobem que el millor cromosoma és 
 `vmax = (1111001101000100000101)`, que correspon al valor `xmax = 1.850773`. 
@@ -830,19 +1234,20 @@ L'evolució de l'algorisme es pot avaluar a partir del millor valor de la funci�
 137   2.850217
 145   2.850227
 ```
-
 ---
-## Exemple: Optimització d'una funció multimodal.
+## Algorismes genètics: Complexitat
+
+Quin és el factor que més pesa en el càlcul de la complexitat computacional de l’algorisme? 
+
+--
+**El nombre d'avaluacions!**
 
 
-Observació vàlida per a qualsevol problema de recerca 
-amb algorismes genètics:
+--
+Els operadors genètics tenen un cost  computacional menyspreable i  per tant la complexitat de l’algorisme és el nombre d’avaluacions per la complexitat de l’avaluació.
 
-> Quin és el factor que més pesa en el càlcul de la complexitat computacional de l’algorisme? El nombre d'avaluacions!
+A l'exemple de la funció multimodal hem fet `50x150=7.500` avaluacions! ja que teniem 50 individus i hem iterat durant 150 generacions.
 
-En el nostre problema hem fet `50x150=7.500` avaluacions!
-
-> Els operadors genètics tenen un cost  computacional nul, per tant la complexitat de l’algorisme és el nombre d’avaluacions per la complexitat de l’avaluació.
 
 
 
