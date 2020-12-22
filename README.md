@@ -208,7 +208,13 @@ En el cas de no arribar a l’aprovat per avaluació continuada, els alumnes pod
 + Setmana del 21/12: 
   + Classe presencial: 
     + [El problema del viatjant de comerç](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/Traveling%20Salesman%20Problem_def.ipynb)
-  + Contingut en línia (Mireia): [Algorismes de Cerca]  
+  + Contingut en línia (Mireia): [Cerca]*
+    + Vídeo de 4' sobre les [cerca en llistse](https://campusvirtual.ub.edu/pluginfile.php/3475644/mod_resource/content/3/T5-1-Cerca/T5-1-Cerca.html), corresponent a les [transparències 1-17 de Cerca](https://algorismica2020.github.io/slides/cera.html#1)
+      + [Notebook CercaLineal.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/CercaLineal.ipynb)
+      + [Notebook CercaBinaria.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/CercaBinaria.ipynb)
+    + Vídeo d'11' sobre [algorismes genètics](https://campusvirtual.ub.edu/pluginfile.php/3475645/mod_resource/content/3/T5-2-AlgGenetics/T5-2-AlgGenetics.html),  corresponent a les [transparències 18-52 de Cerca](https://algorismica2020.github.io/slides/python.html#18)
+      + [Notebook CercaExhaustiva.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/CercaExhaustiva.ipynb)
+      + [Notebook AlgorismesGenetics.ipynb](https://colab.research.google.com/github/algorismica2020/algorismica2020.github.io/blob/master/notebookscolab/FuncioMultimodal-AlgGenetics.ipynb)
 
     
 ## Material d'estudi 
